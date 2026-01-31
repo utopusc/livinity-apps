@@ -2,13 +2,9 @@ manifestVersion: 1
 id: specter-desktop
 category: bitcoin
 name: Specter Desktop
-version: "2.1.1"
+version: 2.1.1
 tagline: Multisig with hardware wallets made easy
-description: >-
-  Specter Desktop can be used to connect to the Bitcoin Core running on your Umbrel or an Electrum Server.
-  It functions as a watch-only coordinator for multi-signature and single-key
-  Bitcoin wallets. At the moment Specter Desktop is working with all major
-  hardware wallets including:
+description: 'Specter Desktop can be used to connect to the Bitcoin Core running on your LivOS or an Electrum Server. It functions as a watch-only coordinator for multi-signature and single-key Bitcoin wallets. At the moment Specter Desktop is working with all major hardware wallets including:
 
 
   - SeedSigner
@@ -34,32 +30,15 @@ description: >-
   - KeepKey
 
 
-  Specter Desktop also supports using the Bitcoin Core on your Umbrel as a hot wallet, by importing or generating a random BIP39 mnemonic, but this feature is experimental and we do not recommend using it at this stage. We plan to add support for other hardware wallets as they come up.
+  Specter Desktop also supports using the Bitcoin Core on your LivOS as a hot wallet, by importing or generating a random BIP39 mnemonic, but this feature is experimental and we do not recommend using it at this stage. We plan to add support for other hardware wallets as they come up.'
 developer: Crypto Advance
 website: https://specter.solutions
 dependencies:
-  - bitcoin
+- bitcoin
 repo: https://github.com/cryptoadvance/specter-desktop
 support: https://t.me/spectersupport
 port: 25441
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-releaseNotes: >-
-  🎉 Specter Desktop is back on the umbrelOS app store and compatible with the latest version of Bitcoin Core!
-
-
-  Key changes in this release:
-    - Specter Desktop is now compatible with Bitcoin Core v28.0
-    - Added wallet export to Jade via QR codes
-    - Fixed backup zip download issues
-    - Various bug fixes and improvements
-
-
-  Full release notes and detailed information is available at https://github.com/cryptoadvance/specter-desktop/releases
-submitter: k9ert
-submission: https://github.com/getumbrel/umbrel/pull/339
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: "\U0001F389 Specter Desktop is back on the umbrelOS app store and compatible with the latest version of Bitcoin Core!\n\nKey changes in this release:\n  - Specter Desktop is now compatible with Bitcoin Core v28.0\n  - Added wallet export to Jade via QR codes\n  - Fixed backup zip download issues\n  - Various bug fixes and improvements\n\n\nFull release notes and detailed information is available at https://github.com/cryptoadvance/specter-desktop/releases"

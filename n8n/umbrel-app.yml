@@ -2,25 +2,10 @@ manifestVersion: 1
 id: n8n
 category: automation
 name: n8n
-version: "1.123.5"
-releaseNotes: >-
-  This release includes bug fixes and improvements to workflow management and runner configuration.
-
-
-  Key highlights:
-    - Fixed workflow import to properly create version history records
-    - Improved runner configuration with additional environment variables
-    - Enhanced migration rule handling for cloud environments
-    - Fixed HTML header validation issues
-    - Improved Sentry initialization for JS runner stability
-
-
-  Full release notes are found at https://github.com/n8n-io/n8n/releases
+version: 1.123.5
+releaseNotes: "This release includes bug fixes and improvements to workflow management and runner configuration.\n\nKey highlights:\n  - Fixed workflow import to properly create version history records\n  - Improved runner configuration with additional environment variables\n  - Enhanced migration rule handling for cloud environments\n  - Fixed HTML header validation issues\n  - Improved Sentry initialization for JS runner stability\n\n\nFull release notes are found at https://github.com/n8n-io/n8n/releases"
 tagline: Build complex workflows, really fast
-description: >-
-  n8n is an extendable workflow automation tool. With a fair-code distribution model, n8n will always have visible source code, 
-  be available to self-host, and allow you to add your own custom functions, logic and apps. 
-  n8n's node-based approach makes it highly versatile, enabling you to connect anything to everything.
+description: 'n8n is an extendable workflow automation tool. With a fair-code distribution model, n8n will always have visible source code,  be available to self-host, and allow you to add your own custom functions, logic and apps.  n8n''s node-based approach makes it highly versatile, enabling you to connect anything to everything.
 
 
   n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
@@ -29,19 +14,13 @@ description: >-
   Customizable: highly flexible workflows and the option to build custom nodes.
 
 
-  Privacy-focused: self-host n8n for privacy and security.
+  Privacy-focused: self-host n8n for privacy and security.'
 developer: n8n
 website: https://n8n.io
 dependencies: []
 repo: https://github.com/n8n-io/n8n
 support: https://docs.n8n.io/
 port: 5678
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-submitter: Pranshu Agrawal
-submission: https://github.com/getumbrel/umbrel-apps/pull/283
+path: ''
+defaultUsername: ''
+defaultPassword: ''

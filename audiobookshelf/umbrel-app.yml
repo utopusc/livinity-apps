@@ -3,10 +3,9 @@ id: audiobookshelf
 name: Audiobookshelf
 tagline: Audiobook and podcast server
 category: media
-version: "2.30.0"
+version: 2.30.0
 port: 13378
-description: >-
-  Features:
+description: 'Features:
 
 
   - Fully open-source, including the android & iOS app (in beta)
@@ -47,38 +46,13 @@ description: >-
 
   iOS App (early beta)
 
-  - Available using Test Flight: https://testflight.apple.com/join/wiic7QIW
+  - Available using Test Flight: https://testflight.apple.com/join/wiic7QIW'
 developer: advplyr
 website: https://audiobookshelf.org
 repo: https://github.com/advplyr/audiobookshelf
 support: https://discord.gg/pJsjuNCKRq
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-releaseNotes: >-
-  New features and improvements:
-    - Added "Best" option for book cover search (searches audible, google & fantlab)
-    - Book cover search is now async and streams results using websockets
-    - Decreased timeout to 10s on all metadata providers
-
-
-  Bug fixes:
-    - Fixed OIDC invalid callback URL issue
-    - Fixed MultiSelect causing web client to become unresponsive
-    - Fixed podcast episodes being downloaded without an audio stream
-    - Fixed chapter editor overflowing on smaller screen sizes
-
-
-  UI/UX improvements:
-    - Chapter editor no longer redirects back after saving changes or deleting all chapters
-    - Various translation updates for multiple languages
-
-
-  Full release notes can be found at https://github.com/advplyr/audiobookshelf/releases
-submitter: Jasper
-submission: https://github.com/getumbrel/umbrel-apps/pull/302
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: "New features and improvements:\n  - Added \"Best\" option for book cover search (searches audible, google & fantlab)\n  - Book cover search is now async and streams results using websockets\n  - Decreased timeout to 10s on all metadata providers\n\n\nBug fixes:\n  - Fixed OIDC invalid callback URL issue\n  - Fixed MultiSelect causing web client to become unresponsive\n  - Fixed podcast episodes being downloaded without an audio stream\n  - Fixed chapter editor overflowing on smaller screen sizes\n\n\nUI/UX improvements:\n  - Chapter editor no longer redirects back after saving changes or deleting all chapters\n  - Various translation updates for multiple languages\n\n\nFull release notes can be found at https://github.com/advplyr/audiobookshelf/releases"

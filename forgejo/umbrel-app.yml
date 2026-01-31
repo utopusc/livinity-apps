@@ -2,61 +2,15 @@ manifestVersion: 1.1
 id: forgejo
 category: developer
 name: Forgejo
-version: "11.0.8"
+version: 11.0.8
 tagline: A self-hosted lightweight software forge
-description: >-
-  Forgejo is a self-hosted lightweight software forge, designed to be a fully self-hosted, privacy-respecting alternative to GitHub, GitLab, and Bitbucket. It is a fork of Gitea with additional features and community-driven enhancements. Forgejo is written in Go and can run on low-resource hardware like a Raspberry Pi. 
-
-
-  🔑 Key features include:
-
-  
-  🏠 Fully self-hosted and private
-  
-  🎯 Issue tracker and project management
-  
-  👥 Account/Organization/Repository management
-  
-  🕶️ Tor support
-  
-  🛠️ Repository Git hooks/deploy keys
-  
-  📝 Repository issues, pull requests, and wiki
-  
-  👤 Add/Remove repository collaborators
-  
-  🌐 Gravatar and custom source
-  
-  🖥️ Admin panel
-  
-  ⚙️ Forgejo Actions for CI/CD
-  
-  🚀 Lightweight and performant
-
-
-  🌍 Forgejo is brought to you by an inclusive community under the umbrella of Codeberg e.V., a democratic non-profit organization. It is 100% Free Software, focusing on security, scaling, federation, and privacy.
-
+description: "Forgejo is a self-hosted lightweight software forge, designed to be a fully self-hosted, privacy-respecting alternative to GitHub, GitLab, and Bitbucket. It is a fork of Gitea with additional features and community-driven enhancements. Forgejo is written in Go and can run on low-resource hardware like a Raspberry Pi. \n\n\U0001F511 Key features include:\n\n\U0001F3E0 Fully self-hosted and private\n\U0001F3AF Issue tracker and project management\n\U0001F465 Account/Organization/Repository management\n\U0001F576️ Tor support\n\U0001F6E0️ Repository Git hooks/deploy keys\n\U0001F4DD Repository issues, pull requests, and wiki\n\U0001F464 Add/Remove repository collaborators\n\U0001F310 Gravatar and custom source\n\U0001F5A5️ Admin panel\n⚙️ Forgejo Actions for CI/CD\n\U0001F680 Lightweight and performant\n\n\U0001F30D Forgejo is brought to you by an inclusive community under the livosla of Codeberg e.V., a democratic non-profit organization. It is 100% Free Software, focusing on\
+  \ security, scaling, federation, and privacy."
 developer: Forgejo Community
 website: https://forgejo.org/
 dependencies: []
 repo: https://codeberg.org/forgejo/forgejo
 support: https://codeberg.org/forgejo/forgejo/issues
 port: 8101
-path: ""
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-releaseNotes: >-
-  🚨 This release includes important security fixes:
-    - Fixed dependency repository permission checks in API operations
-    - Prevented draft releases from being read before publication
-    - Fixed misconfigured security checks on tag delete operations
-    - Corrected enforcement of head branch protection rules during pull request updates
-    - Fixed issue where issue owners could delete other users' comment edit history
-    - Prevented bypassing of tag protection rules during tag deletion
-
-
-  Full release notes are available at https://forgejo.org/releases/
-submitter: John Wilddip
-submission: https://github.com/getumbrel/umbrel-apps/pull/2221
+path: ''
+releaseNotes: "\U0001F6A8 This release includes important security fixes:\n  - Fixed dependency repository permission checks in API operations\n  - Prevented draft releases from being read before publication\n  - Fixed misconfigured security checks on tag delete operations\n  - Corrected enforcement of head branch protection rules during pull request updates\n  - Fixed issue where issue owners could delete other users' comment edit history\n  - Prevented bypassing of tag protection rules during tag deletion\n\n\nFull release notes are available at https://forgejo.org/releases/"

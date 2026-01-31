@@ -2,47 +2,17 @@ manifestVersion: 1
 id: calibre-web
 category: files
 name: Calibre Web
-version: "0.6.25"
+version: 0.6.25
 tagline: A clean web app for your eBooks
-description: >-
-  Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
-  It is also possible to integrate google drive and edit metadata and your calibre library through the app itself. 
-  
-  
-  🛠️ SET-UP INSTRUCTIONS
-
-    - Library Setup: On the initial setup screen, enter /books as your calibre library location.
-    - Uploading eBooks: If you wish to enable the upload feature, navigate to Admin > Edit Basic Configuration > Feature Configuration and toggle "Enable Upload".
-    - Documentation: It is recommended to read through the official documentation available at https://github.com/janeczku/calibre-web/wiki
+description: "Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It is also possible to integrate google drive and edit metadata and your calibre library through the app itself. \n\n\U0001F6E0️ SET-UP INSTRUCTIONS\n\n  - Library Setup: On the initial setup screen, enter /books as your calibre library location.\n  - Uploading eBooks: If you wish to enable the upload feature, navigate to Admin > Edit Basic Configuration > Feature Configuration and toggle \"Enable Upload\".\n  - Documentation: It is recommended to read through the official documentation available at https://github.com/janeczku/calibre-web/wiki"
 developer: Janeczku
 website: https://github.com/janeczku/calibre-web
 dependencies: []
 repo: https://github.com/janeczku/calibre-web
 support: https://github.com/linuxserver/docker-calibre-web/issues
 port: 8098
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: "admin"
-defaultPassword: "admin123"
+path: ''
+defaultUsername: admin
+defaultPassword: admin123
 torOnly: false
-releaseNotes: >-
-  This update includes several new features and improvements:
-
-
-    - Enhanced metadata extraction for audio files during upload
-    - Improved PDF viewer functionality
-    - Better shelf sorting capabilities
-    - Improved contrast for epub reader in dark modes
-    - Support for multiple e-reader email addresses
-    - Enhanced whitespace handling and string formatting
-    - Improvements to Kobo sync and browser experience
-    - Various bug fixes and stability enhancements
-    - Better support for Windows installations
-
-
-  Full release notes can be found here: https://github.com/janeczku/calibre-web/releases
-submitter: Xosten
-submission: https://github.com/getumbrel/umbrel-apps/pull/74
+releaseNotes: "This update includes several new features and improvements:\n\n\n  - Enhanced metadata extraction for audio files during upload\n  - Improved PDF viewer functionality\n  - Better shelf sorting capabilities\n  - Improved contrast for epub reader in dark modes\n  - Support for multiple e-reader email addresses\n  - Enhanced whitespace handling and string formatting\n  - Improvements to Kobo sync and browser experience\n  - Various bug fixes and stability enhancements\n  - Better support for Windows installations\n\n\nFull release notes can be found here: https://github.com/janeczku/calibre-web/releases"

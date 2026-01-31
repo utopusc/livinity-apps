@@ -2,10 +2,9 @@ manifestVersion: 1.1
 id: firefly-iii
 category: finance
 name: Firefly III
-version: "6.4.9"
+version: 6.4.9
 tagline: Your personal finance manager
-description: >-
-  Firefly III is a manager for your personal finances. It is self-hosted and open source. This means that it's free, it has no ads and no tracking.
+description: 'Firefly III is a manager for your personal finances. It is self-hosted and open source. This means that it''s free, it has no ads and no tracking.
 
 
   Full transaction management
@@ -15,7 +14,7 @@ description: >-
 
   Advanced rule engine
 
-  Use rules to quickly convert shorthands to detailed transactions or clean up your bank's abysmal CSV files.
+  Use rules to quickly convert shorthands to detailed transactions or clean up your bank''s abysmal CSV files.
 
 
   Budgets, categories and tags
@@ -25,38 +24,21 @@ description: >-
 
   Informative reports
 
-  Firefly III has advanced reporting capabilities, showing your expenses per week, month or year. But it can also help you audit your accounts with detailed list views. Or perhaps compare budgets or tags? It's all possible.
+  Firefly III has advanced reporting capabilities, showing your expenses per week, month or year. But it can also help you audit your accounts with detailed list views. Or perhaps compare budgets or tags? It''s all possible.
 
 
   JSON rest API
 
-  For the advanced and mobile users out there, Firefly III features an expansive JSON REST API that allows you to tap into Firefly III's most important features. Create transactions, manage categories and get chart data from any app or system.
+  For the advanced and mobile users out there, Firefly III features an expansive JSON REST API that allows you to tap into Firefly III''s most important features. Create transactions, manage categories and get chart data from any app or system.'
 backupIgnore:
-  - data/logs/*
+- data/logs/*
 developer: Firefly III
 website: https://www.firefly-iii.org/
 dependencies: []
 repo: https://github.com/firefly-iii/firefly-iii
 support: https://docs.firefly-iii.org/firefly-iii
 port: 30009
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 deterministicPassword: false
 torOnly: false
-releaseNotes: >-
-  Key improvements in this release:
-    - Fixed issues with optional transaction information not saving for recurring transactions
-    - Resolved problems with tags being added to unremovable elements
-    - Corrected webhooks triggering twice for recurring transactions created by cronjobs
-    - Addressed internal server errors when deleting budgets
-    - Fixed piggy bank creation form not respecting primary currency
-    - Resolved incorrect balance display issues
-    - Improved consistency in the exchange rates API
-
-
-  Full release notes are found at https://github.com/firefly-iii/firefly-iii/releases
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/pull/378
+releaseNotes: "Key improvements in this release:\n  - Fixed issues with optional transaction information not saving for recurring transactions\n  - Resolved problems with tags being added to unremovable elements\n  - Corrected webhooks triggering twice for recurring transactions created by cronjobs\n  - Addressed internal server errors when deleting budgets\n  - Fixed piggy bank creation form not respecting primary currency\n  - Resolved incorrect balance display issues\n  - Improved consistency in the exchange rates API\n\n\nFull release notes are found at https://github.com/firefly-iii/firefly-iii/releases"

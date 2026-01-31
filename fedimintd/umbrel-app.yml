@@ -2,69 +2,21 @@ manifestVersion: 1
 id: fedimintd
 category: bitcoin
 name: Fedimint
-version: "v0.9.1"
+version: v0.9.1
 tagline: Federated Chaumian E-Cash Mint for Bitcoin
-description: >-
-  Fedimint is a federated Chaumian E-Cash Mint to custody and transact bitcoin in a community. It allows groups of trusted individuals, 
-  called guardians, to jointly operate a multi-signature e-cash mint.
-
-  # Setting Up a Federation
-
-  You can create a Fedimint in two ways:
-
-    - Single Guardian Federation — A single guardian operating their own mint.
-
-    - Group Federation — Multiple guardians running the mint together (minimum of 4 guardians).
-
-  [See here for more deployment recommendations](https://github.com/fedimint/fedimint/blob/master/docs/deploying.md)
-
-  # Step By Step Ceremony
-
-  1. Install & Launch this Fedimint app (fedimintd) on your Umbrel
-     Each participating guardian runs their own instance of fedimintd.
-
-  2. Set a Password
-     When starting fedimintd for the first time, each guardian must create a secure password.
-
-  3. Generate Setup Code
-     After entering the password, a unique setup code is generated for each guardian.
-
-  4. Exchange Setup Codes
-     All guardians must share their setup codes with each other (every guardian needs every other guardian's code).
-
-  5. Distributed Key Generation (DKG)
-     Once all setup codes are entered, the DKG process begins. This is where the federation's cryptographic keys are jointly created.
-     This step may take some time while all guardians connect.
-
-  6. Federation Complete!
-     Once DKG finishes, your federation is live. Your guardian dashboard will be available for monitoring. You now have a functioning Fedimint!
-
-  # Enabling Lightning Payments
-
-  Fedimint supports Lightning payments via a Lightning Gateway. To use Lightning in your federation, there are two options:
-
-  1. Use an existing Lightning Gateway. [Reach out on Discord to get setup](https://chat.fedimint.org).
-
-  2. Run your own - [see Lightning Gateway docs for more information](https://github.com/fedimint/fedimint/blob/master/docs/gateway.md).
-  
+description: "Fedimint is a federated Chaumian E-Cash Mint to custody and transact bitcoin in a community. It allows groups of trusted individuals,  called guardians, to jointly operate a multi-signature e-cash mint.\n# Setting Up a Federation\nYou can create a Fedimint in two ways:\n\n  - Single Guardian Federation — A single guardian operating their own mint.\n\n  - Group Federation — Multiple guardians running the mint together (minimum of 4 guardians).\n\n[See here for more deployment recommendations](https://github.com/fedimint/fedimint/blob/master/docs/deploying.md)\n# Step By Step Ceremony\n1. Install & Launch this Fedimint app (fedimintd) on your LivOS\n   Each participating guardian runs their own instance of fedimintd.\n\n2. Set a Password\n   When starting fedimintd for the first time, each guardian must create a secure password.\n\n3. Generate Setup Code\n   After entering the password, a unique setup code is generated for each guardian.\n\n4. Exchange Setup Codes\n   All guardians\
+  \ must share their setup codes with each other (every guardian needs every other guardian's code).\n\n5. Distributed Key Generation (DKG)\n   Once all setup codes are entered, the DKG process begins. This is where the federation's cryptographic keys are jointly created.\n   This step may take some time while all guardians connect.\n\n6. Federation Complete!\n   Once DKG finishes, your federation is live. Your guardian dashboard will be available for monitoring. You now have a functioning Fedimint!\n\n# Enabling Lightning Payments\nFedimint supports Lightning payments via a Lightning Gateway. To use Lightning in your federation, there are two options:\n1. Use an existing Lightning Gateway. [Reach out on Discord to get setup](https://chat.fedimint.org).\n2. Run your own - [see Lightning Gateway docs for more information](https://github.com/fedimint/fedimint/blob/master/docs/gateway.md)."
 developer: Fedimint Developers
 website: https://fedimint.org/
 dependencies:
-  - bitcoin
+- bitcoin
 repo: https://github.com/fedimint/fedimint
 support: https://github.com/fedimint/fedimint/issues
 port: 8175
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-submitter: Fedimint Developers
-submission: https://github.com/getumbrel/umbrel-apps/pull/3371
-releaseNotes: >-
-  This release includes several bug fixes and improvements.
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: 'This release includes several bug fixes and improvements.
 
 
-  Full release notes can be found at https://github.com/fedimint/fedimint/releases
+  Full release notes can be found at https://github.com/fedimint/fedimint/releases'

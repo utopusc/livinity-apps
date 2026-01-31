@@ -2,33 +2,16 @@ manifestVersion: 1
 id: bitaxe-sentry
 category: bitcoin
 name: Bitaxe Sentry
-version: "0.5.0"
+version: 0.5.0
 tagline: Bitaxe stats and alerts, all in one
-description: >-
-  Bitaxe Sentry is a monitoring and management solution for Bitaxe ASIC miners.
-  Track the performance, temperature, and status of your miners from a single dashboard. Get alerts when your miners hit a new best difficulty, or when temperature or voltage thresholds are exceeded.
-  
-  
-  Features included: 
-    - 📊 Centralized dashboard for all Bitaxe miners
-    - 🌡️ Temperature and hashrate monitoring
-    - 🚨 Discord notifications for critical events
-releaseNotes: >-
-  This release includes firmware compatibility improvements:
-    - Fixed difficulty handling for new Bitaxe firmware format compatibility
-    - Improved best difficulty alert accuracy during firmware transitions
+description: "Bitaxe Sentry is a monitoring and management solution for Bitaxe ASIC miners. Track the performance, temperature, and status of your miners from a single dashboard. Get alerts when your miners hit a new best difficulty, or when temperature or voltage thresholds are exceeded.\n\nFeatures included: \n  - \U0001F4CA Centralized dashboard for all Bitaxe miners\n  - \U0001F321️ Temperature and hashrate monitoring\n  - \U0001F6A8 Discord notifications for critical events"
+releaseNotes: "This release includes firmware compatibility improvements:\n  - Fixed difficulty handling for new Bitaxe firmware format compatibility\n  - Improved best difficulty alert accuracy during firmware transitions"
 developer: Zach Price
 website: https://github.com/zachchan105/bitaxe-sentry
 repo: https://github.com/zachchan105/bitaxe-sentry
 support: https://github.com/zachchan105/bitaxe-sentry/issues
 port: 7070
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-submitter: Zach Price
-submission: https://github.com/getumbrel/umbrel-apps/pull/3122
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 dependencies: []

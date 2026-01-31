@@ -1,21 +1,17 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: lunalytics_web_1
-      APP_PORT: 2308
-
   web:
     image: ksjaay/lunalytics:0.10.16@sha256:4307f6f409b218ee2496e9780c96bba0c9d77e74d37198936fbfc8c4f1ab7dd6
-    user: "1000:1000"
+    user: 1000:1000
     restart: on-failure
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 2308 || exit 1"]
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 2308 || exit 1
       interval: 10s
       timeout: 5s
       retries: 3
       start_period: 90s
     volumes:
-      - ${APP_DATA_DIR}/data/lunalytics_data:/app/data:rw
-      - ${APP_DATA_DIR}/data/logs:/app/logs:rw
+    - ${APP_DATA_DIR}/data/lunalytics_data:/app/data:rw
+    - ${APP_DATA_DIR}/data/logs:/app/logs:rw

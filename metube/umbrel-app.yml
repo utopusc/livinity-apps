@@ -2,33 +2,16 @@ manifestVersion: 1
 id: metube
 category: media
 name: MeTube
-version: "2025.12.09"
+version: 2025.12.09
 tagline: Download videos from YouTube
-description: >-
-  Download videos from YouTube (and dozens of other sites) directly to your Umbrel.
+description: Download videos from YouTube (and dozens of other sites) directly to your LivOS.
 developer: Alex Shnitman
 dependencies: []
 repo: https://github.com/alexta69/metube
 port: 3700
-releaseNotes: >-
-  This release includes important updates and improvements.
-
-
-  Key highlights:
-    - Upgraded yt-dlp from 2025.11.12 to 2025.12.8
-    - Upgraded to Angular 20
-    - Fixed GitHub login issue
-
-
-  Full release notes can be found at https://github.com/alexta69/metube/releases
+releaseNotes: "This release includes important updates and improvements.\n\nKey highlights:\n  - Upgraded yt-dlp from 2025.11.12 to 2025.12.8\n  - Upgraded to Angular 20\n  - Fixed GitHub login issue\n\n\nFull release notes can be found at https://github.com/alexta69/metube/releases"
 support: https://github.com/alexta69/metube/issues
 website: https://github.com/alexta69/metube
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-submitter: MontejoJorge
-submission: https://github.com/getumbrel/umbrel-apps/pull/864
+path: ''
+defaultUsername: ''
+defaultPassword: ''

@@ -3,10 +3,9 @@ id: btctracker
 name: BTC Tracker
 tagline: A simple, privacy-focused Bitcoin investment tracker
 category: bitcoin
-version: "0.6.7"
+version: 0.6.7
 port: 3947
-description: >-
-  BTC Tracker is a user-friendly yet powerful application designed for managing and analyzing Bitcoin investments. It was created to offer a privacy-focused and straightforward alternative to existing tracking tools, which are often cluttered with unnecessary features, complicated to set up, or designed for managing large, diversified portfolios. Many of those tools require connections to external services and the sharing of sensitive information such as wallet addresses or transaction histories.
+description: 'BTC Tracker is a user-friendly yet powerful application designed for managing and analyzing Bitcoin investments. It was created to offer a privacy-focused and straightforward alternative to existing tracking tools, which are often cluttered with unnecessary features, complicated to set up, or designed for managing large, diversified portfolios. Many of those tools require connections to external services and the sharing of sensitive information such as wallet addresses or transaction histories.
 
 
   BTC Tracker takes a different approach. The entire application runs locally on your own device, with no data ever sent to external servers or third parties. All investment data, transactions, and settings are stored securely and privately on your machine, giving you full control over your personal information at all times. This makes BTC Tracker an ideal solution for anyone who values privacy and data ownership.
@@ -21,63 +20,14 @@ description: >-
   Overall, BTC Tracker is a focused tool that puts privacy first and strips away unnecessary complexity. It gives you a clear, secure way to track your Bitcoin investments without compromising your data.
 
 
-  ⚠️ To use BTC Tracker, you need to create a user account. The application cannot function without it, as all data is securely linked to your personal profile and stored locally.
+  ⚠️ To use BTC Tracker, you need to create a user account. The application cannot function without it, as all data is securely linked to your personal profile and stored locally.'
 developer: wilqq-the
 website: https://github.com/wilqq-the
-submitter: dennysubke
-submission: https://github.com/getumbrel/umbrel-apps/pull/2597
 repo: https://github.com/wilqq-the/BTC-Tracker
 support: https://github.com/wilqq-the/BTC-Tracker/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-releaseNotes: >-
-  🚨 Breaking Change since version 0.6.0: all existing data will be deleted and the update is not backward compatible, so please export your transactions from the previous version before updating. After installation, register again and reimport your data.
-  
-  
-  🔐 Security
-  
-    - Two-Factor Authentication (2FA) - Secure your account with TOTP-based 2FA
-    - Works with Google Authenticator, Authy, and other authenticator apps
-    - 10 backup codes generated for account recovery
-    - Available in Profile and Settings panels
-    - Critical: Updated Next.js from 15.3.4 to 15.3.6 to fix CVE-2025-66478 (CVSS 10.0) - Remote Code Execution vulnerability
-    - Fixed npm audit vulnerabilities
-  
-  
-  ✨ New Features
-  
-    - External Transfer Tracking - Track BTC transfers in/out without affecting P&L
-    - Transfer In: Add BTC from gifts, mining rewards, payments received
-    - Transfer Out: Remove BTC for donations, payments sent, gifts given
-    - System Status Dialog - View all background services in Settings → Price Data
-    - Transaction markers on chart - Buy/sell dots with tooltips showing details
-    - BTC/Fiat Price switch - Calculate price from either BTC amount or fiat total
-  
-  
-  🚀 Improvements
-  
-    - Improved Migration System - Automatic handling of legacy databases and upgrade issues
-    - Improved CSV Import/Export - Better handling of whitespace, quotes, and edge cases
-    - 21bitcoin Parser - Support for 21bitcoin CSV export format
-    - Simplified Migration Output - Less verbose logs, use --verbose flag for details
-  
-  
-  🐛 Bug Fixes
-  
-    - Fixed P&L calculation in BitcoinChart for non-USD currencies
-    - Fixed avatar display in navigation bar and persistence across Docker restarts
-    - Fixed double migration execution in Docker
-    - Removed unused migrate.sh script
-  
-  
-  🎨 UI
-  
-    - Migrated more components to shadcn/ui design system
-    - Better avatar handling with automatic refresh 
+releaseNotes: "\U0001F6A8 Breaking Change since version 0.6.0: all existing data will be deleted and the update is not backward compatible, so please export your transactions from the previous version before updating. After installation, register again and reimport your data.\n\n\U0001F510 Security\n\n  - Two-Factor Authentication (2FA) - Secure your account with TOTP-based 2FA\n  - Works with Google Authenticator, Authy, and other authenticator apps\n  - 10 backup codes generated for account recovery\n  - Available in Profile and Settings panels\n  - Critical: Updated Next.js from 15.3.4 to 15.3.6 to fix CVE-2025-66478 (CVSS 10.0) - Remote Code Execution vulnerability\n  - Fixed npm audit vulnerabilities\n\n\n✨ New Features\n\n  - External Transfer Tracking - Track BTC transfers in/out without affecting P&L\n  - Transfer In: Add BTC from gifts, mining rewards, payments received\n  - Transfer Out: Remove BTC for donations, payments sent, gifts given\n  - System Status Dialog - View all background\
+  \ services in Settings → Price Data\n  - Transaction markers on chart - Buy/sell dots with tooltips showing details\n  - BTC/Fiat Price switch - Calculate price from either BTC amount or fiat total\n\n\n\U0001F680 Improvements\n\n  - Improved Migration System - Automatic handling of legacy databases and upgrade issues\n  - Improved CSV Import/Export - Better handling of whitespace, quotes, and edge cases\n  - 21bitcoin Parser - Support for 21bitcoin CSV export format\n  - Simplified Migration Output - Less verbose logs, use --verbose flag for details\n\n\n\U0001F41B Bug Fixes\n\n  - Fixed P&L calculation in BitcoinChart for non-USD currencies\n  - Fixed avatar display in navigation bar and persistence across Docker restarts\n  - Fixed double migration execution in Docker\n  - Removed unused migrate.sh script\n\n\n\U0001F3A8 UI\n\n  - Migrated more components to shadcn/ui design system\n  - Better avatar handling with automatic refresh "
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''

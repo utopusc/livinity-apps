@@ -2,14 +2,9 @@ manifestVersion: 1
 id: whoogle-search
 category: networking
 name: Whoogle Search
-version: "1.1.2"
+version: 1.1.2
 tagline: A self-hosted, ad-free, privacy-respecting metasearch engine
-description: >-
-  Get Google search results, but without any ads, javascript, AMP links, 
-  cookies, or IP address tracking. Easily deployable in one 
-  click as a Docker app, and customizable with a single config file. 
-  Quick and simple to implement as a primary search engine replacement on 
-  both desktop and mobile.
+description: 'Get Google search results, but without any ads, javascript, AMP links,  cookies, or IP address tracking. Easily deployable in one  click as a Docker app, and customizable with a single config file.  Quick and simple to implement as a primary search engine replacement on  both desktop and mobile.
 
 
   - No ads or sponsored content
@@ -49,37 +44,16 @@ description: >-
 
   *No third party JavaScript. Whoogle can be used with JavaScript disabled, but if enabled, uses JavaScript for things like presenting search suggestions.
 
-  **No third party cookies. Whoogle uses server side cookies (sessions) to store non-sensitive configuration settings such as theme, language, etc. Just like with JavaScript, cookies can be disabled and not affect Whoogle's search functionality.
+  **No third party cookies. Whoogle uses server side cookies (sessions) to store non-sensitive configuration settings such as theme, language, etc. Just like with JavaScript, cookies can be disabled and not affect Whoogle''s search functionality.
 
-  ***If deployed to a remote server, or configured to send requests through a VPN, Tor, proxy, etc.
-
+  ***If deployed to a remote server, or configured to send requests through a VPN, Tor, proxy, etc.'
 developer: Ben Busby
 website: https://github.com/benbusby
 dependencies: []
 repo: https://github.com/benbusby/whoogle-search
 support: https://github.com/benbusby/whoogle-search/issues
 port: 6420
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-releaseNotes: >-
-  ⚠️ Google's recent changes have made it difficult to provide JavaScript-free search results, which may affect Whoogle's functionality.
-
-
-  This release reverts the Mullvad Leta implementation and introduces new features to improve search reliability:
-    - Added a feature to randomly generate User Agent (UA) strings based on working patterns
-    - Option to use your own rotating list of UAs or a static UA
-    - A configuration toggle to display the active UA at the bottom of search results for debugging
-    - Introduced two new tools: one to generate offline UA lists and another to automatically test them
-    - Maps, Videos, and News searches are now working again
-    - ⚠️ Known issue: Image Search still displays an "Update your browser" message
-
-
-  Full release notes are found at https://github.com/benbusby/whoogle-search/compare/v1.1.0...v1.1.2
-submitter: Jasper
-submission: https://github.com/getumbrel/umbrel-apps/pull/117
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: "⚠️ Google's recent changes have made it difficult to provide JavaScript-free search results, which may affect Whoogle's functionality.\n\nThis release reverts the Mullvad Leta implementation and introduces new features to improve search reliability:\n  - Added a feature to randomly generate User Agent (UA) strings based on working patterns\n  - Option to use your own rotating list of UAs or a static UA\n  - A configuration toggle to display the active UA at the bottom of search results for debugging\n  - Introduced two new tools: one to generate offline UA lists and another to automatically test them\n  - Maps, Videos, and News searches are now working again\n  - ⚠️ Known issue: Image Search still displays an \"Update your browser\" message\n\n\nFull release notes are found at https://github.com/benbusby/whoogle-search/compare/v1.1.0...v1.1.2"

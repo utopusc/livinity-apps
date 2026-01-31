@@ -3,35 +3,15 @@ id: watch-your-lan
 name: WatchYourLAN
 tagline: Lightweight network IP scanner
 category: networking
-version: "2.1.4"
+version: 2.1.4
 port: 8840
-description: >-
-  WatchYourLAN is a lightweight network IP scanner. It allows you to keep track of all devices that are connected to your local network.
-
-releaseNotes: >-
-  Key highlights in this release include:
-    - Added Swagger API docs
-    - Ability to add hosts from API
-    - Trigger rescan from API or Config/Scan settings
-    - Delete selected hosts
-    - Wake-on-LAN functionality
-
-
-  ⚠️ The HIST_IN_DB config option is now deprecated. History is always stored in the database.
-
-
-  Full release notes can be found at https://github.com/aceberg/WatchYourLAN/releases
+description: WatchYourLAN is a lightweight network IP scanner. It allows you to keep track of all devices that are connected to your local network.
+releaseNotes: "Key highlights in this release include:\n  - Added Swagger API docs\n  - Ability to add hosts from API\n  - Trigger rescan from API or Config/Scan settings\n  - Delete selected hosts\n  - Wake-on-LAN functionality\n\n\n⚠️ The HIST_IN_DB config option is now deprecated. History is always stored in the database.\n\nFull release notes can be found at https://github.com/aceberg/WatchYourLAN/releases"
 developer: aceberg
 website: https://github.com/aceberg/WatchYourLAN
-submitter: Jasper
-submission: https://github.com/getumbrel/umbrel-apps/pull/940
 repo: https://github.com/aceberg/WatchYourLAN
 support: https://github.com/aceberg/WatchYourLAN/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''

@@ -2,56 +2,26 @@ manifestVersion: 1
 id: bazarr
 category: media
 name: Bazarr
-version: "1.5.3"
+version: 1.5.3
 tagline: Manage and download subtitles for Sonarr and Radarr
-description: >-
-  Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
-  You define your preferences by TV show or movie and Bazarr takes care of everything for you.
+description: 'Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.
 
 
   Bazarr does not scan your disk to detect series and movies. It only takes care of the series and movies that are indexed in Sonarr and Radarr.
 
 
   🛠️ SET-UP INSTRUCTIONS
-  
-  During initial set-up, you will need to input your Umbrel device's IP address to connect to Sonarr and/or Radarr.
-  You can find your device's IP address by visiting your router's admin dashboard or by using an IP scanning tool like Angry IP Scanner.
-  You will also need to input your API key for Sonarr and/or Radarr. You can find your API keys in the settings of the Sonarr and Radarr apps.
-releaseNotes: >-
-  Key improvements in this release include:
-    - Removed outdated subtitle providers (Argenteam-dump and tusubtitulo)
-    - Fixed issues with subtitle searching for series/seasons
-    - Improved Plex integration with simplified library selection and selective content refresh
-    - Added Plex OAuth Authentication Support
-    - Enhanced subtitle upgrade process for translated subtitles
-    - Added support for Lingarr subtitles translation
-    - Introduced SubsRo provider for subtitles
-    - Added support for .mk3d video file extension
-    - Improved greeksubs provider functionality
-    - Fixed issues with Bazarr shutdown/restart on various operating systems
-    - Added Gemini AI translation option
-    - Improved handling of AniDB ID mapping
-    - Added language mapping to WhisperAI
-    - Fixed problem with unnecessary removal of long text blocks from subtitle files
-    - Updated Sonarr and Radarr webhook functionality (users should review settings)
-    - Fixed issue with Titulky VIP status during active login sessions
-    - Added option to include language only when matching audio
 
-
-  Full release notes are found at https://github.com/morpheus65535/bazarr/releases
+  During initial set-up, you will need to input your LivOS device''s IP address to connect to Sonarr and/or Radarr. You can find your device''s IP address by visiting your router''s admin dashboard or by using an IP scanning tool like Angry IP Scanner. You will also need to input your API key for Sonarr and/or Radarr. You can find your API keys in the settings of the Sonarr and Radarr apps.'
+releaseNotes: "Key improvements in this release include:\n  - Removed outdated subtitle providers (Argenteam-dump and tusubtitulo)\n  - Fixed issues with subtitle searching for series/seasons\n  - Improved Plex integration with simplified library selection and selective content refresh\n  - Added Plex OAuth Authentication Support\n  - Enhanced subtitle upgrade process for translated subtitles\n  - Added support for Lingarr subtitles translation\n  - Introduced SubsRo provider for subtitles\n  - Added support for .mk3d video file extension\n  - Improved greeksubs provider functionality\n  - Fixed issues with Bazarr shutdown/restart on various operating systems\n  - Added Gemini AI translation option\n  - Improved handling of AniDB ID mapping\n  - Added language mapping to WhisperAI\n  - Fixed problem with unnecessary removal of long text blocks from subtitle files\n  - Updated Sonarr and Radarr webhook functionality (users should review settings)\n  - Fixed issue with Titulky VIP status during\
+  \ active login sessions\n  - Added option to include language only when matching audio\n\n\nFull release notes are found at https://github.com/morpheus65535/bazarr/releases"
 developer: morpheus65535
 website: https://www.bazarr.media/
 dependencies: []
 repo: https://github.com/morpheus65535/bazarr
 support: https://github.com/morpheus65535/bazarr/issues
 port: 6767
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/pull/610

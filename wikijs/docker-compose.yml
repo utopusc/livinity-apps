@@ -1,17 +1,10 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: wikijs_server_1
-      APP_PORT: 3000
-      PROXY_AUTH_ADD: "false"
-  
   server:
-    user: "1000:1000"
+    user: 1000:1000
     image: linuxserver/wikijs:2.5.308@sha256:b1b3704db9554bf99f72539c6876bfa88c0aa7cd344d694bf1443019187e54e0
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data:/data
-      - ${APP_DATA_DIR}/repo:/app/wiki/data/repo
-      - ${APP_DATA_DIR}/config:/config
+    - ${APP_DATA_DIR}/data:/data
+    - ${APP_DATA_DIR}/repo:/app/wiki/data/repo
+    - ${APP_DATA_DIR}/config:/config

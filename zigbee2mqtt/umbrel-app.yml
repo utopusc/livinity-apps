@@ -1,59 +1,16 @@
 manifestVersion: 1
-id: "zigbee2mqtt"
-name: "Zigbee2MQTT"
-tagline: "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges"
-category: "automation"
-version: "2.7.1"
+id: zigbee2mqtt
+name: Zigbee2MQTT
+tagline: Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges
+category: automation
+version: 2.7.1
 port: 60082
-description: >-
-  Allows you to use your Zigbee devices without the vendor's bridge or gateway.
-
-  It bridges events and allows you to control your Zigbee devices via MQTT. In this way you can integrate your Zigbee devices with whatever smart home infrastructure you are using.
-
-
-  **Compatible**
-
-  Zigbee2MQTT supports various Zigbee adapters and a big bunch of devices.
-
-
-  **Integrations**
-
-  Zigbee2MQTT integrates well with most home automation solutions because it uses MQTT.
-
-
-  **Open Source**
-
-  Zigbee2MQTT is licenced under the free GNU General Public License 3.
-
-
-  **Setup** 
-
-  After the install you will be presented with a setup wizard. Select your device and get started. After the setup you need to re-open the app to access the web interface.
-developer: "@Koenkk"
-website: "https://www.zigbee2mqtt.io/"
-submitter: "dirstel"
-submission: "https://github.com/getumbrel/umbrel-apps/pull/2472"
-repo: "https://github.com/Koenkk/zigbee2mqtt"
-support: "https://github.com/Koenkk/zigbee2mqtt/issues"
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-releaseNotes: >-
-  This hotfix release resolves an issue causing excessive disk writes that could crash Zigbee2MQTT.
-
-
-  Key improvements and fixes:
-    - Fixed excessive disk writes issue
-    - Enhanced device support for Aqara W600, Tuya PJ1203A, and various other devices
-    - Improved Home Assistant integration for climate devices
-    - Fixed OTA updates for various Ledvance plugs
-    - Corrected color temperature range for Philips bulbs
-    - Various bug fixes and stability improvements
-    - Support for 20 new devices
-
-
-  Full release notes can be found at https://github.com/Koenkk/zigbee2mqtt/releases
+description: "Allows you to use your Zigbee devices without the vendor's bridge or gateway.\nIt bridges events and allows you to control your Zigbee devices via MQTT. In this way you can integrate your Zigbee devices with whatever smart home infrastructure you are using.\n\n**Compatible**\nZigbee2MQTT supports various Zigbee adapters and a big bunch of devices.\n\n**Integrations**\nZigbee2MQTT integrates well with most home automation solutions because it uses MQTT.\n\n**Open Source**\nZigbee2MQTT is licenced under the free GNU General Public License 3.\n\n**Setup** \nAfter the install you will be presented with a setup wizard. Select your device and get started. After the setup you need to re-open the app to access the web interface."
+developer: '@Koenkk'
+website: https://www.zigbee2mqtt.io/
+repo: https://github.com/Koenkk/zigbee2mqtt
+support: https://github.com/Koenkk/zigbee2mqtt/issues
+releaseNotes: "This hotfix release resolves an issue causing excessive disk writes that could crash Zigbee2MQTT.\n\nKey improvements and fixes:\n  - Fixed excessive disk writes issue\n  - Enhanced device support for Aqara W600, Tuya PJ1203A, and various other devices\n  - Improved Home Assistant integration for climate devices\n  - Fixed OTA updates for various Ledvance plugs\n  - Corrected color temperature range for Philips bulbs\n  - Various bug fixes and stability improvements\n  - Support for 20 new devices\n\n\nFull release notes can be found at https://github.com/Koenkk/zigbee2mqtt/releases"
 dependencies:
-  - mosquitto
-path: ""
+- mosquitto
+path: ''

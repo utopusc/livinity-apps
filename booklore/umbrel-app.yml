@@ -3,10 +3,9 @@ id: booklore
 name: BookLore
 tagline: An app for managing and reading books
 category: files
-version: "1.13.2"
+version: 1.13.2
 port: 6060
-description: >-
-  📖 BookLore is a modern web application created to transform the way digital libraries are managed and experienced. It is designed for readers who want to bring order and beauty to their collection of books and comics while also making them instantly accessible. Instead of leaving files scattered across folders, BookLore gathers them into a central library that can be explored and enjoyed directly through the browser. It provides a seamless reading environment where organization, discovery, and enjoyment flow together.
+description: '📖 BookLore is a modern web application created to transform the way digital libraries are managed and experienced. It is designed for readers who want to bring order and beauty to their collection of books and comics while also making them instantly accessible. Instead of leaving files scattered across folders, BookLore gathers them into a central library that can be explored and enjoyed directly through the browser. It provides a seamless reading environment where organization, discovery, and enjoyment flow together.
 
 
   One of the most defining features of BookLore is its ability to automatically retrieve detailed information about each book. When a new file is added, the application fetches metadata such as title, author, description, and cover art, ensuring that the library always looks complete and polished. This automation removes the tedious task of entering details by hand and makes the collection feel like a professional archive. Users can browse their books with confidence that the information they see is accurate and visually appealing.
@@ -33,42 +32,13 @@ description: >-
   The design of the interface is another strength of BookLore. It is responsive, intuitive, and built to adapt to different screen sizes, ensuring that browsing the library is equally pleasant on a phone, tablet, or desktop. The layout emphasizes clarity and usability, encouraging readers to engage with their collection in a way that feels natural and inviting.
 
 
-  At its core, BookLore is more than just a management tool. It is a thoughtful environment for digital reading that combines organization, automation, sharing, and customization into a single experience. By bringing together the functional needs of cataloging with the emotional enjoyment of reading, it helps transform a scattered set of files into a living, evolving library that is both beautiful and deeply personal.
+  At its core, BookLore is more than just a management tool. It is a thoughtful environment for digital reading that combines organization, automation, sharing, and customization into a single experience. By bringing together the functional needs of cataloging with the emotional enjoyment of reading, it helps transform a scattered set of files into a living, evolving library that is both beautiful and deeply personal.'
 developer: BookLore
 website: https://demo.booklore.dev/login
-submitter: dennysubke
-submission: https://github.com/getumbrel/umbrel-apps/pull/3560
 repo: https://github.com/booklore-app/booklore
 support: https://github.com/booklore-app/booklore/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-  - 5.jpg
-  - 6.jpg
-releaseNotes: >-
-  This release brings new features, enhancements, and important bug fixes.
-
-
-  Some of the key highlights in this release include:
-    - Add sort preference option for Magic Shelf names in the left sidebar
-    - New filter mode preference
-    - Option to enable or disable series view
-    - Disable merging of moods and tags during metadata updates
-    - Improved date parsing for EPUB files to support year-only formats
-    - OPDS Feed now sorts by added date in descending order
-    - Improved handling of locked, but empty or null metadata
-    - Visually indicate the active menu item in the left sidebar
-    - Consistent layout alignment across all dialogs
-    - Improved localization of the Amazon Parser
-    - Filter mode now added to URL query string
-    - Fixed race conditions when importing multiple files via Bookdrop and Monitoring Service
-    - Re-added description to EPUB metadata extraction
-
-
-  Full release notes can be found at: https://github.com/booklore-app/booklore/releases
+releaseNotes: "This release brings new features, enhancements, and important bug fixes.\n\nSome of the key highlights in this release include:\n  - Add sort preference option for Magic Shelf names in the left sidebar\n  - New filter mode preference\n  - Option to enable or disable series view\n  - Disable merging of moods and tags during metadata updates\n  - Improved date parsing for EPUB files to support year-only formats\n  - OPDS Feed now sorts by added date in descending order\n  - Improved handling of locked, but empty or null metadata\n  - Visually indicate the active menu item in the left sidebar\n  - Consistent layout alignment across all dialogs\n  - Improved localization of the Amazon Parser\n  - Filter mode now added to URL query string\n  - Fixed race conditions when importing multiple files via Bookdrop and Monitoring Service\n  - Re-added description to EPUB metadata extraction\n\n\nFull release notes can be found at: https://github.com/booklore-app/booklore/releases"
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''

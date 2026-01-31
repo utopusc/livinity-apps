@@ -2,51 +2,18 @@ manifestVersion: 1.1
 id: synapse
 category: social
 name: Synapse
-version: "1.144.0"
+version: 1.144.0
 tagline: Matrix homeserver
-description: >-
-  Synapse is an open source Matrix homeserver implementation, written and maintained by Element. Matrix is the open standard for secure and interoperable real time communications.
-
-
-  💡 How It Works
-
-
-  To chat using Matrix, you'll need a client. You can find a list of popular clients here: https://matrix.org/ecosystem/clients/
-
-
-  In Matrix, each user operates one or more Matrix clients, which connect to a Matrix homeserver. The homeserver stores all personal chat history and user account information, similar to how a mail client connects to an IMAP/SMTP server.
-  Like email, you can either run your own Matrix homeserver to control and own your communications and history, or use a hosted server (e.g., matrix.org). Matrix has no single point of control or mandatory service provider, unlike WhatsApp, Facebook, Hangouts, etc.
-
-
-  🛠️ Connecting a Client
-
-
-  To get started, install the "Element" app on your Umbrel, or install any other Matrix client on a device of your choice. When you register or login through the client, you will need to change the address of the homeserver you are logging into from the default matrix.org to http://umbrel.local:8008 for local access. 
-
-
-  For seamless connection even when your client isn't connected to the same network as your Umbrel, simply install the "Tailscale" app on your Umbrel and your client device, and use http://umbrel:8008 as the address of your server.
+description: "Synapse is an open source Matrix homeserver implementation, written and maintained by Element. Matrix is the open standard for secure and interoperable real time communications.\n\n\U0001F4A1 How It Works\n\nTo chat using Matrix, you'll need a client. You can find a list of popular clients here: https://matrix.org/ecosystem/clients/\n\nIn Matrix, each user operates one or more Matrix clients, which connect to a Matrix homeserver. The homeserver stores all personal chat history and user account information, similar to how a mail client connects to an IMAP/SMTP server. Like email, you can either run your own Matrix homeserver to control and own your communications and history, or use a hosted server (e.g., matrix.org). Matrix has no single point of control or mandatory service provider, unlike WhatsApp, Facebook, Hangouts, etc.\n\n\U0001F6E0️ Connecting a Client\n\nTo get started, install the \"Element\" app on your LivOS, or install any other Matrix client on a device of your\
+  \ choice. When you register or login through the client, you will need to change the address of the homeserver you are logging into from the default matrix.org to http://livos.local:8008 for local access. \n\nFor seamless connection even when your client isn't connected to the same network as your LivOS, simply install the \"Tailscale\" app on your LivOS and your client device, and use http://livos:8008 as the address of your server."
 developer: Element
 website: https://element-hq.github.io/synapse/latest/
 dependencies: []
 repo: https://github.com/element-hq/synapse
 support: https://github.com/element-hq/synapse/issues
 port: 8008
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel/commit/c9f0975e766e79d4bd6adf4255cd081f54d654cb
-releaseNotes: >-
-  Key highlights in this release include:
-    - Experimental support for invite blocking
-    - Ability to restart delayed event timeouts on workers
-    - Fixed a database query issue that could cause unnecessarily long query times
-    - Fixed issues with room version 12 and invalid canonical alias content
-
-
-  Full release notes are found at https://github.com/element-hq/synapse/releases
+releaseNotes: "Key highlights in this release include:\n  - Experimental support for invite blocking\n  - Ability to restart delayed event timeouts on workers\n  - Fixed a database query issue that could cause unnecessarily long query times\n  - Fixed issues with room version 12 and invalid canonical alias content\n\n\nFull release notes are found at https://github.com/element-hq/synapse/releases"

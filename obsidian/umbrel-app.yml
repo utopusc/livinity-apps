@@ -2,10 +2,9 @@ manifestVersion: 1
 id: obsidian
 category: files
 name: Obsidian
-version: "1.8.10"
+version: 1.8.10
 tagline: The private and flexible writing app that adapts to the way you think
-description: >-
-  **Your thoughts are yours.**
+description: '**Your thoughts are yours.**
 
   Obsidian stores notes on your device, so you can access them quickly, even offline. No one else can read them, not even us.
 
@@ -17,22 +16,12 @@ description: >-
 
   **Your knowledge should last.**
 
-  Obsidian uses open, non-proprietary files, so you're never locked in, and can preserve your data for the long term.
-releaseNotes: >-
-  This release of Obsidian brings a bug fix:
-    - Fixed numbering issues in lists with leading spaces or within block quotes
-
-  Full release notes are available at https://obsidian.md/changelog/
+  Obsidian uses open, non-proprietary files, so you''re never locked in, and can preserve your data for the long term.'
+releaseNotes: "This release of Obsidian brings a bug fix:\n  - Fixed numbering issues in lists with leading spaces or within block quotes\n\nFull release notes are available at https://obsidian.md/changelog/"
 developer: Obsidian
 website: https://obsidian.md/
 dependencies: []
 repo: https://github.com/linuxserver/docker-obsidian
 support: https://github.com/linuxserver/docker-obsidian/issues
 port: 3435
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-submitter: al-lac
-submission: https://github.com/getumbrel/umbrel-apps/pull/1921
+path: ''

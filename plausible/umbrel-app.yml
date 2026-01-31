@@ -2,43 +2,19 @@ manifestVersion: 1
 id: plausible
 category: developer
 name: Plausible Analytics
-version: "3.1.0"
+version: 3.1.0
 tagline: Easy to use and privacy-friendly Google Analytics alternative
-description: >-
-  Plausible is intuitive, lightweight and open source web analytics.
-  No cookies and fully compliant with GDPR, CCPA and PECR.
+description: 'Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR.
 
 
-  ⚙️ You may need to expose Plausible to the web in order to use the app in its intended way with websites.
-  The easiest way to do this is to use the 'Cloudflare Tunnel' app from the Umbrel app store, and expose Plausible to the internet using your own domain.
-releaseNotes: >-
-  This release introduces several new features and improvements:
-
-
-    - New dynamic and more configurable tracking snippet and script (legacy scripts continue to work)
-    - Custom events can now be marked as non-interactive and won't count towards bounce rate
-    - Ability to leave team via Team Settings
-    - Properties are now included in full site exports
-    - Weekly and monthly email reports now contain top goal conversions
-    - Ability to enforce enabling 2FA by all team members
-    - Revamped dark theme with darker color scheme and better visual hierarchy
-    - Main graph no longer shows empty values after current time for day, month and year periods
-    - Fixed realtime and hourly graphs overcounting visits and duration metrics
-
-
-  Full release notes are available at https://github.com/plausible/analytics/releases
+  ⚙️ You may need to expose Plausible to the web in order to use the app in its intended way with websites. The easiest way to do this is to use the ''Cloudflare Tunnel'' app from the LivOS app store, and expose Plausible to the internet using your own domain.'
+releaseNotes: "This release introduces several new features and improvements:\n\n\n  - New dynamic and more configurable tracking snippet and script (legacy scripts continue to work)\n  - Custom events can now be marked as non-interactive and won't count towards bounce rate\n  - Ability to leave team via Team Settings\n  - Properties are now included in full site exports\n  - Weekly and monthly email reports now contain top goal conversions\n  - Ability to enforce enabling 2FA by all team members\n  - Revamped dark theme with darker color scheme and better visual hierarchy\n  - Main graph no longer shows empty values after current time for day, month and year periods\n  - Fixed realtime and hourly graphs overcounting visits and duration metrics\n\n\nFull release notes are available at https://github.com/plausible/analytics/releases"
 developer: Plausible Community Edition
 website: https://plausible.io/
 repo: https://github.com/plausible/analytics
 support: https://github.com/plausible/community-edition/issues
 port: 9092
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 dependencies: []
-submitter: ~dibref-labter
-submission: https://github.com/getumbrel/umbrel-apps/pull/1371

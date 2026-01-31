@@ -2,10 +2,9 @@ manifestVersion: 1
 id: vikunja
 category: files
 name: Vikunja
-version: "0.24.6"
+version: 0.24.6
 tagline: The open-source, self-hostable to-do app
-description: >-
-  Think of Vikunja like the notebook you have with all your things to keep track of. But with superpowers.
+description: 'Think of Vikunja like the notebook you have with all your things to keep track of. But with superpowers.
 
 
   🗂️ Stay Organized
@@ -15,28 +14,21 @@ description: >-
 
   👥 Collaborate With Peers
 
-  Vikunja lets you easily share a project with another user or a whole team! Assignments show who's working on what.
+  Vikunja lets you easily share a project with another user or a whole team! Assignments show who''s working on what.
 
 
   🛠️ Use It How You Need It
 
-  You can view your tasks in the classic list view - or in a Gantt Chart, or Table view, or Kanban Board. Whatever you need!
-releaseNotes: >-
-  ⚠️ This release contains an important security fix that addresses a vulnerability which allowed accessing other user's task data.
+  You can view your tasks in the classic list view - or in a Gantt Chart, or Table view, or Kanban Board. Whatever you need!'
+releaseNotes: '⚠️ This release contains an important security fix that addresses a vulnerability which allowed accessing other user''s task data.
 
 
-  Full release notes are available at https://vikunja.io/changelog/
+  Full release notes are available at https://vikunja.io/changelog/'
 developer: Vikunja
 website: https://vikunja.io/
 dependencies: []
 repo: https://github.com/go-vikunja
 support: https://community.vikunja.io/
 port: 4523
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 deterministicPassword: false
-submitter: Pranshu Agrawal
-submission: https://github.com/getumbrel/umbrel-apps/pull/694

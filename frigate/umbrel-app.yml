@@ -2,11 +2,9 @@ manifestVersion: 1
 id: frigate
 category: automation
 name: Frigate
-version: "0.16.3"
+version: 0.16.3
 tagline: A complete and local NVR
-description: >-
-  A complete and local NVR designed for Home Assistant with AI object detection. 
-  Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.
+description: 'A complete and local NVR designed for Home Assistant with AI object detection.  Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.
 
 
   🛠️ SET-UP
@@ -15,37 +13,16 @@ description: >-
   - You can configure your cameras directly within the Frigate app, there is no need to manually edit the configuration files.
 
 
-  - Your RTSP password (if needed) is the "default app password" that is displayed on Frigate's page in the app store (shown after install).
-releaseNotes: >-
-  ⚠️ As usual, Frigate will attempt to update its configuration automatically. It is still recommended to back up your current config and database before upgrading.
-
-
-  This release includes a security fix for authenticated users:
-    - Fixed a vulnerability that could allow viewer users to delete admin and other user accounts
-
-
-  Other improvements in this update include:
-    - Improved recording playback efficiency
-    - Fixed certificate generation crash when using webpush notifications
-    - Fixed YOLOv9 and RF-DETR model export functionality
-    - Updated documentation for various camera models and hardware
-
-
-  Full release notes are available at https://github.com/blakeblackshear/frigate/releases
+  - Your RTSP password (if needed) is the "default app password" that is displayed on Frigate''s page in the app store (shown after install).'
+releaseNotes: "⚠️ As usual, Frigate will attempt to update its configuration automatically. It is still recommended to back up your current config and database before upgrading.\n\nThis release includes a security fix for authenticated users:\n  - Fixed a vulnerability that could allow viewer users to delete admin and other user accounts\n\n\nOther improvements in this update include:\n  - Improved recording playback efficiency\n  - Fixed certificate generation crash when using webpush notifications\n  - Fixed YOLOv9 and RF-DETR model export functionality\n  - Updated documentation for various camera models and hardware\n\n\nFull release notes are available at https://github.com/blakeblackshear/frigate/releases"
 developer: Blake Blackshear
 website: https://frigate.video/
 repo: https://github.com/blakeblackshear/frigate
 support: https://github.com/blakeblackshear/frigate/issues
 port: 5004
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
+path: ''
+defaultUsername: ''
 deterministicPassword: true
 dependencies: []
 permissions:
-  - GPU
-submitter: ~dibref-labter
-submission: https://github.com/getumbrel/umbrel-apps/pull/843
+- GPU

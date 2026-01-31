@@ -3,20 +3,19 @@ id: akaunting
 name: Akaunting
 tagline: An intuitive accounting solution for small businesses and freelancers
 category: finance
-version: "3.1.20"
+version: 3.1.20
 port: 8773
-description: >-
-  📊 Akaunting is a powerful open-source accounting software that simplifies financial management for small businesses, freelancers, and entrepreneurs. It offers an all-in-one solution to manage income, expenses, invoices, and financial reports, making it easier to maintain an organized and transparent overview of your finances. With its intuitive design and flexible features, Akaunting helps you save time on administrative tasks while improving accuracy and efficiency.
+description: '📊 Akaunting is a powerful open-source accounting software that simplifies financial management for small businesses, freelancers, and entrepreneurs. It offers an all-in-one solution to manage income, expenses, invoices, and financial reports, making it easier to maintain an organized and transparent overview of your finances. With its intuitive design and flexible features, Akaunting helps you save time on administrative tasks while improving accuracy and efficiency.
 
 
   From creating professional invoices to managing customers, vendors, and recurring payments, Akaunting is built to streamline your day-to-day accounting operations. It also includes robust features like multi-currency support for international transactions, online payment integration for faster cash flow, and inventory tracking to keep stock and sales aligned. For those needing even more functionality, its built-in App Store offers a wide range of add-ons to extend the software according to your needs.
 
 
-  ℹ To access most features of the app, you'll need an API key. You can create one on the developer's website: https://akaunting.com
+  ℹ To access most features of the app, you''ll need an API key. You can create one on the developer''s website: https://akaunting.com
 
 
   Key Features:
-  
+
 
   💰 Invoicing - Create, customize, and send professional invoices with ease.
 
@@ -42,31 +41,13 @@ description: >-
   📦 Inventory Management - Track product stock, sales, and purchases in real time.
 
 
-  🔧 App Store Extensions - Expand functionality with add-ons like payroll, advanced reports, or project management.
+  🔧 App Store Extensions - Expand functionality with add-ons like payroll, advanced reports, or project management.'
 developer: Akaunting Inc.
 website: https://akaunting.com/
-submitter: dennysubke
-submission: https://github.com/getumbrel/umbrel-apps/pull/3290
 repo: https://github.com/akaunting/akaunting
 support: https://github.com/akaunting/akaunting/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-  - 5.jpg
-releaseNotes: >-
-  This update brings several new features and important fixes to improve your accounting experience:
-    - You can now attach files to document payments for better record keeping
-    - Empty pages now have helpful action buttons to guide you
-    - Fixed issues with recurring invoices that were causing errors when creating or updating them
-    - Resolved problems with bill status not updating correctly when creating or updating expense transactions
-    - Fixed calculation errors and improved overall performance
-    - Improved handling of attachments when updating bills and through the API
-
-
-  Full release notes can be found at https://github.com/akaunting/akaunting/releases
+releaseNotes: "This update brings several new features and important fixes to improve your accounting experience:\n  - You can now attach files to document payments for better record keeping\n  - Empty pages now have helpful action buttons to guide you\n  - Fixed issues with recurring invoices that were causing errors when creating or updating them\n  - Resolved problems with bill status not updating correctly when creating or updating expense transactions\n  - Fixed calculation errors and improved overall performance\n  - Improved handling of attachments when updating bills and through the API\n\n\nFull release notes can be found at https://github.com/akaunting/akaunting/releases"
 dependencies: []
-path: ""
+path: ''
 defaultUsername: umbrel@umbrel.local
 deterministicPassword: true

@@ -3,38 +3,21 @@ id: linkwarden
 name: Linkwarden
 tagline: Bookmark Preservation for Individuals and Teams
 category: social
-version: "2.13.2"
+version: 2.13.2
 port: 8233
-description: >-
-  📚 Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages.
+description: '📚 Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages.
 
 
   🛜 The objective is to organize useful webpages and articles you find across the web in one place, and since useful webpages can go away (see the inevitability of Link Rot), Linkwarden also saves a copy of each webpage as a Screenshot and PDF, ensuring accessibility even if the original content is no longer available.
 
 
-  👥 Additionally, Linkwarden is designed with collaboration in mind, sharing links with the public and/or allowing multiple users to work together seamlessly.
+  👥 Additionally, Linkwarden is designed with collaboration in mind, sharing links with the public and/or allowing multiple users to work together seamlessly.'
 developer: Linkwarden
 website: https://linkwarden.app
-submitter: al-lac
-submission: https://github.com/getumbrel/umbrel-apps/pull/1817
 repo: https://github.com/linkwarden/linkwarden
 support: https://discord.gg/CtuYV47nuJ
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: ''
+defaultPassword: ''
 dependencies: []
-releaseNotes: >-
-  This update includes the official Linkwarden mobile app launch:
-    - Official mobile app now available on iOS and Android
-    - Create, organize, and browse links with a native mobile experience
-    - Save links directly from the share sheet in any app
-    - Cached data for offline reading
-    - Works with both Linkwarden Cloud and self-hosted instances
-    - Support for phones and tablets
-
-
-  Full release notes can be found at https://github.com/linkwarden/linkwarden/releases
-path: ""
+releaseNotes: "This update includes the official Linkwarden mobile app launch:\n  - Official mobile app now available on iOS and Android\n  - Create, organize, and browse links with a native mobile experience\n  - Save links directly from the share sheet in any app\n  - Cached data for offline reading\n  - Works with both Linkwarden Cloud and self-hosted instances\n  - Support for phones and tablets\n\n\nFull release notes can be found at https://github.com/linkwarden/linkwarden/releases"
+path: ''

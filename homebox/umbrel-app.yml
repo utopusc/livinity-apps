@@ -3,42 +3,16 @@ id: homebox
 name: HomeBox
 tagline: An inventory and organization system built for the home user
 category: files
-version: "0.21.0"
+version: 0.21.0
 port: 7745
-description: >-
-  Homebox is an inventory and organization system built for the home user! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs. 
-  
-
-  Homebox is currently in beta and undergoing active development, meaning that it is not yet feature complete and may contain bugs.
+description: "Homebox is an inventory and organization system built for the home user! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs. \n\nHomebox is currently in beta and undergoing active development, meaning that it is not yet feature complete and may contain bugs."
 developer: SysAdmins Media
 website: https://homebox.software
 repo: https://github.com/sysadminsmedia/homebox
 support: https://github.com/sysadminsmedia/homebox/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 dependencies: []
-path: ""
+path: ''
 torOnly: false
-defaultUsername: ""
-defaultPassword: ""
-releaseNotes: >-
-  ⚠️ It is highly recommended to keep backups of your database and stored attachments for this update.
-
-
-  Key improvements and changes:
-    - Added product fetching using barcodes
-    - Support for listening on unix sockets and systemd sockets
-    - Added plugin to set image sizes in Markdown
-    - Support for postgres certificate authentication
-    - Created hardened docker image (experimental)
-    - Fixed Windows paths
-    - Fixed photo display issue when adding additional attachments to items
-    - Improved search functionality
-    - Various bug fixes and performance improvements
-
-
-  Full release notes can be found at https://github.com/sysadminsmedia/homebox/releases
-submitter: Xosten
-submission: https://github.com/getumbrel/umbrel-apps/pull/501
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: "⚠️ It is highly recommended to keep backups of your database and stored attachments for this update.\n\nKey improvements and changes:\n  - Added product fetching using barcodes\n  - Support for listening on unix sockets and systemd sockets\n  - Added plugin to set image sizes in Markdown\n  - Support for postgres certificate authentication\n  - Created hardened docker image (experimental)\n  - Fixed Windows paths\n  - Fixed photo display issue when adding additional attachments to items\n  - Improved search functionality\n  - Various bug fixes and performance improvements\n\n\nFull release notes can be found at https://github.com/sysadminsmedia/homebox/releases"

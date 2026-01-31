@@ -2,41 +2,19 @@ manifestVersion: 1.1
 id: invoice-ninja
 category: finance
 name: Invoice Ninja
-version: "5.12.39"
+version: 5.12.39
 tagline: We'll help with the invoicing
-description: >-
-  Invoicing, Quotes, Expenses, Tasks.
+description: 'Invoicing, Quotes, Expenses, Tasks.
 
 
-  Invoice Ninja is an invoicing application which makes sending invoices and receiving payments simple and easy. Our latest version is a clean slate rewrite of our popular invoicing application which builds on the existing feature set and adds a wide range of features and enhancements the community has asked for.
+  Invoice Ninja is an invoicing application which makes sending invoices and receiving payments simple and easy. Our latest version is a clean slate rewrite of our popular invoicing application which builds on the existing feature set and adds a wide range of features and enhancements the community has asked for.'
 developer: InvoiceNinja, Inc.
 website: https://invoiceninja.com
 dependencies: []
 repo: https://github.com/invoiceninja/invoiceninja
 support: https://forum.invoiceninja.com/
 port: 8676
-gallery:
-- 1.jpg
-- 2.jpg
-- 3.jpg
 path: ''
-releaseNotes: >-
-  This update includes various improvements and new features:
-    - Fixes for payment tests and notifications
-    - Enhanced handling of PDF variables in group or client settings
-    - Improved domain updates and entity handling
-    - Ensures new contacts are correctly marked as primary
-    - Better flattening of location data for templates
-    - Draft invoices can now be included in dashboard amounts
-    - Fixes for AEAT activity constants
-    - Improved livewire state management
-    - Correct injection of payment adjustments when reversed invoices or credits are deleted
-    - Enhanced credit numbering for PEPPOL, supporting credit note patterns for negative invoices
-    - Implemented Stripe webhook secret
-
-
-  Full release notes are available at https://github.com/invoiceninja/invoiceninja/releases
+releaseNotes: "This update includes various improvements and new features:\n  - Fixes for payment tests and notifications\n  - Enhanced handling of PDF variables in group or client settings\n  - Improved domain updates and entity handling\n  - Ensures new contacts are correctly marked as primary\n  - Better flattening of location data for templates\n  - Draft invoices can now be included in dashboard amounts\n  - Fixes for AEAT activity constants\n  - Improved livewire state management\n  - Correct injection of payment adjustments when reversed invoices or credits are deleted\n  - Enhanced credit numbering for PEPPOL, supporting credit note patterns for negative invoices\n  - Implemented Stripe webhook secret\n\n\nFull release notes are available at https://github.com/invoiceninja/invoiceninja/releases"
 deterministicPassword: true
 defaultUsername: admin@example.com
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/pull/347

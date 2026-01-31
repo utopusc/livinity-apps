@@ -2,65 +2,17 @@ manifestVersion: 1.1
 id: invidious
 category: social
 name: Invidious
-version: "2.20250913.0-1"
+version: 2.20250913.0-1
 tagline: Browse YouTube without tracking or ads
-description: >-
-  An open source alternative front-end to YouTube
-
-
-  User Features:
-   - Lightweight
-   - No ads
-   - No tracking
-   - No JavaScript required
-   - Light/Dark themes
-   - Customizable homepage
-   - Subscriptions independent from Google
-   - Notifications for all subscribed channels
-   - Audio-only mode (with background play on mobile)
-   - Support for Reddit comments
-   - Available in many languages, thanks to our translators
-
-  Data Import/Export:
-   - Import subscriptions from YouTube, NewPipe and Freetube
-   - Import watch history from NewPipe
-   - Export subscriptions to NewPipe and Freetube
-   - Import/Export Invidious user data
-
-  Technical features:
-   - Embedded video support
-   - Developer API
-   - Does not use official YouTube APIs
-   - No Contributor License Agreement (CLA)
-
+description: "An open source alternative front-end to YouTube\n\nUser Features:\n - Lightweight\n - No ads\n - No tracking\n - No JavaScript required\n - Light/Dark themes\n - Customizable homepage\n - Subscriptions independent from Google\n - Notifications for all subscribed channels\n - Audio-only mode (with background play on mobile)\n - Support for Reddit comments\n - Available in many languages, thanks to our translators\n\nData Import/Export:\n - Import subscriptions from YouTube, NewPipe and Freetube\n - Import watch history from NewPipe\n - Export subscriptions to NewPipe and Freetube\n - Import/Export Invidious user data\n\nTechnical features:\n - Embedded video support\n - Developer API\n - Does not use official YouTube APIs\n - No Contributor License Agreement (CLA)"
 developer: IV-Org
 website: https://invidious.io/
 dependencies: []
 repo: https://github.com/iv-org/invidious
 support: https://matrix.to/#/#invidious:matrix.org
 port: 3420
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
-releaseNotes: >-
-  This update fixes playback and startup issues by adding the new companion component.
-
-
-  Other Key Highlights:
-    - DASH now enabled by default due to YouTube stream changes
-    - Graceful handling of parse errors: broken items replaced with error cards
-    - Player upgrades: persistent caption styles and default playlist selection
-    - Enhanced keyboard shortcuts for caption customization
-    - Improved stability for video retrieval without Companion
-    - API gains support for structured parse-error JSON responses
-    - Significant bug fixes for livestream proxying, feeds, playlists, search, and video info
-
-
-  For full release notes, visit https://github.com/iv-org/invidious/releases
-submitter: Jasper
-submission: https://github.com/getumbrel/umbrel-apps/pull/129
+releaseNotes: "This update fixes playback and startup issues by adding the new companion component.\n\nOther Key Highlights:\n  - DASH now enabled by default due to YouTube stream changes\n  - Graceful handling of parse errors: broken items replaced with error cards\n  - Player upgrades: persistent caption styles and default playlist selection\n  - Enhanced keyboard shortcuts for caption customization\n  - Improved stability for video retrieval without Companion\n  - API gains support for structured parse-error JSON responses\n  - Significant bug fixes for livestream proxying, feeds, playlists, search, and video info\n\n\nFor full release notes, visit https://github.com/iv-org/invidious/releases"

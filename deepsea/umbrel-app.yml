@@ -2,109 +2,16 @@ manifestVersion: 1.1
 id: deepsea
 category: bitcoin
 name: DeepSea Dashboard
-version: "1.1.3"
+version: 1.1.3
 tagline: Retro style Ocean dashboard
-description: >-
-  This open-source dashboard monitors Ocean.xyz pool miners in real time. It presents hashrate, profitability, worker status and network metrics through a retro terminal interface. The goal is to keep miners fully informed with minimal fuss.
-  
-
-  ## ⚡ Key Features
-
-  - **⛏️ Live Mining Metrics**  
-    - Real-time hashrate tracking: 60s, 10min, 3h, and 24h  
-    - Profitability analysis in BTC & fiat  
-    - Automatic revenue, cost, and net profit calculation  
-    - Sparkline trend charts for quick insights  
-    - Break-even electricity rate estimator  
-    - Dynamic reward modeling (subsidy + fees)  
-    - Network stats: BTC price, difficulty, hashrate, avg. fees  
-    - Payout monitoring & estimated payout time  
-    - Pool fee alerts with optimal range highlighting  
-    - Ocean.xyz API integration + scraper fallback  
-    - Low Hashrate Mode keeps charts visible during dips  
-
-  - **🌍 Multi-Currency Support**  
-    - Choose from USD, EUR, GBP, JPY, CNY, BRL, and more  
-    - Real-time exchange rates  
-    - Persistent currency preferences  
-    - All earnings & notifications shown in your currency  
-
-  - **👷 Worker Management**  
-    - Centralized fleet overview  
-    - Real-time online/offline status  
-    - Device-level hashrate, temp, and acceptance rate  
-    - Sort & filter by type or status  
-
-  - **🔎 Bitcoin Block Explorer**  
-    - View latest blocks & transaction data  
-    - Details on fees, miner, and difficulty  
-    - Persistent block timer & seamless pagination  
-
-  - **💰 Earnings Overview**  
-    - Daily, weekly, monthly breakdown  
-    - Live fiat conversion  
-    - Historical earnings archive  
-
-  - **🛡️ System Resilience**  
-    - Auto reconnect on network loss  
-    - Polling fallback if live feed fails  
-    - Ocean API fallback for worker list  
-    - Syncs across browser tabs  
-    - Health watchdog & memory protection  
-    - Friendly error page with centralized handling  
-
-  - **🖥️ Retro Meets Modern UI**  
-    - Terminal-style aesthetic with boot sequence  
-    - Floating system monitor  
-    - Responsive for mobile & desktop  
-    - Default **DeepSea** mode with ambient ocean audio  
-    - Live-editable Docker container layout  
-
-  ## 🌊 DeepSea Theme
-
-  - Immersive underwater visuals with digital distortions  
-  - Ambient audio with seamless crossfades  
-  - Bitcoin theme cycles through custom audio tracks  
-  - Audio control with volume slider & persistent playback  
-  - Optional new block sound (block.mp3) support  
-
-  ## 💻 Secret Matrix Theme (Easter Egg)
-
-  - Unlock with Konami Code + "MATRIX"  
-  - Animated green matrix rain with rare word drops  
-  - Mobile shortcut: tap card header 10x  
-  - Boot shortcut: press "M" to enter Matrix mode  
-  - Rotating falling characters with cinema-style fonts  
-  - Matrix-themed audio with custom soundtrack  
-
-
-  (This community project is not affiliated with OCEAN)
+description: "This open-source dashboard monitors Ocean.xyz pool miners in real time. It presents hashrate, profitability, worker status and network metrics through a retro terminal interface. The goal is to keep miners fully informed with minimal fuss.\n\n## ⚡ Key Features\n- **⛏️ Live Mining Metrics**  \n  - Real-time hashrate tracking: 60s, 10min, 3h, and 24h  \n  - Profitability analysis in BTC & fiat  \n  - Automatic revenue, cost, and net profit calculation  \n  - Sparkline trend charts for quick insights  \n  - Break-even electricity rate estimator  \n  - Dynamic reward modeling (subsidy + fees)  \n  - Network stats: BTC price, difficulty, hashrate, avg. fees  \n  - Payout monitoring & estimated payout time  \n  - Pool fee alerts with optimal range highlighting  \n  - Ocean.xyz API integration + scraper fallback  \n  - Low Hashrate Mode keeps charts visible during dips  \n\n- **\U0001F30D Multi-Currency Support**  \n  - Choose from USD, EUR, GBP, JPY, CNY, BRL, and more  \n  - Real-time\
+  \ exchange rates  \n  - Persistent currency preferences  \n  - All earnings & notifications shown in your currency  \n\n- **\U0001F477 Worker Management**  \n  - Centralized fleet overview  \n  - Real-time online/offline status  \n  - Device-level hashrate, temp, and acceptance rate  \n  - Sort & filter by type or status  \n\n- **\U0001F50E Bitcoin Block Explorer**  \n  - View latest blocks & transaction data  \n  - Details on fees, miner, and difficulty  \n  - Persistent block timer & seamless pagination  \n\n- **\U0001F4B0 Earnings Overview**  \n  - Daily, weekly, monthly breakdown  \n  - Live fiat conversion  \n  - Historical earnings archive  \n\n- **\U0001F6E1️ System Resilience**  \n  - Auto reconnect on network loss  \n  - Polling fallback if live feed fails  \n  - Ocean API fallback for worker list  \n  - Syncs across browser tabs  \n  - Health watchdog & memory protection  \n  - Friendly error page with centralized handling  \n\n- **\U0001F5A5️ Retro Meets Modern UI**  \n  - Terminal-style\
+  \ aesthetic with boot sequence  \n  - Floating system monitor  \n  - Responsive for mobile & desktop  \n  - Default **DeepSea** mode with ambient ocean audio  \n  - Live-editable Docker container layout  \n\n## \U0001F30A DeepSea Theme\n- Immersive underwater visuals with digital distortions   - Ambient audio with seamless crossfades   - Bitcoin theme cycles through custom audio tracks   - Audio control with volume slider & persistent playback   - Optional new block sound (block.mp3) support  \n## \U0001F4BB Secret Matrix Theme (Easter Egg)\n- Unlock with Konami Code + \"MATRIX\"   - Animated green matrix rain with rare word drops   - Mobile shortcut: tap card header 10x   - Boot shortcut: press \"M\" to enter Matrix mode   - Rotating falling characters with cinema-style fonts   - Matrix-themed audio with custom soundtrack  \n\n(This community project is not affiliated with OCEAN)"
 developer: DJ O₿leezy
 website: https://github.com/Djobleezy/DeepSea-Dashboard
 dependencies: []
 repo: https://github.com/Djobleezy/DeepSea-Dashboard
 support: https://github.com/Djobleezy/DeepSea-Dashboard/issues
 port: 5300
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-path: ""
-releaseNotes: >-
-  This release comes with new features and various improvements and fixes.
-
-  
-  Key Highlights:
-    - Refactored backend into modular blueprints for better scalability
-    - Improved earnings calculations and UI consistency
-    - Enhanced memory management with safer session handling
-    - Reworked scheduler and SSE into separate services
-    - Added dynamic audio controls with theme-aware styling
-    - Strengthened cache and memory cleanup mechanisms
-    - Added regression tests and fixed various UI bugs
-
-
-  Full release notes are available at https://github.com/Djobleezy/DeepSea-Dashboard/releases
-submitter: Léo Haf
-submission: https://github.com/getumbrel/umbrel-apps/pull/2635
+path: ''
+releaseNotes: "This release comes with new features and various improvements and fixes.\n\nKey Highlights:\n  - Refactored backend into modular blueprints for better scalability\n  - Improved earnings calculations and UI consistency\n  - Enhanced memory management with safer session handling\n  - Reworked scheduler and SSE into separate services\n  - Added dynamic audio controls with theme-aware styling\n  - Strengthened cache and memory cleanup mechanisms\n  - Added regression tests and fixed various UI bugs\n\n\nFull release notes are available at https://github.com/Djobleezy/DeepSea-Dashboard/releases"

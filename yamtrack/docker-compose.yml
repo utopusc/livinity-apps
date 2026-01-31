@@ -1,29 +1,20 @@
 version: '3.7'
-
 services:
-  app_proxy:
-    environment:
-      APP_HOST: yamtrack_web_1
-      APP_PORT: 8000
-
   web:
     image: ghcr.io/fuzzygrim/yamtrack:0.24.8@sha256:f5a0651fb7ae4072aedf6d710a69c8dab175aad2157d118e76040ce8b3c1184c
-    # does not work yet rootless
-    # user: "1000:1000"
     restart: on-failure
     security_opt:
-      - no-new-privileges:true
+    - no-new-privileges:true
     depends_on:
-      - redis
+    - redis
     environment:
-        SECRET: ${APP_SEED}
-        REDIS_URL: redis://yamtrack_redis_1:6379
+      SECRET: ${APP_SEED}
+      REDIS_URL: redis://yamtrack_redis_1:6379
     volumes:
-      - ${APP_DATA_DIR}/data/db:/yamtrack/db:rw
-      
+    - ${APP_DATA_DIR}/data/db:/yamtrack/db:rw
   redis:
     image: redis:8.0.2@sha256:b43d2dcbbdb1f9e1582e3a0f37e53bf79038522ccffb56a25858969d7a9b6c11
-    user: "1000:1000"
+    user: 1000:1000
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/redis:/data:rw
+    - ${APP_DATA_DIR}/data/redis:/data:rw

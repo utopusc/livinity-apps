@@ -3,13 +3,12 @@ id: docmost
 name: Docmost
 tagline: An collaborative wiki and documentation software
 category: files
-version: "0.23.2"
+version: 0.23.2
 port: 8941
-description: >-
-  Docmost is an open source collaborative documentation and knowledge management platform designed to help teams create and maintain structured content together. It serves as a modern alternative to tools like Notion and Confluence with a strong focus on real time collaboration and ease of use.
+description: 'Docmost is an open source collaborative documentation and knowledge management platform designed to help teams create and maintain structured content together. It serves as a modern alternative to tools like Notion and Confluence with a strong focus on real time collaboration and ease of use.
 
 
-  At its core Docmost allows multiple users to work on the same document simultaneously without the risk of overwriting each other's changes. Every update appears in real time creating a smooth and intuitive editing experience similar to what users expect from cloud based productivity tools. This real time capability makes Docmost especially suitable for fast moving teams and projects that require collective input and quick iteration.
+  At its core Docmost allows multiple users to work on the same document simultaneously without the risk of overwriting each other''s changes. Every update appears in real time creating a smooth and intuitive editing experience similar to what users expect from cloud based productivity tools. This real time capability makes Docmost especially suitable for fast moving teams and projects that require collective input and quick iteration.
 
 
   The platform features a clean and user friendly rich text editor that supports advanced formatting tables comments and visual content. It integrates with tools such as Excalidraw Drawio and Mermaid to allow for the creation and embedding of diagrams directly within pages. This makes it easier to present ideas processes and relationships visually without needing to switch between applications.
@@ -24,32 +23,13 @@ description: >-
   The core software is licensed under the AGPL which ensures that it remains free and open while encouraging contributions and transparency. For organizations seeking additional features or enterprise level support Docmost also offers a commercial edition with advanced capabilities and dedicated services.
 
 
-  Overall Docmost provides a powerful yet flexible solution for teams that value collaborative knowledge sharing and want full control over their data and workflows.
+  Overall Docmost provides a powerful yet flexible solution for teams that value collaborative knowledge sharing and want full control over their data and workflows.'
 developer: Docmost, Inc.
 website: https://docmost.com/
-submitter: dennysubke
-submission: https://github.com/getumbrel/umbrel-apps/pull/2870
 repo: https://github.com/docmost/docmost
 support: https://github.com/docmost/docmost/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-  - 5.jpg
-  - 6.jpg
-releaseNotes: >-
-  This release includes new features and improvements:
-    - Added workspace and space icon support
-    - Implemented resizable last column in tables
-    - Enhanced page import functionality
-    - Fixed zip page import issue where attachments imports stalled and crashed the server
-    - Improved Confluence import support for table background colors
-    - Updated LDAP supported URL protocols
-
-
-  Full release notes can be found at https://github.com/docmost/docmost/releases
+releaseNotes: "This release includes new features and improvements:\n  - Added workspace and space icon support\n  - Implemented resizable last column in tables\n  - Enhanced page import functionality\n  - Fixed zip page import issue where attachments imports stalled and crashed the server\n  - Improved Confluence import support for table background colors\n  - Updated LDAP supported URL protocols\n\n\nFull release notes can be found at https://github.com/docmost/docmost/releases"
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''

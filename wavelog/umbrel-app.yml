@@ -1,53 +1,17 @@
 manifestVersion: 1.1
 id: wavelog
 name: Wavelog
-version: "2.2.1"
-tagline: "Amateur radio logging software"
-description: >-
-  ⚠️ See below for important set-up instructions.
-
-   Wavelog is a powerful web-based amateur radio logging application that allows you to log and manage your radio contacts with ease. It supports various features like QSO logging, award tracking, and integration with online services like LoTW and eQSL.
-
-  🛠️ SET-UP INSTRUCTIONS
-
-   During the setup wizard, you will be prompted to configure the application's database connection. Please use the following settings:
-
-    - Hostname: wavelog-db
-    - Database: wavelog
-    - Username: wavelog
-    - Password: wavelog
-
-  This ensures that the app will connect to the correct database and function properly.
+version: 2.2.1
+tagline: Amateur radio logging software
+description: "⚠️ See below for important set-up instructions.\n\n Wavelog is a powerful web-based amateur radio logging application that allows you to log and manage your radio contacts with ease. It supports various features like QSO logging, award tracking, and integration with online services like LoTW and eQSL.\n\n\U0001F6E0️ SET-UP INSTRUCTIONS\n\n During the setup wizard, you will be prompted to configure the application's database connection. Please use the following settings:\n\n  - Hostname: wavelog-db\n  - Database: wavelog\n  - Username: wavelog\n  - Password: wavelog\n\nThis ensures that the app will connect to the correct database and function properly."
 category: social
 developer: DF2ET, DJ7NT, HB9HIL, LA8AJA
 website: https://www.wavelog.org
 repo: https://github.com/wavelog/wavelog
 support: https://github.com/wavelog/wavelog/issues
 port: 8099
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 dependencies: []
-submitter: LU5JPL
-submission: https://github.com/getumbrel/umbrel-apps/pull/3323
-releaseNotes: >-
-  This maintenance release includes an important bug fix for the DXCluster functionality and several enhancements.
-
-
-  Key highlights include:
-    - Fixed a critical bug in DXCluster that could flood your server with cluster requests under special circumstances (upgrade highly recommended)
-    - Added date filters for DXCC award, gridsquare map, and CQ WAZ award
-    - Added distance filter in the Advanced Logbook
-    - Added Polska Award
-    - Introduced a new Clubmember Role allowing import/export of ADIFs
-    - Fixed various issues with SimpleFLE logging, station locations, and ADIF exports
-    - Improved LoTW certificate checking and display
-    - Optimized code for geo data handling and added support for more countries
-    - Various fixes for the Advanced Logbook and visitor gridsquare map
-
-
-  Full release notes can be found at https://github.com/wavelog/wavelog/releases
+releaseNotes: "This maintenance release includes an important bug fix for the DXCluster functionality and several enhancements.\n\nKey highlights include:\n  - Fixed a critical bug in DXCluster that could flood your server with cluster requests under special circumstances (upgrade highly recommended)\n  - Added date filters for DXCC award, gridsquare map, and CQ WAZ award\n  - Added distance filter in the Advanced Logbook\n  - Added Polska Award\n  - Introduced a new Clubmember Role allowing import/export of ADIFs\n  - Fixed various issues with SimpleFLE logging, station locations, and ADIF exports\n  - Improved LoTW certificate checking and display\n  - Optimized code for geo data handling and added support for more countries\n  - Various fixes for the Advanced Logbook and visitor gridsquare map\n\n\nFull release notes can be found at https://github.com/wavelog/wavelog/releases"

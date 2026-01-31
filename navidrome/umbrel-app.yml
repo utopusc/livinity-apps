@@ -2,11 +2,9 @@ manifestVersion: 1.1
 id: navidrome
 category: media
 name: Navidrome
-version: "0.59.0"
+version: 0.59.0
 tagline: Your personal streaming service
-description: >-
-  Navidrome is an open source web-based music collection server and streamer.
-  It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!
+description: 'Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It''s like your personal Spotify!
 
 
   Features:
@@ -35,35 +33,14 @@ description: >-
 
   - Transcoding on the fly. Can be set per user/player. Opus encoding is supported
 
-  - Translated to various languages
-
+  - Translated to various languages'
 developer: Navidrome
 website: https://www.navidrome.org/
 dependencies: []
 repo: https://github.com/navidrome/navidrome
 support: https://github.com/navidrome/navidrome/discussions
 port: 4533
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 permissions:
-  - STORAGE_DOWNLOADS
-releaseNotes: >-
-  This release brings significant improvements and new features including scanner enhancements, native scrobble history tracking, user administration CLI commands, and two new themes (SquiddiesGlass and AMusic).
-
-
-  Key highlights include:
-    - Selective folder scanning and file system watcher improvements for better performance
-    - Native scrobble/listen history tracking to record your listening habits
-    - New CLI commands for user management from the terminal
-    - Two new themes: SquiddiesGlass and AMusic (Apple Music inspired)
-    - Improved playlist handling with cross-library relative path support
-    - Enhanced artist information with Deezer integration for bios, top tracks, and related artists
-    - Multiple translation updates and UI improvements
-
-
-  Full release notes are found at https://github.com/navidrome/navidrome/releases
-submitter: owmsoton
-submission: https://github.com/getumbrel/umbrel-apps/pull/1232
+- STORAGE_DOWNLOADS
+releaseNotes: "This release brings significant improvements and new features including scanner enhancements, native scrobble history tracking, user administration CLI commands, and two new themes (SquiddiesGlass and AMusic).\n\nKey highlights include:\n  - Selective folder scanning and file system watcher improvements for better performance\n  - Native scrobble/listen history tracking to record your listening habits\n  - New CLI commands for user management from the terminal\n  - Two new themes: SquiddiesGlass and AMusic (Apple Music inspired)\n  - Improved playlist handling with cross-library relative path support\n  - Enhanced artist information with Deezer integration for bios, top tracks, and related artists\n  - Multiple translation updates and UI improvements\n\n\nFull release notes are found at https://github.com/navidrome/navidrome/releases"

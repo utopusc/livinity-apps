@@ -1,45 +1,37 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: core-lightning-rtl_web_1
-      APP_PORT: 3000
-
   web:
     image: shahanafarooqui/rtl:v0.15.6@sha256:5cac3cbe5e730b86c6f888b2b5b4c37faa08fe0232eefda3d6895e2b46629369
     restart: on-failure
     environment:
       PORT: 3000
       APP_PASSWORD: $APP_PASSWORD
-      LN_IMPLEMENTATION: "CLN"
-      lnImplementation: "CLN"
-      LN_SERVER_URL: "https://$APP_CORE_LIGHTNING_DAEMON_IP:$CORE_LIGHTNING_REST_PORT"
-      RUNE_PATH: "/root/.lightning/.commando-env"
-      RTL_CONFIG_PATH: "/data"
-      RTL_COOKIE_PATH: "/data/.cookie"
-      BLOCK_EXPLORER_URL: "${APP_CORE_RTL_BLOCK_EXPLORER_URL}"
-      # Boltz
-      BOLTZ_SERVER_URL: "https://core-lightning-rtl_boltz_1:9003"
-      BOLTZ_MACAROON_PATH: "/boltz/.boltz/macaroons"
+      LN_IMPLEMENTATION: CLN
+      lnImplementation: CLN
+      LN_SERVER_URL: https://$APP_CORE_LIGHTNING_DAEMON_IP:$CORE_LIGHTNING_REST_PORT
+      RUNE_PATH: /root/.lightning/.commando-env
+      RTL_CONFIG_PATH: /data
+      RTL_COOKIE_PATH: /data/.cookie
+      BLOCK_EXPLORER_URL: ${APP_CORE_RTL_BLOCK_EXPLORER_URL}
+      BOLTZ_SERVER_URL: https://core-lightning-rtl_boltz_1:9003
+      BOLTZ_MACAROON_PATH: /boltz/.boltz/macaroons
     volumes:
-      - "${APP_DATA_DIR}/data/rtl:/data"
-      - "${APP_CORE_LIGHTNING_DATA_DIR}:/root/.lightning:ro"
-      - "${APP_DATA_DIR}/data/boltz:/boltz:ro"
-
+    - ${APP_DATA_DIR}/data/rtl:/data
+    - ${APP_CORE_LIGHTNING_DATA_DIR}:/root/.lightning:ro
+    - ${APP_DATA_DIR}/data/boltz:/boltz:ro
   boltz:
     image: boltz/boltz-client:2.8.9@sha256:90c36cf9345d60743e8fc43f65f289b9846fb86deb4d695ef2d50641311a2370
-    restart: "on-failure"
-    stop_grace_period: "1m"
+    restart: on-failure
+    stop_grace_period: 1m
     environment:
-      HOME: "/data"
+      HOME: /data
     volumes:
-      - "${APP_DATA_DIR}/data/boltz:/data"
-      - "${APP_CORE_LIGHTNING_DATA_DIR}:/cln:ro"
+    - ${APP_DATA_DIR}/data/boltz:/data
+    - ${APP_CORE_LIGHTNING_DATA_DIR}:/cln:ro
     command:
-      - --network=$APP_BITCOIN_NETWORK
-      - --cln.datadir=/cln
-      - --cln.host=$APP_CORE_LIGHTNING_DAEMON_IP
-      - --cln.port=$APP_CORE_LIGHTNING_DAEMON_GRPC_PORT
-      - --rpc.rest.host="0.0.0.0"
-      - --rpc.rest.port="9003"
+    - --network=$APP_BITCOIN_NETWORK
+    - --cln.datadir=/cln
+    - --cln.host=$APP_CORE_LIGHTNING_DAEMON_IP
+    - --cln.port=$APP_CORE_LIGHTNING_DAEMON_GRPC_PORT
+    - --rpc.rest.host="0.0.0.0"
+    - --rpc.rest.port="9003"

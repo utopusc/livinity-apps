@@ -3,51 +3,18 @@ id: ollama
 name: Ollama
 tagline: Self-host open source AI models like DeepSeek-R1, Llama, and more
 category: ai
-version: "0.12.10"
+version: 0.12.10
 port: 11434
-description: >-
-  Ollama allows you to download and run advanced AI models directly on your own hardware. Self-hosting AI models ensures full control over your data and protects your privacy.
-
-
-  ⚠️ Before running a model, make sure your device has enough free RAM to support it. Attempting to run a model that exceeds your available memory could cause your device to crash or become unresponsive. Always check the model requirements before downloading or starting it.
-
-
-  **Getting Started:**
-
-  The easiest way to get started with Ollama is to install the Open WebUI app from the Umbrel App Store. Open WebUI will automatically connect to your Ollama setup, allowing you to manage model downloads and chat with your AI models effortlessly.
-
-
-  **Advanced Setup:**
-
-  If you want to connect Ollama to other apps or devices, here's how:
-    - Apps running on UmbrelOS: Use ollama_ollama_1 as the host and 11434 as the port when configuring other apps to connect to Ollama. For example, the API Base URL would be: http://ollama_ollama_1:11434.
-    - Custom Integrations: Connect Ollama to third-party apps or your own code using your UmbrelOS local domain (e.g., http://umbrel.local:11434) or your device's IP address, which you can find in the UmbrelOS Settings page (e.g., http://192.168.4.74:11434).
+description: "Ollama allows you to download and run advanced AI models directly on your own hardware. Self-hosting AI models ensures full control over your data and protects your privacy.\n\n⚠️ Before running a model, make sure your device has enough free RAM to support it. Attempting to run a model that exceeds your available memory could cause your device to crash or become unresponsive. Always check the model requirements before downloading or starting it.\n\n**Getting Started:**\nThe easiest way to get started with Ollama is to install the Open WebUI app from the LivOS App Store. Open WebUI will automatically connect to your Ollama setup, allowing you to manage model downloads and chat with your AI models effortlessly.\n\n**Advanced Setup:**\nIf you want to connect Ollama to other apps or devices, here's how:\n  - Apps running on LivOSOS: Use ollama_ollama_1 as the host and 11434 as the port when configuring other apps to connect to Ollama. For example, the API Base URL would be: http://ollama_ollama_1:11434.\n\
+  \  - Custom Integrations: Connect Ollama to third-party apps or your own code using your LivOSOS local domain (e.g., http://livos.local:11434) or your device's IP address, which you can find in the LivOSOS Settings page (e.g., http://192.168.4.74:11434)."
 backupIgnore:
-  - data/*
+- data/*
 developer: Ollama
 website: https://ollama.com/
-submitter: al-lac
-submission: https://github.com/getumbrel/umbrel-apps/pull/2114
 repo: https://github.com/ollama/ollama
 support: https://github.com/ollama/ollama/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: ''
+defaultPassword: ''
 dependencies: []
-releaseNotes: >-
-  This release contains various improvements and bug fixes.
-
-
-  Key highlights in this release:
-    - Ollama run now works with embedding models to generate vector embeddings from text
-    - Fixed errors when running qwen3-vl:235b and qwen3-vl:235b-instruct
-    - Fixed hanging issues due to CPU discovery
-    - Improved performance for qwen3-vl models with flash attention support
-    - Ollama will now stop running a model before removing it
-
-
-  Full release notes are available at https://github.com/ollama/ollama/releases
-path: ""
+releaseNotes: "This release contains various improvements and bug fixes.\n\nKey highlights in this release:\n  - Ollama run now works with embedding models to generate vector embeddings from text\n  - Fixed errors when running qwen3-vl:235b and qwen3-vl:235b-instruct\n  - Fixed hanging issues due to CPU discovery\n  - Improved performance for qwen3-vl models with flash attention support\n  - Ollama will now stop running a model before removing it\n\n\nFull release notes are available at https://github.com/ollama/ollama/releases"
+path: ''

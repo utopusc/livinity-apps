@@ -2,52 +2,16 @@ manifestVersion: 1.1
 id: romm
 category: media
 name: RomM
-version: "4.3.2"
+version: 4.3.2
 tagline: A beautiful, powerful, self-hosted rom manager
-description: >-
-  👾 RomM (ROM Manager) allows you to scan, enrich, browse and play your game collection with a clean and responsive interface.
-
-
-  🎮 With support for multiple platforms, various naming schemes, and custom tags, RomM is a must-have for anyone who plays on emulators.
-
-
-  **Features**
-    - Scans your existing games library and enhances it with metadata from IGDB and MobyGames
-    - Supports a large number of platforms
-    - Play games directly from the browser using EmulatorJS and RuffleRS
-    - Share your library with friends while limiting access and permissions
-    - Supports MAME, Nintendo Switch, and Sony Playstation naming schemes
-    - Detects and groups multifile games (e.g. PS1 games with multiple CDs)
-    - Can parse tags in filenames (e.g. (E), (USA), (rev v1), etc.)
-    - View, upload, update, and delete games from any modern web browser
+description: "\U0001F47E RomM (ROM Manager) allows you to scan, enrich, browse and play your game collection with a clean and responsive interface.\n\n\U0001F3AE With support for multiple platforms, various naming schemes, and custom tags, RomM is a must-have for anyone who plays on emulators.\n\n**Features**\n  - Scans your existing games library and enhances it with metadata from IGDB and MobyGames\n  - Supports a large number of platforms\n  - Play games directly from the browser using EmulatorJS and RuffleRS\n  - Share your library with friends while limiting access and permissions\n  - Supports MAME, Nintendo Switch, and Sony Playstation naming schemes\n  - Detects and groups multifile games (e.g. PS1 games with multiple CDs)\n  - Can parse tags in filenames (e.g. (E), (USA), (rev v1), etc.)\n  - View, upload, update, and delete games from any modern web browser"
 developer: rommapp
 website: https://github.com/rommapp/romm
 repo: https://github.com/rommapp/romm
 support: https://github.com/rommapp/romm/issues
 port: 4002
-submitter: Mateo Silguero
-submission: https://github.com/getumbrel/umbrel-apps/pull/2020
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
-releaseNotes: >-
-  This release includes several new features and improvements:
-    - Experimental service to cache API requests (toggle "Enable experimental request cache" under UI settings)
-    - QR code support for all DS platforms
-    - Button to delete manuals
-    - Improved HowLongToBeat integration
-    - Enhanced user email and username validation
-
-
-  Other improvements include:
-    - Updated OIDC functionality
-    - Improved Tinfoil TitleDB sanitization
-    - Various bug fixes and performance enhancements
-
-
-  Full release notes can be found at https://github.com/rommapp/romm/releases
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+releaseNotes: "This release includes several new features and improvements:\n  - Experimental service to cache API requests (toggle \"Enable experimental request cache\" under UI settings)\n  - QR code support for all DS platforms\n  - Button to delete manuals\n  - Improved HowLongToBeat integration\n  - Enhanced user email and username validation\n\n\nOther improvements include:\n  - Updated OIDC functionality\n  - Improved Tinfoil TitleDB sanitization\n  - Various bug fixes and performance enhancements\n\n\nFull release notes can be found at https://github.com/rommapp/romm/releases"

@@ -2,11 +2,9 @@ manifestVersion: 1
 id: usocial
 category: social
 name: usocial
-version: "0.1.7-build-1"
+version: 0.1.7-build-1
 tagline: Read. Listen. Pay back.
-description: >-
-  The podcast client and feed reader for your personal server. With
-  Lightning Network support.
+description: 'The podcast client and feed reader for your personal server. With Lightning Network support.
 
 
   - Simple interface (minimalist HN-like design)
@@ -19,21 +17,15 @@ description: >-
 
   - Search podcasts from Podcast Index
 
-  - Support for the Podcasting 2.0 value tag, sending Bitcoin payments to podcast creators over the Lightning Network
+  - Support for the Podcasting 2.0 value tag, sending Bitcoin payments to podcast creators over the Lightning Network'
 developer: Ioan Bizău
 website: http://usocial.me
 dependencies:
-  - lightning
+- lightning
 repo: https://github.com/ibz/usocial
 support: https://github.com/ibz/usocial/issues
 port: 8448
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 deterministicPassword: true
 torOnly: false
-submitter: Ioan Bizău
-submission: https://github.com/getumbrel/umbrel/pull/1247
-releaseNotes: ""
+releaseNotes: ''

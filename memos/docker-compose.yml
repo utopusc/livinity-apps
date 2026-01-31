@@ -1,19 +1,12 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: memos_main_1
-      APP_PORT: 5230
-      PROXY_AUTH_ADD: "false"
-
   main:
     image: neosmemo/memos:0.25.3@sha256:40db300a188ede0c2cf1fc0c49741a03077478d6891fd3ace05c16d702b536a6
-    user: "1000:1000"
+    user: 1000:1000
     environment:
-      - MEMOS_MODE=prod
-      - MEMOS_PORT=5230
+    - MEMOS_MODE=prod
+    - MEMOS_PORT=5230
     restart: on-failure
     stop_grace_period: 1m
     volumes:
-      - ${APP_DATA_DIR}/data:/var/opt/memos
+    - ${APP_DATA_DIR}/data:/var/opt/memos

@@ -2,44 +2,26 @@ manifestVersion: 1.1
 id: wikijs
 category: developer
 name: WikiJS
-version: "2.5.308"
+version: 2.5.308
 tagline: Make documentation a joy to write
-description: >-
-  The most powerful and extensible open source Wiki software.
+description: 'The most powerful and extensible open source Wiki software.
 
 
-  Not all teams need the same set of features. That's why Wiki.js offers a wide range of modules that can be turned on/off on demand.
+  Not all teams need the same set of features. That''s why Wiki.js offers a wide range of modules that can be turned on/off on demand.
 
 
-  It's not just about being free, it also means anyone can contribute new features and help squash bugs. Wiki.js is proudly licensed under AGPLv3.
+  It''s not just about being free, it also means anyone can contribute new features and help squash bugs. Wiki.js is proudly licensed under AGPLv3.
 
 
-  Connect your wiki with an ever-expanding list of external integrations for authentication, logging, rendering, search and storage.
+  Connect your wiki with an ever-expanding list of external integrations for authentication, logging, rendering, search and storage.'
 developer: Requarks
 website: https://js.wiki/
 dependencies: []
 repo: https://github.com/requarks/wiki
 support: https://js.wiki/support
 port: 9182
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
-releaseNotes: >-
-  This update includes several new features and bug fixes:
-
-    - Added support for setting groups based on Azure groups
-    - Improved handling of code blocks in print view
-    - Added support for Elasticsearch 8.x
-    - Enhanced security for password resets and JWT token renewals
-    - Improved compatibility with newer versions of Node.js
-    - Added support for custom GitLab endpoints for self-managed instances
-    - Various UI improvements and bug fixes
-
-  Full release notes are found at https://github.com/requarks/wiki/releases
-submitter: Pranshu Agrawal
-submission: https://github.com/getumbrel/umbrel-apps/pull/273
+releaseNotes: "This update includes several new features and bug fixes:\n\n  - Added support for setting groups based on Azure groups\n  - Improved handling of code blocks in print view\n  - Added support for Elasticsearch 8.x\n  - Enhanced security for password resets and JWT token renewals\n  - Improved compatibility with newer versions of Node.js\n  - Added support for custom GitLab endpoints for self-managed instances\n  - Various UI improvements and bug fixes\n\nFull release notes are found at https://github.com/requarks/wiki/releases"

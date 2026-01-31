@@ -3,51 +3,14 @@ id: nginx-proxy-manager
 name: Nginx Proxy Manager
 tagline: Expose your services easily and securely
 category: networking
-version: "2.13.5"
+version: 2.13.5
 port: 4498
-description: >-
-  Expose your apps to the internet easily and securely.
-
-
-  ⚠️ Be cautious when exposing apps to the public internet. Ensure they have proper security, such as login protection, and avoid exposing sensitive apps without adequate safeguards.
-  
-
-  🔧 Nginx Proxy Manager uses port 40080 for HTTP (unsecured) traffic and port 40443 for HTTPS (secured) traffic.
-  To make your apps accessible from the public internet, you will need to set up port forwarding on your router.
-  Forward external port 80 (HTTP) to internal port 40080 and external port 443 (HTTPS) to internal port 40443.
-  
-
-  🔍 Features:
-  
-    - Beautiful and Secure Admin Interface based on Tabler
-    - Easily create forwarding domains, redirections, streams and 404 hosts without knowing anything about Nginx
-    - Free SSL using Let's Encrypt or provide your own custom SSL certificates
-    - Access Lists and basic HTTP Authentication for your hosts
-    - Advanced Nginx configuration available for super users
-    - User management, permissions and audit log  
+description: "Expose your apps to the internet easily and securely.\n\n⚠️ Be cautious when exposing apps to the public internet. Ensure they have proper security, such as login protection, and avoid exposing sensitive apps without adequate safeguards.\n\n\U0001F527 Nginx Proxy Manager uses port 40080 for HTTP (unsecured) traffic and port 40443 for HTTPS (secured) traffic. To make your apps accessible from the public internet, you will need to set up port forwarding on your router. Forward external port 80 (HTTP) to internal port 40080 and external port 443 (HTTPS) to internal port 40443.\n\n\U0001F50D Features:\n\n  - Beautiful and Secure Admin Interface based on Tabler\n  - Easily create forwarding domains, redirections, streams and 404 hosts without knowing anything about Nginx\n  - Free SSL using Let's Encrypt or provide your own custom SSL certificates\n  - Access Lists and basic HTTP Authentication for your hosts\n  - Advanced Nginx configuration available for super users\n  - User\
+  \ management, permissions and audit log  "
 developer: Jamie Curnow
 website: https://nginxproxymanager.com/
-submitter: Sahil Phule
-submission: https://github.com/getumbrel/umbrel-apps/pull/1296
 repo: https://github.com/NginxProxyManager/nginx-proxy-manager
 support: https://github.com/NginxProxyManager/nginx-proxy-manager/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-releaseNotes: >-
-  This update includes several improvements and bug fixes.
-
-
-  Key highlights include:
-    - 🌎 Added support for Vietnamese, Italian, and Dutch languages
-    - 🌎 Updated translations for Polish, Russian, Slovak, and Chinese
-    - Fixed web crashes when viewing Custom Certificates
-    - Available upgrade notification
-    - Mobile interface improvements
-    - Translation improvements for Access List rules
-
-
-  Full release notes are available at https://github.com/NginxProxyManager/nginx-proxy-manager/releases
+releaseNotes: "This update includes several improvements and bug fixes.\n\nKey highlights include:\n  - \U0001F30E Added support for Vietnamese, Italian, and Dutch languages\n  - \U0001F30E Updated translations for Polish, Russian, Slovak, and Chinese\n  - Fixed web crashes when viewing Custom Certificates\n  - Available upgrade notification\n  - Mobile interface improvements\n  - Translation improvements for Access List rules\n\n\nFull release notes are available at https://github.com/NginxProxyManager/nginx-proxy-manager/releases"
 dependencies: []
-path: ""
+path: ''

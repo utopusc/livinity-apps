@@ -3,55 +3,18 @@ id: endurain
 name: Endurain
 tagline: Fitness tracking, Open Source, Self-Hosted
 category: social
-version: "0.16.2"
+version: 0.16.2
 port: 8865
-description: >-
-  Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. 
-
-
-  It's similar to Strava but focused on privacy and customization.
-
-
-  Features:
-
-  - **Seamless Activity Tracking** - Import workouts via manual entry, bulk upload (.gpx and .fit files), or sync automatically with Strava and Garmin Connect
-
-  - **Complete Gear Management** - Monitor usage and performance of your shoes, bicycles, wetsuits, and more
-
-  - **Personalized Dashboard** - View your activity feeds, weekly/monthly statistics, and progress at a glance
-
-  - **Social Connection** - Follow friends, share achievements, and build your fitness community
-
-  - **Customizable Experience** - Enjoy multi-language support, dark/light themes, and interfaces that adapt to admin or user roles
-
-  - **Comprehensive Health Tracking** - Sync body composition data and log weight measurements
-
-  - **Privacy Controls** - Manage who sees your activities with flexible privacy settings
-
-  - **Third-Party Integration** - Connect with your favorite fitness apps for a unified experience
+description: "Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. \n\nIt's similar to Strava but focused on privacy and customization.\n\nFeatures:\n- **Seamless Activity Tracking** - Import workouts via manual entry, bulk upload (.gpx and .fit files), or sync automatically with Strava and Garmin Connect\n- **Complete Gear Management** - Monitor usage and performance of your shoes, bicycles, wetsuits, and more\n- **Personalized Dashboard** - View your activity feeds, weekly/monthly statistics, and progress at a glance\n- **Social Connection** - Follow friends, share achievements, and build your fitness community\n- **Customizable Experience** - Enjoy multi-language support, dark/light themes, and interfaces that adapt to admin or user roles\n- **Comprehensive Health Tracking** - Sync body composition data and log weight measurements\n- **Privacy Controls** - Manage who sees your activities with flexible privacy settings\n\
+  - **Third-Party Integration** - Connect with your favorite fitness apps for a unified experience"
 backupIgnore:
-  - data/logs/*
+- data/logs/*
 developer: João Vitória Silva
 website: https://docs.endurain.com/
-submitter: al-lac
-submission: https://github.com/getumbrel/umbrel-apps/pull/2764
 repo: https://github.com/joaovitoriasilva/endurain
 support: https://github.com/joaovitoriasilva/endurain/issues
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-defaultUsername: "admin"
-defaultPassword: "admin"
+defaultUsername: admin
+defaultPassword: admin
 dependencies: []
-releaseNotes: >-
-  This realease contains various bug fixes and performance improvements.
-
-
-  Bug fixes:
-    - Fixed BMI calculation on manual weight entry
-    - Fixed an issue where no sleep data was retrieved from Garmin Connect when some values were missing
-
-
-  Full release notes can be found at https://github.com/joaovitoriasilva/endurain/releases
-path: ""
+releaseNotes: "This realease contains various bug fixes and performance improvements.\n\nBug fixes:\n  - Fixed BMI calculation on manual weight entry\n  - Fixed an issue where no sleep data was retrieved from Garmin Connect when some values were missing\n\n\nFull release notes can be found at https://github.com/joaovitoriasilva/endurain/releases"
+path: ''

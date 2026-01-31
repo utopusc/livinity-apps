@@ -1,20 +1,14 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: oak-node_web_1
-      APP_PORT: 8100
-
   web:
     image: oak-node.net/oak:v0.3.8@sha256:226e4b91f753babbf166893dfa044ed80eafd00a13e75033c374bd11824ef961
-    user: "1000:1000"
+    user: 1000:1000
     restart: on-failure
     stop_grace_period: 1m
     volumes:
-      - $APP_LIGHTNING_NODE_DATA_DIR:/lnd-dir:ro
-      - ${APP_DATA_DIR}/data:/data
-      - ${APP_DATA_DIR}/log:/oak/log
+    - $APP_LIGHTNING_NODE_DATA_DIR:/lnd-dir:ro
+    - ${APP_DATA_DIR}/data:/data
+    - ${APP_DATA_DIR}/log:/oak/log
     environment:
       ROCKET_PORT: 8100
       ROCKET_ADDRESS: 0.0.0.0

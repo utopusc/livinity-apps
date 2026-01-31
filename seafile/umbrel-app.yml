@@ -2,11 +2,9 @@ manifestVersion: 1
 id: seafile
 category: files
 name: Seafile
-version: "12.0.14"
+version: 12.0.14
 tagline: Reliable and Performant File Sync and Share Solution
-description: >
-  Seafile is an open source file sync&share solution designed for high reliability, performance and productivity.
-  Sync, share and collaborate across devices and teams. Build your team's knowledge base with Seafile's built-in Wiki feature.
+description: 'Seafile is an open source file sync&share solution designed for high reliability, performance and productivity. Sync, share and collaborate across devices and teams. Build your team''s knowledge base with Seafile''s built-in Wiki feature.
 
 
   🔄 Reliable File Syncing
@@ -16,35 +14,22 @@ description: >
 
   🛡️ Built-in File Encryption
 
-  A library can be encrypted by a password choosen by you. Files are encrypted before syncing to the server. Even the system admin can't view the files.
+  A library can be encrypted by a password choosen by you. Files are encrypted before syncing to the server. Even the system admin can''t view the files.
 
 
   🛠️ SET-UP:
 
-  Seafile is configured to work out-of-the-box when installed on Umbrel. However, if you want to be able to upload files from a domain name that is not umbrel.local,
-  open the Seafile app, go to System Admin > Settings and change "FILE_SERVER_ROOT" to /seafhttp.
-releaseNotes: >-
-  This update includes multiple bug fixes and improvements:
-    - Fixed two stored XSS vulnerabilities in terms and conditions and institution admin pages
-    - Added S/MIME email support
-    - Resolved UI issues in share links and user rendering pages
-    - Updated translations for improved localization
+  Seafile is configured to work out-of-the-box when installed on LivOS. However, if you want to be able to upload files from a domain name that is not livos.local, open the Seafile app, go to System Admin > Settings and change "FILE_SERVER_ROOT" to /seafhttp.
 
-
-  Full release notes can be found at https://manual.seafile.com/latest/changelog/server-changelog/
+  '
+releaseNotes: "This update includes multiple bug fixes and improvements:\n  - Fixed two stored XSS vulnerabilities in terms and conditions and institution admin pages\n  - Added S/MIME email support\n  - Resolved UI issues in share links and user rendering pages\n  - Updated translations for improved localization\n\n\nFull release notes can be found at https://manual.seafile.com/latest/changelog/server-changelog/"
 developer: Seafile
 website: https://www.seafile.com/
 dependencies: []
 repo: https://github.com/haiwen/seafile
 support: https://www.seafile.com/en/support/
 port: 8920
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 torOnly: false
-defaultUsername: "umbrel"
+defaultUsername: umbrel
 deterministicPassword: true
-submitter: Pranshu Agrawal
-submission: https://github.com/getumbrel/umbrel-apps/pull/281

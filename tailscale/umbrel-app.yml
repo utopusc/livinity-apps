@@ -2,35 +2,25 @@ manifestVersion: 1
 id: tailscale
 category: networking
 name: Tailscale
-version: "v1.90.9"
-tagline: Zero config VPN to access your Umbrel from anywhere
-description: >-
-  Tailscale is zero config VPN that creates a secure network between
-  your Umbrel and your other devices. Even when separated by firewalls or
-  subnets, Tailscale just works.
+version: v1.90.9
+tagline: Zero config VPN to access your LivOS from anywhere
+description: 'Tailscale is zero config VPN that creates a secure network between your LivOS and your other devices. Even when separated by firewalls or subnets, Tailscale just works.
 
 
-  Tailscale will assign your Umbrel a stable IP and an auto-assigned domain that stays consistent, no matter what network your Umbrel is connected to. It's like a local network that works everywhere.
+  Tailscale will assign your LivOS a stable IP and an auto-assigned domain that stays consistent, no matter what network your LivOS is connected to. It''s like a local network that works everywhere.
 
 
-  Tailscale builds on top of WireGuard®'s Noise protocol encryption, a peer-reviewed and trusted standard.
+  Tailscale builds on top of WireGuard®''s Noise protocol encryption, a peer-reviewed and trusted standard.'
 developer: Tailscale Inc.
 website: https://tailscale.com
 dependencies: []
 repo: https://github.com/tailscale/tailscale
 support: https://tailscale.com/contact/support
 port: 8240
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 deterministicPassword: false
 torOnly: false
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel/pull/1248
-releaseNotes: >-
-  This release includes a number of bug fixes and improvements.
+releaseNotes: 'This release includes a number of bug fixes and improvements.
 
 
-  Full release notes are available at https://tailscale.com/changelog
+  Full release notes are available at https://tailscale.com/changelog'

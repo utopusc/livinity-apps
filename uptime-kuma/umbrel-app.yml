@@ -2,10 +2,9 @@ manifestVersion: 1
 id: uptime-kuma
 category: networking
 name: Uptime Kuma
-version: "2.0.2-auth-proxy-patch"
+version: 2.0.2-auth-proxy-patch
 tagline: Self-hosted uptime monitoring tool
-description: >
-  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
+description: 'Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
 
 
   Features:
@@ -26,37 +25,14 @@ description: >
   - Ping Chart
 
   - Certificate Info
+
+  '
 developer: Louis Lam
 website: https://uptime.kuma.pet
 dependencies: []
 repo: https://github.com/louislam/uptime-kuma
 support: https://github.com/louislam/uptime-kuma/issues
 port: 8385
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultPassword: ""
-releaseNotes: >
-  ⚠️ This is a major version update with some breaking changes. Make sure to have a backup of your data.
-  
-  After the update, a migration will run. This process may take a few minutes, depending on how many monitors you have.
-
-
-  Key highlights in this release:
-    - Added new notification providers: Nextcloud Talk, Brevo, and Evolution API
-    - Improved login with autofocus on 2FA
-    - Added Slovak language to the dropdown menu
-    - Various UI improvements and bug fixes
-
-
-  Security updates:
-    - Fixed a Local File Inclusion vulnerability in the Real-Browser monitor feature
-    - Addressed a Server-side Template Injection issue in Notification Templates
-    - Disable Proxy Auth
-
-
-  Full release notes can be found at https://github.com/louislam/uptime-kuma/releases
-submitter: Philipp Haussleiter
-submission: https://github.com/getumbrel/umbrel/pull/1148
+path: ''
+defaultPassword: ''
+releaseNotes: "⚠️ This is a major version update with some breaking changes. Make sure to have a backup of your data.\nAfter the update, a migration will run. This process may take a few minutes, depending on how many monitors you have.\n\nKey highlights in this release:\n  - Added new notification providers: Nextcloud Talk, Brevo, and Evolution API\n  - Improved login with autofocus on 2FA\n  - Added Slovak language to the dropdown menu\n  - Various UI improvements and bug fixes\n\n\nSecurity updates:\n  - Fixed a Local File Inclusion vulnerability in the Real-Browser monitor feature\n  - Addressed a Server-side Template Injection issue in Notification Templates\n  - Disable Proxy Auth\n\n\nFull release notes can be found at https://github.com/louislam/uptime-kuma/releases\n"

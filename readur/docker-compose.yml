@@ -1,14 +1,8 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      APP_HOST: readur_app_1
-      APP_PORT: 8000
-
   app:
     image: ghcr.io/readur/readur:2.7.0@sha256:a81a2f7286b9f5dcd75511b82ae42563ee0dbe100ad1148c5d4db79b30706656
-    user: "1000:1000"
+    user: 1000:1000
     restart: on-failure
     environment:
       DATABASE_URL: postgresql://readur:readur_password@readur_postgres_1:5432/readur
@@ -28,10 +22,14 @@ services:
       CPU_PRIORITY: normal
       ADMIN_PASSWORD: readur2024
     volumes:
-      - ${APP_DATA_DIR}/data/uploads:/app/uploads
-      - ${APP_DATA_DIR}/data/watch:/app/watch
+    - ${APP_DATA_DIR}/data/uploads:/app/uploads
+    - ${APP_DATA_DIR}/data/watch:/app/watch
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      test:
+      - CMD
+      - curl
+      - -f
+      - http://localhost:8000/api/health
       interval: 30s
       timeout: 10s
       retries: 3
@@ -39,19 +37,20 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-
   postgres:
     image: postgres:17.5@sha256:3962158596daaef3682838cc8eb0e719ad1ce520f88e34596ce8d5de1b6330a1
-    user: "1000:1000"
+    user: 1000:1000
     restart: on-failure
     environment:
       POSTGRES_USER: readur
       POSTGRES_PASSWORD: readur_password
       POSTGRES_DB: readur
     volumes:
-      - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data
+    - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U readur"]
+      test:
+      - CMD-SHELL
+      - pg_isready -U readur
       interval: 10s
       timeout: 5s
       retries: 5

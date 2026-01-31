@@ -2,34 +2,19 @@ manifestVersion: 1
 id: octoprint
 category: files
 name: OctoPrint
-version: "1.11.5"
+version: 1.11.5
 tagline: A snappy web interface for your 3D printer
-description: >-
-  OctoPrint provides a snappy web interface for controlling consumer 3D printers.
-  OctoPrint's powerful plugin system allows extending its functionality with awesome plugins from the community.
+description: 'OctoPrint provides a snappy web interface for controlling consumer 3D printers. OctoPrint''s powerful plugin system allows extending its functionality with awesome plugins from the community.
 
 
-  Plug your 3D printer into your Umbrel to control and monitor every aspect of your 3D printer and your printing jobs right from within your browser.
+  Plug your 3D printer into your LivOS to control and monitor every aspect of your 3D printer and your printing jobs right from within your browser.'
 developer: OctoPrint
 website: https://octoprint.org/
 repo: https://github.com/OctoPrint/OctoPrint
 support: https://community.octoprint.org/
 port: 5003
-submitter: mateosilguero
-releaseNotes: >-
-  This release primarily focuses on bug fixes and improvements:
-    - Fixed an issue causing file uploads with non-latin characters to fail
-    - Corrected a logic error in a file search helper
-    - Improved plugin installation for legacy packages in the Backup Plugin
-
-
-  Full release notes are found at https://github.com/OctoPrint/OctoPrint/releases
-submission: https://github.com/getumbrel/umbrel-apps/pull/449
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+releaseNotes: "This release primarily focuses on bug fixes and improvements:\n  - Fixed an issue causing file uploads with non-latin characters to fail\n  - Corrected a logic error in a file search helper\n  - Improved plugin installation for legacy packages in the Backup Plugin\n\n\nFull release notes are found at https://github.com/OctoPrint/OctoPrint/releases"
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''

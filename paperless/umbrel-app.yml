@@ -2,10 +2,9 @@ manifestVersion: 1
 id: paperless
 category: files
 name: Paperless-ngx
-version: "2.20.1"
+version: 2.20.1
 tagline: Transform your physical documents into a searchable online archive
-description: >-
-  Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
+description: 'Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
 
   - Organize and index your scanned documents with tags, correspondents, types, and more.
 
@@ -21,31 +20,16 @@ description: >-
 
   - Supports PDF documents, images, plain text files, Office documents (Word, Excel, Powerpoint, and LibreOffice equivalents)1 and more.
 
-  - Paperless stores your documents plain on disk. Filenames and folders are managed by paperless and their format can be configured freely with different configurations assigned to different documents.
-releaseNotes: >-
-  This update includes bug fixes and improvements:
-    - Improved log viewer functionality
-    - Faster application startup and document processing
-    - Enhanced date display with more relative date options
-    - Better handling of custom fields in search and editing
-    - Various bug fixes related to search, custom field updates, and database readiness checks
-
-
-  Full release notes are found at https://github.com/paperless-ngx/paperless-ngx/releases
+  - Paperless stores your documents plain on disk. Filenames and folders are managed by paperless and their format can be configured freely with different configurations assigned to different documents.'
+releaseNotes: "This update includes bug fixes and improvements:\n  - Improved log viewer functionality\n  - Faster application startup and document processing\n  - Enhanced date display with more relative date options\n  - Better handling of custom fields in search and editing\n  - Various bug fixes related to search, custom field updates, and database readiness checks\n\n\nFull release notes are found at https://github.com/paperless-ngx/paperless-ngx/releases"
 backupIgnore:
-  - data/redisdata/*
+- data/redisdata/*
 developer: Paperless-ngx Community
 website: https://docs.paperless-ngx.com/
 dependencies: []
 repo: https://github.com/paperless-ngx/paperless-ngx
 support: https://github.com/paperless-ngx/paperless-ngx/discussions
 port: 2349
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
-defaultUsername: "admin"
+path: ''
+defaultUsername: admin
 deterministicPassword: true
-submitter: highghlow
-submission: https://github.com/getumbrel/umbrel-apps/pull/1047

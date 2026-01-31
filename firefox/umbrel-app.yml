@@ -2,10 +2,9 @@ manifestVersion: 1.2
 id: firefox
 category: networking
 name: Firefox
-version: "139.0.4"
+version: 139.0.4
 tagline: Firefox is a free and open-source web browser
-description: >-
-  ⚠️ Removal Notice: The Firefox app has been disabled as there are no more updates that work without HTTPS.
+description: '⚠️ Removal Notice: The Firefox app has been disabled as there are no more updates that work without HTTPS.
 
 
   Get the browser that protects what is important.
@@ -20,32 +19,15 @@ description: >-
   Firefox is for everyone:
 
 
-  Available in over 90 languages, and compatible with Windows, Mac and Linux machines, Firefox works no matter what you are using or where you are. Make sure your operating system is up to date for the best experience.
-releaseNotes: >-
-  This release of Firefox brings multiple bug fixes and improvements:
-
-
-    - Fixed Firefox freezing when switching between apps or opening certain panels within the browser
-    - Fixed difficult selection of drop-down menu options in the Firefox preferences page when selected via the in-page search
-    - Fixed various selection issues when triple-clicking text in some situations
-    - Fixed an incorrect filename being used when setting an image as the desktop wallpaper on Windows
-    - Various security fixes
-
-
-  Full release notes are available at https://www.mozilla.org/en-US/firefox/notes/
+  Available in over 90 languages, and compatible with Windows, Mac and Linux machines, Firefox works no matter what you are using or where you are. Make sure your operating system is up to date for the best experience.'
+releaseNotes: "This release of Firefox brings multiple bug fixes and improvements:\n\n\n  - Fixed Firefox freezing when switching between apps or opening certain panels within the browser\n  - Fixed difficult selection of drop-down menu options in the Firefox preferences page when selected via the in-page search\n  - Fixed various selection issues when triple-clicking text in some situations\n  - Fixed an incorrect filename being used when setting an image as the desktop wallpaper on Windows\n  - Various security fixes\n\n\nFull release notes are available at https://www.mozilla.org/en-US/firefox/notes/"
 developer: Mozilla Foundation
 website: https://www.mozilla.org/en-US/firefox/
 dependencies: []
 repo: https://support.mozilla.org/en-US/contribute
 support: https://support.mozilla.org/en-US/products/firefox
 port: 3434
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-path: ""
+path: ''
 deterministicPassword: false
 torOnly: false
-submitter: Pranshu Agrawal
-submission: https://github.com/getumbrel/umbrel-apps/pull/253
 disabled: true

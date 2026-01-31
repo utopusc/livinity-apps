@@ -2,48 +2,26 @@ manifestVersion: 1
 id: plex
 category: media
 name: Plex
-version: "1.42.2.10156"
+version: 1.42.2.10156
 tagline: Stream Movies & TV Shows
-description: >-
-  Stream movies and TV shows, plus 300+ channels of live TV, instantly, without a subscription. Watch live TV and movies anywhere, from any device, with Plex.
+description: 'Stream movies and TV shows, plus 300+ channels of live TV, instantly, without a subscription. Watch live TV and movies anywhere, from any device, with Plex.
 
 
   Plex uses a server to house your media library and player apps to playback the media. Add, access, and share all the entertainment that matters to you, on almost any device.
 
 
-  ⚠️ If you encounter a "not authorized error" when attempting to access your Plex app, please follow the steps in this guide: https://community.umbrel.com/t/fixing-plexs-not-authorized-error/10523
+  ⚠️ If you encounter a "not authorized error" when attempting to access your Plex app, please follow the steps in this guide: https://community.livos.com/t/fixing-plexs-not-authorized-error/10523'
 developer: Plex
 website: https://www.plex.tv/
 dependencies: []
-repo: ""
+repo: ''
 support: https://www.plex.tv/
 port: 32400
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 path: /web
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
 permissions:
-  - STORAGE_DOWNLOADS
-  - GPU
-releaseNotes: >-
-  This update includes several improvements and bug fixes:
-    - Better caching of codec testing to improve start time of playback sessions
-    - Split transcoder slots into CPU and GPU slots for better control
-    - Fixed issues with ad detection logs being placed in the wrong location
-    - Fixed credit detection failures on Windows servers
-    - Fixed permission issues when explicitly setting UID and GID
-    - Fixed issue where existing files in downloads temporary directory would be deleted
-    - Fixed issue where setting maximum simultaneous background video transcode to unlimited would prevent downloads from running
-    - Fixed similar artist tags not being loaded for music
-    - Fixed HEVC optimization resulting in files with no video
-    - Fixed automatic subtitle selection preferring forced subtitles over full subtitles
-    - Fixed software fallback failures when CPU slots were set to unlimited
-
-
-  Full release notes are available at https://www.videohelp.com/software/Plex
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/commit/60878f278d544b204d8e7c96240c797f43a9b319
+- STORAGE_DOWNLOADS
+- GPU
+releaseNotes: "This update includes several improvements and bug fixes:\n  - Better caching of codec testing to improve start time of playback sessions\n  - Split transcoder slots into CPU and GPU slots for better control\n  - Fixed issues with ad detection logs being placed in the wrong location\n  - Fixed credit detection failures on Windows servers\n  - Fixed permission issues when explicitly setting UID and GID\n  - Fixed issue where existing files in downloads temporary directory would be deleted\n  - Fixed issue where setting maximum simultaneous background video transcode to unlimited would prevent downloads from running\n  - Fixed similar artist tags not being loaded for music\n  - Fixed HEVC optimization resulting in files with no video\n  - Fixed automatic subtitle selection preferring forced subtitles over full subtitles\n  - Fixed software fallback failures when CPU slots were set to unlimited\n\n\nFull release notes are available at https://www.videohelp.com/software/Plex"
