@@ -27,5 +27,5 @@ repo: https://github.com/janoside/btc-rpc-explorer
 support: https://github.com/janoside/btc-rpc-explorer/discussions
 port: 3002
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true

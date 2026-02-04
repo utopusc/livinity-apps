@@ -13,5 +13,5 @@ support: https://slack.min.io
 port: 9011
 path: ''
 deterministicPassword: true
-defaultUsername: umbrel
+defaultUsername: livinity
 releaseNotes: "This release includes improvements to system performance and reliability:\n  - Fixed ILM-related S3 listing and upload issues\n  - Improved replication metrics and region config\n  - Enhanced network policy and job egress control\n  - Minor code modernizations and stability fixes\n\n\nFull release notes are found at https://github.com/minio/minio/releases"

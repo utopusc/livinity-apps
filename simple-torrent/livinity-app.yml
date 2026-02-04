@@ -27,7 +27,7 @@ description: 'SimpleTorrent is a a self-hosted remote torrent client that starts
 
 
   ⚠️ SimpleTorrent downloads torrents over the Clearnet, not Tor.'
-releaseNotes: '- SimpleTorrent now utilizes the shared downloads folder that can be accessed by other apps on Umbrel, such as Jellyfin, File Browser, Transmission, Plex, and more.'
+releaseNotes: '- SimpleTorrent now utilizes the shared downloads folder that can be accessed by other apps on Livinity, such as Jellyfin, File Browser, Transmission, Plex, and more.'
 developer: Preston
 website: https://github.com/boypt
 dependencies: []

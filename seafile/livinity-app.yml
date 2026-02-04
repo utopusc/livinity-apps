@@ -31,5 +31,5 @@ support: https://www.seafile.com/en/support/
 port: 8920
 path: ''
 torOnly: false
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true

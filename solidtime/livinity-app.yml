@@ -11,7 +11,7 @@ developer: Solidtime
 website: https://www.solidtime.io/
 repo: https://github.com/solidtime-io/solidtime
 support: https://github.com/solidtime-io/solidtime/issues
-defaultUsername: umbrel@umbrel.local
+defaultUsername: user@livinity.local
 deterministicPassword: true
 defaultPassword: ''
 dependencies: []

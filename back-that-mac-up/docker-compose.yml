@@ -9,9 +9,9 @@ services:
     - ${APP_DATA_DIR}/data:/timemachine
   timemachine:
     image: mbentley/timemachine:smb-20231122@sha256:861560184a5c9f3b4f2a8bef4549ef4168d80c57a9de81b16bc5e6eead24ff3f
-    hostname: umbrel
+    hostname: livinity
     environment:
-      ADVERTISED_HOSTNAME: umbrel
+      ADVERTISED_HOSTNAME: livinity
       CUSTOM_SMB_CONF: 'false'
       CUSTOM_USER: 'false'
       DEBUG_LEVEL: '1'

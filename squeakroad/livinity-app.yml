@@ -19,6 +19,6 @@ repo: https://github.com/yzernik/squeakroad
 support: https://t.me/squeakroad
 port: 18200
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
 releaseNotes: '- Show better error message on failed user signup validation. - Don''t fetch font assets from remote CDN.'

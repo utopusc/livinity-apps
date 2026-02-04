@@ -29,6 +29,6 @@ repo: https://github.com/joinmarket-webui/jam
 support: https://github.com/joinmarket-webui/jam/issues
 port: 5002
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 defaultPassword: ''
 deterministicPassword: true

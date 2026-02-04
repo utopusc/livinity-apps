@@ -28,6 +28,6 @@ support: https://nodered.org/about/community/slack/
 port: 1880
 path: ''
 releaseNotes: "This release includes several bug fixes and minor improvements:\n  - Fixed issues with `RED.comms.subscribe` callbacks\n  - Improved display of the lock icon for read-only users\n  - Enhanced clearing of suggestions when interacting with nodes or ports\n  - Subflow input labels are now shown on virtual ports\n  - Resolved a race condition during project initialization\n  - Added a context menu option to convert a selection into a subflow\n  - Corrected port event cancellation behavior during node selection\n  - Improved handling of plugin names\n  - Fixed an invalid 'dirty' state during redo operations after deployment\n\n\nFull release notes are found at https://github.com/node-red/node-red/releases"
-defaultUsername: umbrel
+defaultUsername: livinity
 defaultPassword: moneyprintergobrrr
 torOnly: false

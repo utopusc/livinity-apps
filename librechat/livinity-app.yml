@@ -14,7 +14,7 @@ developer: Danny Avila
 website: https://librechat.ai/
 repo: https://github.com/danny-avila/LibreChat
 support: https://github.com/danny-avila/LibreChat/issues
-defaultUsername: umbrel@umbrel.local
+defaultUsername: user@livinity.local
 defaultPassword: ''
 deterministicPassword: true
 dependencies: []

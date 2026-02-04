@@ -10,7 +10,7 @@ services:
       database__client: mysql
       database__connection__host: ghost_db_1
       database__connection__user: root
-      database__connection__password: umbrel
+      database__connection__password: livinity
       database__connection__database: ghost
       url: http://${DEVICE_DOMAIN_NAME}:3368
       security__staffDeviceVerification: 'false'
@@ -19,6 +19,6 @@ services:
     restart: on-failure
     user: 1000:1000
     environment:
-      MYSQL_ROOT_PASSWORD: umbrel
+      MYSQL_ROOT_PASSWORD: livinity
     volumes:
     - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw

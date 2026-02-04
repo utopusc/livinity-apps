@@ -27,4 +27,4 @@ releaseNotes: "Key highlights in this release:\n  - Hooks now behave more predic
 dependencies: []
 path: ''
 defaultUsername: admin
-defaultPassword: umbrel
+defaultPassword: livinity

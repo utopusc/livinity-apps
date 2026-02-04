@@ -17,6 +17,6 @@ support: https://t.me/agoradiscussion
 port: 12080
 path: /admin/
 deterministicPassword: true
-defaultUsername: umbrel
+defaultUsername: livinity
 torOnly: false
 releaseNotes: ''

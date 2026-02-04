@@ -49,5 +49,5 @@ support: https://github.com/akaunting/akaunting/issues
 releaseNotes: "This update brings several new features and important fixes to improve your accounting experience:\n  - You can now attach files to document payments for better record keeping\n  - Empty pages now have helpful action buttons to guide you\n  - Fixed issues with recurring invoices that were causing errors when creating or updating them\n  - Resolved problems with bill status not updating correctly when creating or updating expense transactions\n  - Fixed calculation errors and improved overall performance\n  - Improved handling of attachments when updating bills and through the API\n\n\nFull release notes can be found at https://github.com/akaunting/akaunting/releases"
 dependencies: []
 path: ''
-defaultUsername: umbrel@umbrel.local
+defaultUsername: user@livinity.local
 deterministicPassword: true

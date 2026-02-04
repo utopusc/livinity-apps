@@ -41,4 +41,4 @@ port: 25441
 path: ''
 defaultUsername: ''
 defaultPassword: ''
-releaseNotes: "\U0001F389 Specter Desktop is back on the umbrelOS app store and compatible with the latest version of Bitcoin Core!\n\nKey changes in this release:\n  - Specter Desktop is now compatible with Bitcoin Core v28.0\n  - Added wallet export to Jade via QR codes\n  - Fixed backup zip download issues\n  - Various bug fixes and improvements\n\n\nFull release notes and detailed information is available at https://github.com/cryptoadvance/specter-desktop/releases"
+releaseNotes: "\U0001F389 Specter Desktop is back on the LivOS app store and compatible with the latest version of Bitcoin Core!\n\nKey changes in this release:\n  - Specter Desktop is now compatible with Bitcoin Core v28.0\n  - Added wallet export to Jade via QR codes\n  - Fixed backup zip download issues\n  - Various bug fixes and improvements\n\n\nFull release notes and detailed information is available at https://github.com/cryptoadvance/specter-desktop/releases"

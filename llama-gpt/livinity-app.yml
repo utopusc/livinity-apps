@@ -24,13 +24,13 @@ description: 'LlamaGPT is a self-hosted, offline, and private chatbot that provi
 
   An official app from LivOS.'
 releaseNotes: ''
-developer: Umbrel
-website: https://umbrel.com
+developer: Livinity
+website: https://livinity.io
 dependencies: []
 repo: https://github.com/getumbrel/llama-gpt
-support: https://community.umbrel.com
+support: https://community.livinity.io
 port: 1234
 path: ''
 deterministicPassword: false
 torOnly: false
-optimizedForUmbrelHome: true
+optimizedForLivinityHome: true

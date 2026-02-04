@@ -11,7 +11,7 @@ services:
       RESTORE_DEFAULT_CONFIG: 'true'
       REMOVE_LOCK_FILES: 'true'
       ENSURE_WALLET: 'true'
-      APP_USER: umbrel
+      APP_USER: livinity
       APP_PASSWORD: ${APP_PASSWORD}
       jm_network: $APP_BITCOIN_NETWORK
       jm_rpc_host: $APP_BITCOIN_NODE_IP

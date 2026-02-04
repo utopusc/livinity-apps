@@ -30,5 +30,5 @@ support: https://github.com/danielbrendel/hortusfox-web/issues
 releaseNotes: "This release brings the following improvements:\n  - Improved time unit handling for recurring tasks\n  - Refined wording for mail encryption types\n  - Fixed an issue with photo uploads during inventory editing\n  - Added a list view for the history section\n\n\nFull release notes are found at https://github.com/danielbrendel/hortusfox-web/releases"
 dependencies: []
 path: ''
-defaultUsername: umbrel@umbrel.local
+defaultUsername: user@livinity.local
 deterministicPassword: true

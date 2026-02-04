@@ -17,6 +17,6 @@ repo: https://github.com/squeaknode/squeaknode
 support: https://github.com/squeaknode/squeaknode/discussions
 port: 12994
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
 releaseNotes: ''

@@ -19,7 +19,7 @@ developer: Kevin Papst
 website: https://www.kimai.org/
 repo: https://github.com/kimai/kimai
 support: https://github.com/kimai/kimai/discussions
-defaultUsername: umbrel@umbrel.local
+defaultUsername: user@livinity.local
 defaultPassword: changeme
 deterministicPassword: false
 dependencies: []

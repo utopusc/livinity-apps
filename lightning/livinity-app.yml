@@ -24,12 +24,12 @@ releaseNotes: 'This update includes the latest version of LND (v0.20.0-beta).
 
 
   Full LND release notes can be found at https://github.com/lightningnetwork/lnd/releases/tag/v0.20.0-beta'
-developer: Umbrel
-website: https://umbrel.com
+developer: Livinity
+website: https://livinity.io
 dependencies:
 - bitcoin
 repo: https://github.com/getumbrel/umbrel-lightning
-support: https://community.getumbrel.com/c/bitcoin-and-lightning
+support: https://community.getlivinity.io/c/bitcoin-and-lightning
 port: 2101
 path: ''
 defaultPassword: ''

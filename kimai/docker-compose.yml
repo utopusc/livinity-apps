@@ -6,7 +6,7 @@ services:
     - ${APP_DATA_DIR}/data/app:/opt/kimai/var/data
     - ${APP_DATA_DIR}/data/app/plugins:/opt/kimai/var/plugins
     environment:
-      ADMINMAIL: umbrel@umbrel.local
+      ADMINMAIL: user@livinity.local
       ADMINPASS: changeme
       DATABASE_URL: mysql://kimaiuser:${APP_PASSWORD}@kimai_db_1/kimai?charset=utf8mb4&serverVersion=8.3.0
     restart: on-failure

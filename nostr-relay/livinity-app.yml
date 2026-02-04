@@ -22,10 +22,10 @@ description: 'Introducing Nostr Relay — an official app by LivOS.
   Nostr Relay is powered by the open source nostr-rs-relay project — a Rust implementation of Nostr relay. It currently supports the entire relay protocol, including NIP-01, NIP-02, NIP-03, NIP-05, NIP-09, NIP-11, NIP-12, NIP-15, NIP-16, NIP-20, NIP-22, NIP-26, NIP-28, and NIP-33.
 
   '
-releaseNotes: '🎉 Widgets are here for umbrelOS 1.0.
+releaseNotes: '🎉 Widgets are here for LivOS 1.0.
 
 
-  This update brings two new widgets for Nostr Relay, allowing you to see your latest notes and latest event kinds at a glance right from your Umbrel''s home screen:
+  This update brings two new widgets for Nostr Relay, allowing you to see your latest notes and latest event kinds at a glance right from your Livinity''s home screen:
 
 
   - Latest Notes: A widget that displays the latest notes that are synced to your Nostr Relay.
@@ -34,12 +34,12 @@ releaseNotes: '🎉 Widgets are here for umbrelOS 1.0.
   - Latest Events: A widget that shows the latest event kinds that are synced to your Nostr Relay, including posts, reactions, profile updates, and more.
 
 
-  After updating to umbrelOS 1.0, you can add widgets by right-clicking on the home screen and selecting "Edit widgets", or by clicking on Widgets in the Dock.'
-developer: Umbrel
-website: https://umbrel.com
+  After updating to LivOS 1.0, you can add widgets by right-clicking on the home screen and selecting "Edit widgets", or by clicking on Widgets in the Dock.'
+developer: Livinity
+website: https://livinity.io
 dependencies: []
 repo: https://github.com/getumbrel/umbrel-nostr-relay
-support: https://community.getumbrel.com
+support: https://community.getlivinity.io
 port: 4848
 path: ''
 deterministicPassword: false
@@ -54,7 +54,7 @@ widgets:
     type: list
     link: ''
     items:
-    - text: one-click app restarts, arriving in umbrelOS 1.0
+    - text: one-click app restarts, arriving in LivOS 1.0
       subtext: 01:11 Mar 02, 2024
     - text: woop! glad it arrived before christmas! welcome aboard 🫡
       subtext: 03:07 Dec 28, 2023

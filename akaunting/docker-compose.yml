@@ -14,7 +14,7 @@ services:
       DB_PREFIX: asd_
       COMPANY_NAME: My Company
       COMPANY_EMAIL: my@company.com
-      ADMIN_EMAIL: umbrel@umbrel.local
+      ADMIN_EMAIL: user@livinity.local
       ADMIN_PASSWORD: ${APP_PASSWORD}
     depends_on:
     - db

@@ -21,7 +21,7 @@ repo: https://github.com/mopfel-winrux/urbit-umbrel
 support: https://github.com/mopfel-winrux/urbit-umbrel/issues
 port: 8090
 path: /launch
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
 torOnly: false
 releaseNotes: "vere-v4.0 is a major runtime release with the following highlighted features:\n-   A completely rewritten allocator that reduces memory usage and\n    decreases snapshot size.\n-   The mars / urth split, a major refactor of the vere multiprocess\n    architecture.\n-   Stateful urwasm jets, improving on the stateless urwasm capabilities\n    shipped with 410.\n-   Restored compatibility with 2015-era Intel based macbooks. -   Declare compatibility with the upcoming 409-k arvo release. -   Support for the 409 “fastboot” brass pill that reduces ship initial\n    boot time from minutes to seconds.\n-   Support for the 409 spin hint that exposes a call stack for local\n    performance monitoring.\n\nNote that ships that upgrade to vere-v4.0 will be unable to downgrade runtime versions.\n\nFull release notes here: https://github.com/urbit/vere/releases/tag/vere-v4.0"

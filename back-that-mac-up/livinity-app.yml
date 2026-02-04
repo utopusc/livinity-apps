@@ -19,18 +19,18 @@ description: '⚠️ Removal Notice: This app has been removed from the LivOS Ap
   For seamless backups even when your Mac isn''t connected to the same network as your LivOS, simply install Tailscale on your LivOS and your Mac, and use smb://livos as the server address.
 
   '
-releaseNotes: '🎉 Widgets are here for umbrelOS 1.0.
+releaseNotes: '🎉 Widgets are here for LivOS 1.0.
 
 
-  This update brings a new widget for Back That Mac Up, allowing you to see your Time Machine usage at a glance right from your Umbrel''s home screen.
+  This update brings a new widget for Back That Mac Up, allowing you to see your Time Machine usage at a glance right from your Livinity''s home screen.
 
 
-  After updating to umbrelOS 1.0, you can add widgets by right-clicking on the home screen and selecting "Edit widgets", or by clicking on Widgets in the Dock.'
-developer: Umbrel
-website: https://umbrel.com
+  After updating to LivOS 1.0, you can add widgets by right-clicking on the home screen and selecting "Edit widgets", or by clicking on Widgets in the Dock.'
+developer: Livinity
+website: https://livinity.io
 dependencies: []
 repo: https://github.com/getumbrel/umbrel-back-that-mac-up
-support: https://community.getumbrel.com
+support: https://community.getlivinity.io
 port: 3012
 path: ''
 deterministicPassword: false

@@ -26,7 +26,7 @@ port: 8096
 path: ''
 defaultUsername: ''
 defaultPassword: ''
-releaseNotes: "This update adds support for GPU passthrough in umbrelOS 1.5.\n\nThe release notes of the previous version included the following changes.\n\n⚠️ If you're using a reverse proxy, ensure you have explicitly configured trusted proxies before upgrading. See the Jellyfin documentation for more information.\n\nKey improvements in this release:\n  - Fixed issues with metadata search and handling\n  - Improved support for various audio and video formats\n  - Enhanced security for API parameters and proxy configurations\n  - Better handling of ratings and premiere dates\n  - Improved system stability and performance\n\n\nFull release notes can be found at https://github.com/jellyfin/jellyfin/releases"
+releaseNotes: "This update adds support for GPU passthrough in LivOS 1.5.\n\nThe release notes of the previous version included the following changes.\n\n⚠️ If you're using a reverse proxy, ensure you have explicitly configured trusted proxies before upgrading. See the Jellyfin documentation for more information.\n\nKey improvements in this release:\n  - Fixed issues with metadata search and handling\n  - Improved support for various audio and video formats\n  - Enhanced security for API parameters and proxy configurations\n  - Better handling of ratings and premiere dates\n  - Improved system stability and performance\n\n\nFull release notes can be found at https://github.com/jellyfin/jellyfin/releases"
 torOnly: false
 permissions:
 - STORAGE_DOWNLOADS

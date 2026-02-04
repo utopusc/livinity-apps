@@ -15,16 +15,16 @@ description: 'Run your personal Electrum server and connect your Electrum-compat
   An official app from LivOS.
 
   '
-developer: Umbrel
-website: https://umbrel.com/
+developer: Livinity
+website: https://livinity.io/
 dependencies:
 - bitcoin
 repo: https://github.com/getumbrel/umbrel-electrumx
-support: https://community.getumbrel.com/c/bitcoin-and-lightning
+support: https://community.getlivinity.io/c/bitcoin-and-lightning
 port: 1999
 path: ''
 defaultPassword: ''
-releaseNotes: 'This update adds support for Backups in umbrelOS 1.5.
+releaseNotes: 'This update adds support for Backups in LivOS 1.5.
 
   '
 backupIgnore:

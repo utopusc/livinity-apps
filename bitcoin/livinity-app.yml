@@ -17,15 +17,15 @@ description: 'Run your Bitcoin node, powered by Bitcoin Core. Independently stor
 
 
   An official app from LivOS.'
-developer: Umbrel
-website: https://umbrel.com
+developer: Livinity
+website: https://livinity.io
 dependencies: []
 repo: https://github.com/getumbrel/umbrel-bitcoin
-support: https://community.getumbrel.com/c/bitcoin-and-lightning
+support: https://community.getlivinity.io/c/bitcoin-and-lightning
 port: 2100
 path: ''
 defaultPassword: ''
-releaseNotes: "This update brings Bitcoin Core v30.0 and gives you simple, powerful control over which Bitcoin Core version you run.\n  - Switch between the latest or a specific version (v30.0 or v29.2) with confidence.\n  - Smart checks and clear guidance help prevent incompatible settings when changing versions.\n  - UI refinements, bug fixes, and reliability improvements.\n\n\nNote: Version selection affects only the Bitcoin Core version. Your Bitcoin Node app will continue to receive regular updates from the Umbrel App Store."
+releaseNotes: "This update brings Bitcoin Core v30.0 and gives you simple, powerful control over which Bitcoin Core version you run.\n  - Switch between the latest or a specific version (v30.0 or v29.2) with confidence.\n  - Smart checks and clear guidance help prevent incompatible settings when changing versions.\n  - UI refinements, bug fixes, and reliability improvements.\n\n\nNote: Version selection affects only the Bitcoin Core version. Your Bitcoin Node app will continue to receive regular updates from the Livinity App Store."
 widgets:
 - id: stats
   type: four-stats

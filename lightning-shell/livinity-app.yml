@@ -30,7 +30,7 @@ repo: https://ibz.github.io/lightning-shell/
 support: https://ibz.github.io/lightning-shell/issues
 port: 7681
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
 releaseNotes: ''
 disabled: true

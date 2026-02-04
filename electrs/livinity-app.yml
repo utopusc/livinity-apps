@@ -13,12 +13,12 @@ description: 'Run your personal Electrum server and connect your Electrum-compat
   An official app from LivOS.
 
   '
-developer: Umbrel
-website: https://umbrel.com/
+developer: Livinity
+website: https://livinity.io/
 dependencies:
 - bitcoin
 repo: https://github.com/getumbrel/umbrel-electrs
-support: https://community.getumbrel.com/c/bitcoin-and-lightning
+support: https://community.getlivinity.io/c/bitcoin-and-lightning
 port: 2102
 path: ''
 defaultPassword: ''

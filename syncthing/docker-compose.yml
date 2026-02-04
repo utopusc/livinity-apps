@@ -4,7 +4,7 @@ services:
     image: syncthing/syncthing:2.0.12@sha256:7ae77d066e9b81d3d8c312b2f9e1a874a5115680bfde90aff5fc9aece694ec93
     restart: on-failure
     stop_grace_period: 1m
-    hostname: umbrel
+    hostname: livinity
     environment:
     - PUID=1000
     - PGID=1000

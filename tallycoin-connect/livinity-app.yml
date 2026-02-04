@@ -17,7 +17,7 @@ support: https://github.com/djbooth007/tallycoin_connect/issues
 port: 8124
 path: ''
 deterministicPassword: true
-releaseNotes: '🚨 IMPORTANT: If you are using both the Tallycoin Connect and Home Assistant apps on your Umbrel, please update Tallycoin Connect to the latest version before updating Home Assistant. This step ensures a smooth operation by preventing any port conflicts between the two apps.
+releaseNotes: '🚨 IMPORTANT: If you are using both the Tallycoin Connect and Home Assistant apps on your Livinity, please update Tallycoin Connect to the latest version before updating Home Assistant. This step ensures a smooth operation by preventing any port conflicts between the two apps.
 
 
   This update changes the port that Tallycoin Connect runs on from 8123 to 8124. This is to avoid a port conflict with the Home Assistant app, which now runs on port 8123.

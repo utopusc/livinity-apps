@@ -35,5 +35,5 @@ releaseNotes: 'This release includes several improvements and updates to the Sam
   Full release notes are found at https://github.com/dockur/samba/releases/tag/v4.22.6-r0'
 dependencies: []
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true

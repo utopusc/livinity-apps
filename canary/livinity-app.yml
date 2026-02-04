@@ -22,7 +22,7 @@ port: 3005
 dependencies:
 - bitcoin
 - electrs
-releaseNotes: Fixed API connectivity issue that prevented adding wallets when running on Umbrel.
+releaseNotes: Fixed API connectivity issue that prevented adding wallets when running on Livinity.
 path: ''
 defaultUsername: ''
 defaultPassword: ''

@@ -13,6 +13,6 @@ repo: https://github.com/nextcloud/server
 support: https://help.nextcloud.com/categories
 port: 8081
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
 torOnly: false

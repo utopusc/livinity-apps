@@ -38,5 +38,5 @@ support: https://github.com/binwiederhier/ntfy/issues
 releaseNotes: "This release adds a new feature that allows you to require users to log in before they can use the web app.\n\nKey highlights:\n  - New require-login flag to redirect to login page if not logged in\n  - Bug fixes and maintenance improvements\n\n\nFull release notes can be found at https://github.com/binwiederhier/ntfy/releases"
 dependencies: []
 path: ''
-defaultUsername: umbrel
+defaultUsername: livinity
 deterministicPassword: true
