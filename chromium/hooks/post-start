@@ -18,16 +18,21 @@ fi
 
 REDIS_CMD="redis-cli -a $REDIS_PASSWORD --no-auth-warning"
 
+# Wait for CDP to be ready (avoid early MCP connection failures)
+sleep 3
+
 # Build the MCP config JSON
 CONTAINER_NAME="chromium_server_1"
 MCP_CONFIG=$(cat <<'MCPJSON'
 {
   "mcpServers": {
     "browser": {
+      "name": "browser",
       "transport": "stdio",
       "command": "docker",
-      "args": ["exec", "-i", "chromium_server_1", "npx", "@playwright/mcp@latest", "--cdp-endpoint", "http://localhost:9222"],
-      "enabled": true
+      "args": ["exec", "-i", "chromium_server_1", "npx", "-y", "@playwright/mcp@latest", "--cdp-endpoint", "http://localhost:9222"],
+      "enabled": true,
+      "description": "Browser automation via Playwright CDP"
     }
   }
 }
