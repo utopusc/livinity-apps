@@ -1,12 +1,18 @@
 #!/bin/bash
 # Deregister Playwright MCP server from Nexus before Chromium stops
 
-REDIS_PASSWORD=$(echo "${REDIS_URL:-}" | sed -n 's|redis://:\([^@]*\)@.*|\1|p')
-if [ -z "$REDIS_PASSWORD" ]; then
+# URL-decode helper (converts %XX sequences to characters)
+urldecode() {
+  printf '%b' "${1//%/\\x}"
+}
+
+REDIS_PASSWORD_RAW=$(echo "${REDIS_URL:-}" | sed -n 's|redis://:\([^@]*\)@.*|\1|p')
+if [ -z "$REDIS_PASSWORD_RAW" ]; then
   if [ -f "/opt/livos/.env" ]; then
-    REDIS_PASSWORD=$(grep REDIS_URL /opt/livos/.env | sed -n 's|.*redis://:\([^@]*\)@.*|\1|p')
+    REDIS_PASSWORD_RAW=$(grep REDIS_URL /opt/livos/.env | sed -n 's|.*redis://:\([^@]*\)@.*|\1|p')
   fi
 fi
+REDIS_PASSWORD=$(urldecode "$REDIS_PASSWORD_RAW")
 
 if [ -z "$REDIS_PASSWORD" ]; then
   echo "[chromium-mcp] No Redis password found, skipping MCP deregistration"
