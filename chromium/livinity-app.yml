@@ -4,9 +4,9 @@ name: Chromium Browser
 tagline: Persistent web browser with AI control
 category: networking
 version: '1.0.0'
-port: 6901
+port: 3000
 description: >-
-  A persistent Chromium browser running in Docker with KasmVNC web viewer.
+  A persistent Chromium browser running in Docker with Selkies web viewer.
   Sessions survive restarts — stay logged into Google, Facebook, and other sites.
   Includes Playwright MCP for AI-powered browser automation via LivOS.
   Anti-detection flags prevent automation fingerprinting.
@@ -22,7 +22,7 @@ path: ''
 defaultUsername: ''
 defaultPassword: ''
 releaseNotes: >-
-  Initial release with KasmVNC web viewer, persistent sessions,
+  Initial release with Selkies web viewer, persistent sessions,
   Playwright MCP integration, and anti-detection Chromium flags.
 backupIgnore:
   - data/cache

@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   server:
     build: .
@@ -18,3 +16,9 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/config
     restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
