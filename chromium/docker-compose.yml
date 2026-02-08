@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - CUSTOM_USER=
       - PASSWORD=
-      - CHROME_CLI=--remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --remote-allow-origins=* --restore-last-session --disable-blink-features=AutomationControlled --disable-infobars --disable-dev-shm-usage
+      - PROXY_URL=
       - TZ=Europe/Istanbul
     volumes:
       - ${APP_DATA_DIR}/data:/config

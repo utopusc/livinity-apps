@@ -6,5 +6,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
     npm install -g @playwright/mcp@latest && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Copy cleanup script to prevent Chromium startup failures after crashes
+# Copy init scripts
+COPY custom-cont-init.d/50-build-chrome-cli.sh /custom-cont-init.d/50-build-chrome-cli
 COPY clean-singletonlock.sh /custom-cont-init.d/99-clean-singletonlock
