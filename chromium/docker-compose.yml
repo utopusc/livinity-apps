@@ -2,7 +2,7 @@ services:
   server:
     build: .
     shm_size: '1gb'
-    mem_limit: 1536m
+    mem_limit: 3072m
     oom_score_adj: 500
     security_opt:
       - seccomp:unconfined
