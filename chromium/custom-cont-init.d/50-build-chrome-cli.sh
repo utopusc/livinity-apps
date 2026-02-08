@@ -2,7 +2,7 @@
 # Dynamically assemble CHROME_CLI from base flags + optional proxy
 # Runs via linuxserver's /custom-cont-init.d/ mechanism
 
-BASE_FLAGS="--remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --remote-allow-origins=* --restore-last-session --disable-blink-features=AutomationControlled --disable-infobars --disable-dev-shm-usage"
+BASE_FLAGS="--remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --remote-allow-origins=* --restore-last-session --disable-dev-shm-usage"
 
 FINAL_FLAGS="$BASE_FLAGS"
 
