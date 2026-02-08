@@ -1,31 +1,3 @@
 #!/bin/bash
-# Deregister Playwright MCP server from Nexus before Chromium stops
-
-# URL-decode helper (converts %XX sequences to characters)
-urldecode() {
-  printf '%b' "${1//%/\\x}"
-}
-
-REDIS_PASSWORD_RAW=$(echo "${REDIS_URL:-}" | sed -n 's|redis://:\([^@]*\)@.*|\1|p')
-if [ -z "$REDIS_PASSWORD_RAW" ]; then
-  if [ -f "/opt/livos/.env" ]; then
-    REDIS_PASSWORD_RAW=$(grep REDIS_URL /opt/livos/.env | sed -n 's|.*redis://:\([^@]*\)@.*|\1|p')
-  fi
-fi
-REDIS_PASSWORD=$(urldecode "$REDIS_PASSWORD_RAW")
-
-if [ -z "$REDIS_PASSWORD" ]; then
-  echo "[chromium-mcp] No Redis password found, skipping MCP deregistration"
-  exit 0
-fi
-
-REDIS_CMD="redis-cli -a $REDIS_PASSWORD --no-auth-warning"
-
-EXISTING=$($REDIS_CMD GET nexus:mcp:config 2>/dev/null)
-
-if [ -n "$EXISTING" ] && [ "$EXISTING" != "(nil)" ]; then
-  UPDATED=$(echo "$EXISTING" | jq 'del(.mcpServers.browser)')
-  $REDIS_CMD SET nexus:mcp:config "$UPDATED" >/dev/null 2>&1
-  $REDIS_CMD PUBLISH nexus:config:updated mcp_config >/dev/null 2>&1
-  echo "[chromium-mcp] Playwright MCP server deregistered"
-fi
+# Chrome app lifecycle hook
+# MCP is managed through the AI Chat marketplace
