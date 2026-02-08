@@ -14,9 +14,9 @@ developer: Livinity
 website: https://livinity.io
 repo: https://github.com/linuxserver/docker-chromium
 support: https://github.com/utopusc/livinity-apps/issues
-icon: https://raw.githubusercontent.com/nicedoc/browser-logos/refs/heads/main/src/chrome/chrome.svg
+icon: https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg
 gallery:
-  - https://raw.githubusercontent.com/nicedoc/browser-logos/refs/heads/main/src/chrome/chrome.svg
+  - https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg
 dependencies: []
 path: ''
 defaultUsername: ''
