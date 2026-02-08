@@ -1,11 +1,20 @@
 version: '3.7'
+
 services:
-  chromium:
-    image: ghcr.io/linuxserver/chromium:version-8d3cb5f1@sha256:d7c5f7faf5fe524117fd73c4d446e1bf81bccd0d64d073a30b8c9819fdf105d6
+  server:
+    build: .
+    shm_size: '1gb'
+    mem_limit: 1536m
+    oom_score_adj: 500
+    security_opt:
+      - seccomp:unconfined
     environment:
-    - PUID=1000
-    - PGID=1000
+      - PUID=1000
+      - PGID=1000
+      - CUSTOM_USER=
+      - PASSWORD=
+      - CHROME_CLI=--remote-debugging-port=9222 --remote-allow-origins=* --restore-last-session --disable-blink-features=AutomationControlled --disable-infobars --disable-dev-shm-usage
+      - TZ=Europe/Istanbul
     volumes:
-    - ${APP_DATA_DIR}/data:/config
-    shm_size: 1gb
+      - ${APP_DATA_DIR}/data:/config
     restart: on-failure

@@ -1,0 +1,52 @@
+#!/bin/bash
+# Register Playwright MCP server in Nexus after Chromium starts
+# This enables AI browser control via LivOS
+
+# Extract Redis password from URL
+REDIS_PASSWORD=$(echo "${REDIS_URL:-}" | sed -n 's|redis://:\([^@]*\)@.*|\1|p')
+if [ -z "$REDIS_PASSWORD" ]; then
+  # Try reading from .env
+  if [ -f "/opt/livos/.env" ]; then
+    REDIS_PASSWORD=$(grep REDIS_URL /opt/livos/.env | sed -n 's|.*redis://:\([^@]*\)@.*|\1|p')
+  fi
+fi
+
+if [ -z "$REDIS_PASSWORD" ]; then
+  echo "[chromium-mcp] No Redis password found, skipping MCP registration"
+  exit 0
+fi
+
+REDIS_CMD="redis-cli -a $REDIS_PASSWORD --no-auth-warning"
+
+# Build the MCP config JSON
+CONTAINER_NAME="chromium_server_1"
+MCP_CONFIG=$(cat <<'MCPJSON'
+{
+  "mcpServers": {
+    "browser": {
+      "transport": "stdio",
+      "command": "docker",
+      "args": ["exec", "-i", "chromium_server_1", "npx", "@playwright/mcp@latest", "--cdp-endpoint", "http://localhost:9222"],
+      "enabled": true
+    }
+  }
+}
+MCPJSON
+)
+
+# Get existing config and merge
+EXISTING=$($REDIS_CMD GET nexus:mcp:config 2>/dev/null)
+
+if [ -z "$EXISTING" ] || [ "$EXISTING" = "(nil)" ]; then
+  # No existing config, set ours
+  $REDIS_CMD SET nexus:mcp:config "$MCP_CONFIG" >/dev/null 2>&1
+else
+  # Merge browser entry into existing config
+  MERGED=$(echo "$EXISTING" | jq --argjson new "$MCP_CONFIG" '.mcpServers.browser = $new.mcpServers.browser')
+  $REDIS_CMD SET nexus:mcp:config "$MERGED" >/dev/null 2>&1
+fi
+
+# Notify Nexus to reload MCP config
+$REDIS_CMD PUBLISH nexus:config:updated mcp_config >/dev/null 2>&1
+
+echo "[chromium-mcp] Playwright MCP server registered"
