@@ -1,4 +1,4 @@
-FROM lscr.io/linuxserver/chromium:latest
+FROM lscr.io/linuxserver/chrome:latest
 
 # Install Node.js 22 for Playwright MCP server
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \

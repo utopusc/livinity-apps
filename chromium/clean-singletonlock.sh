@@ -1,27 +1,33 @@
 #!/bin/bash
-# Clean up Chromium state for reliable restart
-# Runs via linuxserver's /custom-cont-init.d/ mechanism before Chromium launches
+# Clean up Chrome state for reliable restart
+# Runs via linuxserver's /custom-cont-init.d/ mechanism before Chrome launches
+# Supports both Google Chrome and Chromium profile paths
 
-CHROMIUM_DIR="/config/.config/chromium"
-PROFILE_DIR="$CHROMIUM_DIR/Default"
-
-# Remove stale lock files that prevent startup after crashes
-if [ -d "$CHROMIUM_DIR" ]; then
-  for lockfile in SingletonLock SingletonSocket SingletonCookie; do
-    if [ -e "$CHROMIUM_DIR/$lockfile" ]; then
-      rm -f "$CHROMIUM_DIR/$lockfile"
-      echo "[startup-cleanup] Removed stale $lockfile"
-    fi
-  done
+# Detect profile directory (Chrome vs Chromium)
+if [ -d "/config/.config/google-chrome" ]; then
+  BROWSER_DIR="/config/.config/google-chrome"
+elif [ -d "/config/.config/chromium" ]; then
+  BROWSER_DIR="/config/.config/chromium"
+else
+  echo "[startup-cleanup] No browser profile found yet (first run)"
+  exit 0
 fi
 
-# Patch Preferences AND Secure Preferences to prevent "didn't shut down
-# correctly" bar. Chrome writes exit_type=Crashed on start and Normal on
-# clean shutdown. Container stops via SIGKILL leave it as Crashed.
-# We also force restore_on_startup=1 so tabs always come back.
+PROFILE_DIR="$BROWSER_DIR/Default"
+
+# Remove stale lock files that prevent startup after crashes
+for lockfile in SingletonLock SingletonSocket SingletonCookie; do
+  if [ -e "$BROWSER_DIR/$lockfile" ]; then
+    rm -f "$BROWSER_DIR/$lockfile"
+    echo "[startup-cleanup] Removed stale $lockfile"
+  fi
+done
+
+# Patch Preferences to prevent "didn't shut down correctly" bar
+# and force session restore so tabs always come back.
 if [ -f "$PROFILE_DIR/Preferences" ]; then
   python3 -c "
-import json, sys, hashlib, hmac
+import json, sys
 
 PROFILE = '$PROFILE_DIR'
 
@@ -41,4 +47,4 @@ except Exception as e:
 " 2>&1
 fi
 
-echo "[startup-cleanup] Chromium startup cleanup complete"
+echo "[startup-cleanup] Browser startup cleanup complete"
