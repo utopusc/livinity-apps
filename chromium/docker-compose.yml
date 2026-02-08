@@ -17,7 +17,7 @@ services:
       - ${APP_DATA_DIR}/data:/config
     restart: on-failure
     healthcheck:
-      test: ["CMD-SHELL", "curl -sf http://localhost:3000/ || exit 1"]
+      test: ["CMD-SHELL", "curl -so /dev/null http://localhost:3000/ || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
