@@ -2,7 +2,50 @@
 # Dynamically assemble CHROME_CLI from base flags + optional proxy
 # Runs via linuxserver's /custom-cont-init.d/ mechanism
 
-BASE_FLAGS="--remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --remote-allow-origins=* --restore-last-session --disable-dev-shm-usage"
+# --- Profile migration ---
+# Chrome 144+ requires a non-default --user-data-dir for remote debugging.
+# Default is $HOME/.config/google-chrome (/config/.config/google-chrome).
+# We use /config/chrome-data instead.
+CHROME_DATA="/config/chrome-data"
+
+if [ -d "/config/.config/google-chrome" ] && [ ! -d "$CHROME_DATA" ]; then
+  mv /config/.config/google-chrome "$CHROME_DATA"
+  echo "[chrome-cli] Migrated profile to $CHROME_DATA"
+fi
+mkdir -p "$CHROME_DATA"
+
+# --- Patch wrapped-chrome to use non-default user-data-dir ---
+# The base image's wrapped-chrome uses --user-data-dir (empty = default),
+# which blocks remote debugging in Chrome 144+.
+cat > /usr/bin/wrapped-chrome << 'WRAPPER'
+#!/bin/bash
+BIN=/usr/bin/google-chrome
+CHROME_DATA="/config/chrome-data"
+if which pgrep > /dev/null 2>&1 && pgrep chrome > /dev/null 2>&1; then
+  rm -f "$CHROME_DATA"/Singleton*
+fi
+${BIN} \
+  --no-first-run \
+  --no-sandbox \
+  --password-store=basic \
+  --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' \
+  --start-maximized \
+  --test-type \
+  --user-data-dir="$CHROME_DATA" \
+   "$@" > /dev/null 2>&1
+WRAPPER
+chmod +x /usr/bin/wrapped-chrome
+echo "[chrome-cli] Patched wrapped-chrome with user-data-dir=$CHROME_DATA"
+
+# --- Fix autostart for Chrome (migrating from Chromium) ---
+AUTOSTART="/config/.config/openbox/autostart"
+if [ -f "$AUTOSTART" ] && grep -q 'wrapped-chromium' "$AUTOSTART"; then
+  sed -i 's/wrapped-chromium/wrapped-chrome/g' "$AUTOSTART"
+  echo "[chrome-cli] Fixed autostart: wrapped-chromium -> wrapped-chrome"
+fi
+
+# --- Assemble CHROME_CLI flags ---
+BASE_FLAGS="--remote-debugging-port=9222 --remote-allow-origins=* --restore-last-session --disable-dev-shm-usage"
 
 FINAL_FLAGS="$BASE_FLAGS"
 

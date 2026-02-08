@@ -3,8 +3,10 @@
 # Runs via linuxserver's /custom-cont-init.d/ mechanism before Chrome launches
 # Supports both Google Chrome and Chromium profile paths
 
-# Detect profile directory (Chrome vs Chromium)
-if [ -d "/config/.config/google-chrome" ]; then
+# Detect profile directory (non-default Chrome data, default Chrome, or Chromium)
+if [ -d "/config/chrome-data" ]; then
+  BROWSER_DIR="/config/chrome-data"
+elif [ -d "/config/.config/google-chrome" ]; then
   BROWSER_DIR="/config/.config/google-chrome"
 elif [ -d "/config/.config/chromium" ]; then
   BROWSER_DIR="/config/.config/chromium"
