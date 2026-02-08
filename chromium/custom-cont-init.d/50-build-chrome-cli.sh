@@ -13,6 +13,7 @@ if [ -d "/config/.config/google-chrome" ] && [ ! -d "$CHROME_DATA" ]; then
   echo "[chrome-cli] Migrated profile to $CHROME_DATA"
 fi
 mkdir -p "$CHROME_DATA"
+chown -R abc:abc "$CHROME_DATA"
 
 # --- Patch wrapped-chrome to use non-default user-data-dir ---
 # The base image's wrapped-chrome uses --user-data-dir (empty = default),
