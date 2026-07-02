@@ -1,0 +1,666 @@
+[
+ {
+  "slug": "actual",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "argilla",
+  "verdict": "up-failed",
+  "http": null,
+  "detail": "Command failed: docker compose -f out/compose/argilla.yml -p smoke-argilla up -d --quiet-pull\n Network smoke-argilla_def"
+ },
+ {
+  "slug": "bitcoin-core",
+  "verdict": "running",
+  "http": null
+ },
+ {
+  "slug": "browserless",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "budge",
+  "verdict": "unhealthy",
+  "http": null,
+  "detail": "budge"
+ },
+ {
+  "slug": "calibre-web-automated-book-downloader",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "cap-captcha",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "chroma",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "classicpress-with-mariadb",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "classicpress-with-mysql",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "classicpress-without-database",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "cloudbeaver",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "cloudreve",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "cockpit",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "codimd",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "coral",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "countly",
+  "verdict": "running",
+  "http": 502
+ },
+ {
+  "slug": "cryptgeon",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "databasus",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "directus-with-postgresql",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "dokuwiki",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "drizzle-gateway",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "droppy",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "drupal-with-postgresql",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "elasticsearch",
+  "verdict": "running",
+  "http": 401
+ },
+ {
+  "slug": "embystat",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "emqx-enterprise",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "faraday",
+  "verdict": "up-failed",
+  "http": null,
+  "detail": "Command failed: docker compose -f out/compose/faraday.yml -p smoke-faraday up -d --quiet-pull\n Network smoke-faraday_def"
+ },
+ {
+  "slug": "filestash",
+  "verdict": "running",
+  "http": 307
+ },
+ {
+  "slug": "fizzy",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "flipt",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "flowise-with-databases",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "freshrss-with-mariadb",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "freshrss-with-mysql",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "freshrss-with-postgresql",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "gitea-with-mariadb",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "gitea-with-mysql",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "gitea-with-postgresql",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "glpi",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "goatcounter",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "gowa",
+  "verdict": "running",
+  "http": 401
+ },
+ {
+  "slug": "gramps-web",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "grimmory",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "hermes-agent-with-webui",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "imagor-local",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "jenkins",
+  "verdict": "running",
+  "http": 403
+ },
+ {
+  "slug": "jitsi",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "joomla-with-mariadb",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "linkding",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "linkding-plus",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "logto",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "lowcoder",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "mage-ai",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "maildev",
+  "verdict": "running",
+  "http": 401
+ },
+ {
+  "slug": "marimo",
+  "verdict": "running",
+  "http": 303
+ },
+ {
+  "slug": "mediawiki",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "meilisearch",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "mindsdb",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "minecraft",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "neon-ws-proxy",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "newapi",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "next-image-transformation",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "nextcloud-with-mariadb",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "nextcloud-with-mysql",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "nextcloud-with-postgres",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "nexus",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "nexus-arm",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "nexus3",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "nitropage",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "nitropage-with-postgresql",
+  "verdict": "running",
+  "http": 404,
+  "detail": ""
+ },
+ {
+  "slug": "nocobase",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "nodebb",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "odoo",
+  "verdict": "running",
+  "http": 303
+ },
+ {
+  "slug": "ollama-with-open-webui",
+  "verdict": "unhealthy",
+  "http": null,
+  "detail": "open-webui"
+ },
+ {
+  "slug": "once-campfire",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "onetimesecret",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "open-archiver",
+  "verdict": "running",
+  "http": 307,
+  "detail": ""
+ },
+ {
+  "slug": "openobserve",
+  "verdict": "running",
+  "http": 308
+ },
+ {
+  "slug": "openspeedtest",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "orangehrm",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "organizr",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "passbolt",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "pgadmin",
+  "verdict": "running",
+  "http": 302,
+  "detail": ""
+ },
+ {
+  "slug": "pgbackweb",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "rabbitmq",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "rainloop",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "redis-insight",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "redmine",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "resilio-sync",
+  "verdict": "running",
+  "http": 301
+ },
+ {
+  "slug": "rivet-engine",
+  "verdict": "running",
+  "http": 308
+ },
+ {
+  "slug": "ryot",
+  "verdict": "running",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "sessy",
+  "verdict": "running",
+  "http": 401
+ },
+ {
+  "slug": "sinusbot",
+  "verdict": "timeout:sinusbot=running/starting",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "siyuan",
+  "verdict": "running",
+  "http": 401
+ },
+ {
+  "slug": "slash",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "sourcegraph",
+  "verdict": "running",
+  "http": 502
+ },
+ {
+  "slug": "statusnook",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "supertokens",
+  "verdict": "running",
+  "http": 200
+ },
+ {
+  "slug": "supertokens-with-mysql",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "supertokens-with-postgresql",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "terraria-server",
+  "verdict": "running",
+  "http": null
+ },
+ {
+  "slug": "thingsboard-postgres",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "thumbor",
+  "verdict": "running",
+  "http": 400
+ },
+ {
+  "slug": "tolgee",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "trailbase",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "transmission",
+  "verdict": "running",
+  "http": 401,
+  "detail": ""
+ },
+ {
+  "slug": "triliumnext",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "typesense",
+  "verdict": "running",
+  "http": 404
+ },
+ {
+  "slug": "unstructured",
+  "verdict": "running",
+  "http": 404,
+  "detail": ""
+ },
+ {
+  "slug": "uptime-kuma-with-mariadb",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "uptime-kuma-with-mysql",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "verdaccio",
+  "verdict": "running",
+  "http": 200,
+  "detail": ""
+ },
+ {
+  "slug": "vvveb",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "vvveb-only",
+  "verdict": "up-failed",
+  "http": null
+ },
+ {
+  "slug": "vvveb-with-mariadb",
+  "verdict": "unhealthy",
+  "http": null
+ },
+ {
+  "slug": "vvveb-with-mysql",
+  "verdict": "unhealthy",
+  "http": null,
+  "detail": "vvveb"
+ },
+ {
+  "slug": "wakapi",
+  "verdict": "timeout:postgres=running/healthy,wakapi=running/starting",
+  "http": null,
+  "detail": ""
+ },
+ {
+  "slug": "weaviate",
+  "verdict": "running",
+  "http": 301,
+  "detail": ""
+ },
+ {
+  "slug": "wordpress-only",
+  "verdict": "running",
+  "http": 500,
+  "detail": ""
+ },
+ {
+  "slug": "wordpress-with-mariadb",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "wordpress-with-mysql",
+  "verdict": "running",
+  "http": 302
+ },
+ {
+  "slug": "wordpress-without-database",
+  "verdict": "running",
+  "http": 302
+ }
+]
