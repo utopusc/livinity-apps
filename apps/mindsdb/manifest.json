@@ -1,0 +1,17 @@
+{
+ "slug": "mindsdb",
+ "name": "Mindsdb",
+ "section": "app",
+ "tagline": "MindsDB is the platform for building AI from enterprise data, enabling smarter organizations.",
+ "description": "MindsDB is the platform for building AI from enterprise data, enabling smarter organizations.\n\nDocs: https://docs.mindsdb.com/what-is-mindsdb?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "latest",
+ "port": 42068,
+ "subdomain": "mindsdb",
+ "env": [],
+ "internalPort": 47334,
+ "mainService": "mindsdb",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  mindsdb:\n    image: mindsdb/mindsdb:latest\n    environment:\n      - MINDSDB_DOCKER_ENV=true\n      - MINDSDB_STORAGE_DIR=/mindsdb/var\n      - FLASK_DEBUG=${FLASK_DEBUG:-1}\n      - OPENAI_API_KEY=${OPENAI_API_KEY:-b738aebc8d0f6c16659b30065fabe08e}\n      - LANGFUSE_HOST=${LANGFUSE_HOST}\n      - LANGFUSE_PUBLIC_KEY=${LANGFUSE_PUBLIC_KEY:-1807ebf63156e24c2568158695bcc675}\n      - LANGFUSE_SECRET_KEY=${LANGFUSE_SECRET_KEY:-75543221cb6548d9721b3ae9371a08a6}\n      - LANGFUSE_RELEASE=${LANGFUSE_RELEASE:-local}\n      - LANGFUSE_DEBUG=${LANGFUSE_DEBUG:-False}\n      - LANGFUSE_TIMEOUT=${LANGFUSE_TIMEOUT:-10}\n      - LANGFUSE_SAMPLE_RATE=${LANGFUSE_SAMPLE_RATE:-1.0}\n      - MINDSDB_DB_CON=postgresql://u355489f0ea:adb27f92e61f800986d1efdcb9bc4394@postgresql/${POSTGRES_DB:-mindsdb-db}\n    volumes:\n      - mindsdb-data:/mindsdb/var\n    depends_on:\n      postgresql:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://localhost:47334/api/util/ping\n      interval: 30s\n      timeout: 5s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42068:47334\n  postgresql:\n    image: postgres:16-alpine\n    volumes:\n      - mindsdb-postgresql-data:/var/lib/postgresql/data\n    environment:\n      - POSTGRES_USER=u355489f0ea\n      - POSTGRES_PASSWORD=adb27f92e61f800986d1efdcb9bc4394\n      - POSTGRES_DB=${POSTGRES_DB:-mindsdb-db}\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U $${POSTGRES_USER:-liv53086978} -d $${POSTGRES_DB:-mindsdb}\n      interval: 10s\n      timeout: 5s\n      retries: 15\n    restart: unless-stopped\nvolumes:\n  mindsdb-data: null\n  mindsdb-postgresql-data: null\n"
+}

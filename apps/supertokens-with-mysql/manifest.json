@@ -1,0 +1,17 @@
+{
+ "slug": "supertokens-with-mysql",
+ "name": "Supertokens With Mysql",
+ "section": "app",
+ "tagline": "An open-source authentication solution that simplifies the implementation of secure user authentication and session management for web and mobile applications",
+ "description": "An open-source authentication solution that simplifies the implementation of secure user authentication and session management for web and mobile applications\n\nDocs: https://supertokens.com/docs/guides?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42119,
+ "subdomain": "supertokens-with-mysql",
+ "env": [],
+ "internalPort": 3567,
+ "mainService": "supertokens",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  supertokens:\n    image: registry.supertokens.io/supertokens/supertokens-mysql:latest\n    depends_on:\n      mysql:\n        condition: service_healthy\n    environment:\n      - API_KEYS=${API_KEYS:-}\n      - MYSQL_CONNECTION_URI=mysql://u2742cf49d9:61d57e5e00e6dbd3b1a50ec1920cc825@mysql:3306/${MYSQL_DATABASE:-supertokens}\n    healthcheck:\n      test: |\n        bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e \"GET /hello HTTP/1.1\\r\\nhost: 127.0.0.1:3567\\r\\nConnection: close\\r\\n\\r\\n\" >&3 && cat <&3 | grep \"Hello\"'\n      interval: 10s\n      timeout: 5s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42119:3567\n  mysql:\n    image: mysql:latest\n    environment:\n      - MYSQL_ROOT_PASSWORD=61d57e5e00e6dbd3b1a50ec1920cc825\n      - MYSQL_USER=u2742cf49d9\n      - MYSQL_PASSWORD=61d57e5e00e6dbd3b1a50ec1920cc825\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-supertokens}\n    volumes:\n      - supertokens-mysql-data:/var/lib/mysql\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - localhost\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  supertokens-mysql-data: null\n"
+}

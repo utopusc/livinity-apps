@@ -1,0 +1,17 @@
+{
+ "slug": "request-baskets",
+ "name": "Request Baskets",
+ "section": "app",
+ "tagline": "Request Baskets is a web service to collect arbitrary HTTP requests and inspect them via RESTful API or simple web UI. It is strongly inspired by ideas and ap",
+ "description": "Request Baskets is a web service to collect arbitrary HTTP requests and inspect them via RESTful API or simple web UI. It is strongly inspired by ideas and ap\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "v1.1.0",
+ "port": 42103,
+ "subdomain": "request-baskets",
+ "env": [],
+ "internalPort": 55555,
+ "mainService": "request-baskets",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  request-baskets:\n    image: darklynx/request-baskets:v1.1.0\n    restart: unless-stopped\n    ports:\n      - 42103:55555\n"
+}

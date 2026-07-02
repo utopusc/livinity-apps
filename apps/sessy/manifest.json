@@ -1,0 +1,17 @@
+{
+ "slug": "sessy",
+ "name": "Sessy",
+ "section": "app",
+ "tagline": "Email observability platform for monitoring and analyzing email systems.",
+ "description": "Email observability platform for monitoring and analyzing email systems.\n\nDocs: https://github.com/marckohlbrugge/sessy/blob/main/docs/docker-deployment.md?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "main",
+ "port": 42108,
+ "subdomain": "sessy",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "sessy",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  sessy:\n    image: ghcr.io/marckohlbrugge/sessy:main\n    environment:\n      - SECRET_KEY_BASE=4df4c8f7e8515cc65180957ccf0653f5\n      - HTTP_AUTH_USERNAME=ub773a879c1\n      - HTTP_AUTH_PASSWORD=e99222aa07cca060a3dcef97800908e2\n    volumes:\n      - sessy-data:/rails/storage\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - curl -sf http://127.0.0.1:80 || [ $? -eq 22 ]\n      interval: 5s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42108:80\nvolumes:\n  sessy-data: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "unstructured",
+ "name": "Unstructured",
+ "section": "app",
+ "tagline": "Unstructured provides a platform and tools to ingest and process unstructured documents for Retrieval Augmented Generation (RAG) and model fine-tuning.",
+ "description": "Unstructured provides a platform and tools to ingest and process unstructured documents for Retrieval Augmented Generation (RAG) and model fine-tuning.\n\nDocs: https://github.com/Unstructured-IO/unstructured-api?tab=readme-ov-file#--general-pre-processing-pipeline-for-documents?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "latest",
+ "port": 42130,
+ "subdomain": "unstructured",
+ "env": [],
+ "internalPort": 8000,
+ "mainService": "unstructured",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  unstructured:\n    image: downloads.unstructured.io/unstructured-io/unstructured-api:latest\n    environment:\n      - UNSTRUCTURED_API_KEY=95e16c92ba80699f813120114c66bf7a\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://0.0.0.0:8000/healthcheck\n      interval: 5s\n      timeout: 30s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42130:8000\n"
+}

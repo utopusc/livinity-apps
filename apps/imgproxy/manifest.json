@@ -1,0 +1,17 @@
+{
+ "slug": "imgproxy",
+ "name": "imgproxy",
+ "section": "app",
+ "tagline": "imgproxy - Fast and secure standalone server for resizing and converting remote images. For more info visit https://imgproxy.net/.",
+ "description": "imgproxy - Fast and secure standalone server for resizing and converting remote images. For more info visit https://imgproxy.net/.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "networking",
+ "version": "v3.6.0",
+ "port": 42053,
+ "subdomain": "imgproxy",
+ "env": [],
+ "internalPort": 5000,
+ "mainService": "imgproxy",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  imgproxy:\n    environment:\n      IMGPROXY_BIND: 0.0.0.0:5000\n      IMGPROXY_KEY: 57e20205e7445cbdaceaea70504d9c636dddbcd14797824b797c30ab759d6d1b\n      IMGPROXY_SALT: b0d0a3b28a967a6967db59a2c85e0d8bab646a42a34e6b3ddbd1d5924e25e7ee\n    image: darthsim/imgproxy:v3.6.0\n    restart: unless-stopped\n    ports:\n      - 42053:5000\n"
+}

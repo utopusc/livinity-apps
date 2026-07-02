@@ -1,0 +1,17 @@
+{
+ "slug": "ollama-with-open-webui",
+ "name": "Ollama With Open Webui",
+ "section": "app",
+ "tagline": "Ollama with Open Web UI integrates AI model deployment with a user-friendly interface.",
+ "description": "Ollama with Open Web UI integrates AI model deployment with a user-friendly interface.\n\nDocs: https://docs.openwebui.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "main",
+ "port": 42085,
+ "subdomain": "ollama-with-open-webui",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "open-webui",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  ollama-api:\n    image: ollama/ollama:latest\n    volumes:\n      - ollama:/root/.ollama\n    healthcheck:\n      test:\n        - CMD\n        - ollama\n        - list\n      interval: 5s\n      timeout: 30s\n      retries: 10\n    restart: unless-stopped\n  open-webui:\n    image: ghcr.io/open-webui/open-webui:main\n    volumes:\n      - open-webui:/app/backend/data\n    depends_on:\n      - ollama-api\n    environment:\n      - OLLAMA_BASE_URL=http://ollama-api:11434\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:8080\n      interval: 5s\n      timeout: 30s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42085:80\nvolumes:\n  ollama: null\n  open-webui: null\n"
+}

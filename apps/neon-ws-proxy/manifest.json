@@ -1,0 +1,17 @@
+{
+ "slug": "neon-ws-proxy",
+ "name": "Neon Ws Proxy",
+ "section": "app",
+ "tagline": "The database you love, on a serverless platform designed to help you build reliable and scalable applications faster.",
+ "description": "The database you love, on a serverless platform designed to help you build reliable and scalable applications faster.\n\nDocs: https://neon.tech?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "networking",
+ "version": "latest",
+ "port": 42070,
+ "subdomain": "neon-ws-proxy",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "neon-proxy",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  neon-proxy:\n    image: ghcr.io/neondatabase/wsproxy:latest\n    environment:\n      - APPEND_PORT=postgres:5432\n      - ALLOW_ADDR_REGEX=.*\n      - LOG_TRAFFIC=false\n      - LOG_CONN_INFO=true\n    restart: unless-stopped\n    depends_on:\n      - postgres\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - nc -z 127.0.0.1 80\n      interval: 5s\n      timeout: 2s\n      retries: 20\n    ports:\n      - 42070:80\n  postgres:\n    image: postgres:17-alpine\n    volumes:\n      - postgresql-data:/var/lib/postgresql/data\n    environment:\n      - POSTGRES_USER=u93ae56fe05\n      - POSTGRES_PASSWORD=79f507db4c46bfa03e5e919f52224b69\n      - POSTGRES_DB=${POSTGRESQL_DATABASE:-postgres}\n      - POSTGRES_HOST_AUTH_METHOD=password\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U $${POSTGRES_USER:-liv31d130e7} -d $${POSTGRES_DB:-neon_ws_proxy}\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  postgresql-data: null\n"
+}

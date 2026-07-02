@@ -1,0 +1,17 @@
+{
+ "slug": "resilio-sync",
+ "name": "Resilio Sync",
+ "section": "app",
+ "tagline": "Set up Sync to synchronize or share files without having to store your data in the cloud.",
+ "description": "Set up Sync to synchronize or share files without having to store your data in the cloud.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "files",
+ "version": "2.6.4",
+ "port": 42104,
+ "subdomain": "resilio-sync",
+ "env": [],
+ "internalPort": 8888,
+ "mainService": "resilio-sync",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  resilio-sync:\n    image: resilio/sync:2.6.4\n    restart: unless-stopped\n    volumes:\n      - resilio-sync-data:/mnt/sync\n    ports:\n      - 42104:8888\nvolumes:\n  resilio-sync-data: null\n"
+}

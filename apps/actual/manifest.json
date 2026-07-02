@@ -1,0 +1,17 @@
+{
+ "slug": "actual",
+ "name": "Actual",
+ "section": "app",
+ "tagline": "Actual Budget is a super fast and privacy-focused app for managing your finances. At its heart is the well proven and much loved Envelope Budgeting methodolog",
+ "description": "Actual Budget is a super fast and privacy-focused app for managing your finances. At its heart is the well proven and much loved Envelope Budgeting methodolog\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "privacy",
+ "version": "23.8.1-alpine",
+ "port": 42000,
+ "subdomain": "actual",
+ "env": [],
+ "internalPort": 5006,
+ "mainService": "actual",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  actual:\n    image: actualbudget/actual-server:23.8.1-alpine\n    volumes:\n      - actual-data:/data\n    restart: unless-stopped\n    ports:\n      - 42000:5006\nvolumes:\n  actual-data: null\n"
+}

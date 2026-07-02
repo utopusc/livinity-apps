@@ -1,0 +1,17 @@
+{
+ "slug": "soketi",
+ "name": "Soketi",
+ "section": "app",
+ "tagline": "Soketi is your simple, fast, and resilient open-source WebSockets server.",
+ "description": "Soketi is your simple, fast, and resilient open-source WebSockets server.\n\nDocs: https://docs.soketi.app?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "1.6-16-debian",
+ "port": 42114,
+ "subdomain": "soketi",
+ "env": [],
+ "internalPort": 6001,
+ "mainService": "soketi",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  soketi:\n    image: quay.io/soketi/soketi:1.6-16-debian\n    environment:\n      - SOKETI_DEBUG=${DEBUG:-0}\n      - SOKETI_DEFAULT_APP_ID=ua76f40e6b4\n      - SOKETI_DEFAULT_APP_KEY=YWZhMWFkN2I3NjFlY2QzZDA3MjAzZmMx\n      - SOKETI_DEFAULT_APP_SECRET=NjJmNDY0MzY0ZmNiZmMxNzY1NTZhNjFh\n      - SOKETI_PUSHER_SCHEME=${SOKETI_PUSHER_SCHEME:-https}\n      - SOKETI_DEFAULT_APP_ENABLE_CLIENT_MESSAGES=${DEFAULT_APP_ENABLE_CLIENT_MESSAGES}\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - bash -c ':> /dev/tcp/127.0.0.1/6001' || exit 1\n      interval: 5s\n      timeout: 20s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42114:6001\n"
+}

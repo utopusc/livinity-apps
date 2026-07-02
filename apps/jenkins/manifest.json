@@ -1,0 +1,17 @@
+{
+ "slug": "jenkins",
+ "name": "Jenkins",
+ "section": "app",
+ "tagline": "Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or de",
+ "description": "Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or de\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "automation",
+ "version": "lts-jdk11",
+ "port": 42054,
+ "subdomain": "jenkins",
+ "env": [],
+ "internalPort": 8080,
+ "mainService": "jenkins",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  jenkins:\n    image: jenkins/jenkins:lts-jdk11\n    restart: unless-stopped\n    volumes:\n      - jenkins-jenkins-home:/var/jenkins_home\n    ports:\n      - 42054:8080\nvolumes:\n  jenkins-jenkins-home: null\n"
+}

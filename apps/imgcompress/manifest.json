@@ -1,0 +1,17 @@
+{
+ "slug": "imgcompress",
+ "name": "Imgcompress",
+ "section": "app",
+ "tagline": "Offline image compression, conversion, and AI background removal for Docker homelabs.",
+ "description": "Offline image compression, conversion, and AI background removal for Docker homelabs.\n\nDocs: https://imgcompress.karimzouine.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "media",
+ "version": "0.6.0",
+ "port": 42052,
+ "subdomain": "imgcompress",
+ "env": [],
+ "internalPort": 5000,
+ "mainService": "imgcompress",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  imgcompress:\n    image: karimz1/imgcompress:0.6.0\n    environment:\n      - DISABLE_LOGO=${DISABLE_LOGO:-false}\n      - DISABLE_STORAGE_MANAGEMENT=${DISABLE_STORAGE_MANAGEMENT:-false}\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:5000\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42052:5000\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "nextcloud-with-mariadb",
+ "name": "Nextcloud With Mariadb",
+ "section": "app",
+ "tagline": "NextCloud is a self-hosted, open-source platform that provides file storage, collaboration, and communication tools for seamless data management.",
+ "description": "NextCloud is a self-hosted, open-source platform that provides file storage, collaboration, and communication tools for seamless data management.\n\nDocs: https://docs.nextcloud.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "cloud-storage",
+ "version": "latest",
+ "port": 42073,
+ "subdomain": "nextcloud-with-mariadb",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "nextcloud",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  nextcloud:\n    image: lscr.io/linuxserver/nextcloud:latest\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=${TZ:-Europe/Paris}\n      - MYSQL_DATABASE=${MARIADB_DATABASE:-nextcloud}\n      - MYSQL_USER=u396aeb46e2\n      - MYSQL_PASSWORD=fc2c5f9bb0e96d734a0a9dcd611765f7\n      - MYSQL_HOST=nextcloud-db\n      - REDIS_HOST=redis\n      - REDIS_PORT=6379\n    volumes:\n      - nextcloud-config:/config\n      - nextcloud-data:/data\n    depends_on:\n      nextcloud-db:\n        condition: service_healthy\n      redis:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:80/status.php\n      interval: 30s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42073:80\n  nextcloud-db:\n    image: mariadb:11\n    volumes:\n      - nextcloud-mariadb-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=57a67b6ea2ac5265f2b95a96108cf34c\n      - MYSQL_DATABASE=${MARIADB_DATABASE:-nextcloud}\n      - MYSQL_USER=u396aeb46e2\n      - MYSQL_PASSWORD=fc2c5f9bb0e96d734a0a9dcd611765f7\n    healthcheck:\n      test:\n        - CMD\n        - healthcheck.sh\n        - --connect\n        - --innodb_initialized\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\n  redis:\n    image: redis:7.4-alpine\n    volumes:\n      - nextcloud-redis-data:/data\n    healthcheck:\n      test:\n        - CMD\n        - redis-cli\n        - PING\n      interval: 5s\n      timeout: 10s\n      retries: 20\n    restart: unless-stopped\nvolumes:\n  nextcloud-config: null\n  nextcloud-data: null\n  nextcloud-mariadb-data: null\n  nextcloud-redis-data: null\n"
+}

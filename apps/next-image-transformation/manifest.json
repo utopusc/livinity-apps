@@ -1,0 +1,17 @@
+{
+ "slug": "next-image-transformation",
+ "name": "Next Image Transformation",
+ "section": "app",
+ "tagline": "Drop-in replacement for Vercel's Nextjs image optimization service.",
+ "description": "Drop-in replacement for Vercel's Nextjs image optimization service.\n\nDocs: https://github.com/coollabsio/next-image-transformation?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "media",
+ "version": "latest",
+ "port": 42072,
+ "subdomain": "next-image-transformation",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "next-image-transformation",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  next-image-transformation:\n    image: ghcr.io/coollabsio/next-image-transformation:latest\n    environment:\n      - NODE_ENV=production\n      - ALLOWED_REMOTE_DOMAINS=${ALLOWED_REMOTE_DOMAINS:-*}\n      - IMGPROXY_URL=${IMGPROXY_URL:-http://imgproxy:8080}\n    healthcheck:\n      test: wget -qO- http://127.0.0.1:3000/health || exit 1\n      interval: 2s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42072:3000\n  imgproxy:\n    image: darthsim/imgproxy\n    environment:\n      - IMGPROXY_ENABLE_WEBP_DETECTION=true\n      - IMGPROXY_JPEG_PROGRESSIVE=true\n      - IMGPROXY_USE_ETAG=true\n    healthcheck:\n      test:\n        - CMD\n        - imgproxy\n        - health\n      interval: 2s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n"
+}

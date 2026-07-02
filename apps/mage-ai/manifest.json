@@ -1,0 +1,17 @@
+{
+ "slug": "mage-ai",
+ "name": "Mage Ai",
+ "section": "app",
+ "tagline": "Build, run, and manage data pipelines for integrating and transforming data.",
+ "description": "Build, run, and manage data pipelines for integrating and transforming data.\n\nDocs: https://docs.mage.ai?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "automation",
+ "version": "0.9.78",
+ "port": 42062,
+ "subdomain": "mage-ai",
+ "env": [],
+ "internalPort": 6789,
+ "mainService": "mage-ai",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  mage-ai:\n    image: mageai/mageai:0.9.78\n    command: mage start default_project\n    environment:\n      - PROJECT_NAME=default_project\n      - USER_CODE_PATH=/home/src/default_project\n      - ENV=production\n    volumes:\n      - mageai_data:/home/src/\n    restart: unless-stopped\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -s\n        - -f\n        - -o\n        - /dev/null\n        - http://127.0.0.1:6789\n      interval: 30s\n      timeout: 10s\n      retries: 5\n    ports:\n      - 42062:6789\nvolumes:\n  mageai_data: null\n"
+}

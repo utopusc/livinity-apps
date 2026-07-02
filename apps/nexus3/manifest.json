@@ -1,0 +1,17 @@
+{
+ "slug": "nexus3",
+ "name": "Nexus3",
+ "section": "app",
+ "tagline": "Nexus is the world's first and only universal repository solution that's FREE to use. It supports Bower, Docker, Git LFS, Maven, npm, NuGet, PyPI, Ruby Gems, ",
+ "description": "Nexus is the world's first and only universal repository solution that's FREE to use. It supports Bower, Docker, Git LFS, Maven, npm, NuGet, PyPI, Ruby Gems, \n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "3.15.2",
+ "port": 42078,
+ "subdomain": "nexus3",
+ "env": [],
+ "internalPort": 8081,
+ "mainService": "nexus3",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  nexus3:\n    image: sonatype/nexus3:3.15.2\n    volumes:\n      - nexus3-data:/nexus-data\n    restart: unless-stopped\n    environment: {}\n    ports:\n      - 42078:8081\nvolumes:\n  nexus3-data: null\n"
+}

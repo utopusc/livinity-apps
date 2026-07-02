@@ -1,0 +1,17 @@
+{
+ "slug": "proxyscotch",
+ "name": "Proxyscotch",
+ "section": "app",
+ "tagline": "A simple proxy server created for https://hoppscotch.io - CORS proxy",
+ "description": "A simple proxy server created for https://hoppscotch.io - CORS proxy\n\nDocs: https://github.com/hoppscotch/proxyscotch?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "networking",
+ "version": "v0.1.4",
+ "port": 42098,
+ "subdomain": "proxyscotch",
+ "env": [],
+ "internalPort": 9159,
+ "mainService": "proxyscotch",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  proxyscotch:\n    image: hoppscotch/proxyscotch:v0.1.4\n    environment:\n      - PROXYSCOTCH_TOKEN=431e45a78865ee93067acc0b857bf424\n      - PROXYSCOTCH_ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}\n      - PROXYSCOTCH_BANNED_OUTPUTS=${BANNED_OUTPUTS}\n      - PROXYSCOTCH_BANNED_DESTS=${BANNED_DESTS}\n    restart: unless-stopped\n    ports:\n      - 42098:9159\n"
+}

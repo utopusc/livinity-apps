@@ -1,0 +1,17 @@
+{
+ "slug": "pgweb",
+ "name": "pgweb",
+ "section": "app",
+ "tagline": "pgweb is a web-based database browser for PostgreSQL, written in Go.",
+ "description": "pgweb is a web-based database browser for PostgreSQL, written in Go.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "developer-tools",
+ "version": "0.11.2",
+ "port": 42096,
+ "subdomain": "pgweb",
+ "env": [],
+ "internalPort": 8081,
+ "mainService": "pgweb",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  pgweb:\n    image: sosedoff/pgweb:0.11.2\n    restart: unless-stopped\n    ports:\n      - 42096:8081\n"
+}

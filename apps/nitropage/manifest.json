@@ -1,0 +1,17 @@
+{
+ "slug": "nitropage",
+ "name": "Nitropage",
+ "section": "app",
+ "tagline": "Nitropage is an extensible, visual website builder, offering a growing library of versatile building blocks, focal-point image cropping and sovereign font man",
+ "description": "Nitropage is an extensible, visual website builder, offering a growing library of versatile building blocks, focal-point image cropping and sovereign font man\n\nDocs: https://nitropage.org?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "sqlite",
+ "port": 42080,
+ "subdomain": "nitropage",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "nitropage",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  nitropage:\n    image: nitropage/nitropage:sqlite\n    environment:\n      - NP_AUTH_SALT=ZDZjYjFlNWE1YTU1MzA3MzllYTQ3Zjgz\n      - NP_AUTH_PASSWORD=85c84029dc1e73988481c59baf9f6aba\n      - DATABASE_URL=file:../.data/dev.db\n    volumes:\n      - nitropage-data:/app/.data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000/admin\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42080:3000\nvolumes:\n  nitropage-data: null\n"
+}

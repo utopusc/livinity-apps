@@ -1,0 +1,2789 @@
+{
+ "report": {
+  "generated": 131,
+  "bySource": {
+   "coolify": 103,
+   "caprover": 28
+  },
+  "skipped": 552,
+  "skipReasons": {
+   "duplicate": 258,
+   "needs-url": 70,
+   "forbidden": 29,
+   "curated-drop": 8,
+   "required-input": 85,
+   "dockerfile-build": 36,
+   "unresolved-var": 48,
+   "no-web-service": 5,
+   "host-bind": 3,
+   "content-mount": 10
+  },
+  "portRange": [
+   42000,
+   42143
+  ],
+  "sqlBatches": 17
+ },
+ "skips": [
+  {
+   "source": "coolify",
+   "slug": "activepieces",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "actualbudget",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "affine",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "alexandrie",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "anythingllm",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "appflowy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "appsmith",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "appwrite",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "audiobookshelf",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "authentik",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "autobase",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "babybuddy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "bento-pdf",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "beszel-agent",
+   "reason": "forbidden:host-network"
+  },
+  {
+   "source": "coolify",
+   "slug": "beszel",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "bluesky-pds",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "bookstack",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "budibase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "bugsink",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "calibre-web",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "cap",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "castopod",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "changedetection",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "coolify",
+   "slug": "chaskiq",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "chatwoot",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "checkmate",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "cloudflare-ddns",
+   "reason": "forbidden:host-network"
+  },
+  {
+   "source": "coolify",
+   "slug": "cloudflared",
+   "reason": "forbidden:host-network"
+  },
+  {
+   "source": "coolify",
+   "slug": "code-server",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "codimd",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "convex",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "cyberchef",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "dashy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "denokv",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "directus",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "diun",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "docmost",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "documenso",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "docuseal-with-postgres",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "docuseal",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "dolibarr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "dozzle-with-auth",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "dozzle",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "duplicati",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "easyappointments",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "elasticsearch-with-kibana",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "electricsql",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "emby",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "ente-photos-with-s3",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "ente-photos",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "esphome",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "espocrm",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "evolution-api",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "excalidraw",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "fider",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "filebrowser",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "fileflows",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "firefox",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "flowise",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "forgejo-with-mariadb",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "forgejo-with-mysql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "forgejo-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "forgejo",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "formbricks",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "foundryvtt",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "freescout",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "freshrss",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "getoutline",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "ghost",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "gitea-runner",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "gitea",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "github-runner",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "gitlab",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "glance",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "glances",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "glitchtip",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "gotify",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "grafana-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "grafana",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "grist",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "grocy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "hatchet",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "healthchecks",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "heimdall",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "heyform",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "homarr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "home-assistant",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "homebox",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "homepage",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "hoppscotch",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "immich",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "infisical",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "invoice-ninja",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "it-tools",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "jellyfin",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "jenkins",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "jitsi",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "joplin",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "karakeep",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "keycloak-with-postgres",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "keycloak",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "kimai",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "kuzzle",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "coolify",
+   "slug": "labelstudio",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "langflow",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "langfuse",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "leantime",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "librechat",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "libreoffice",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "librespeed",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "libretranslate",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "limesurvey",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "listmonk",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "litellm",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "lobe-chat",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "martin",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "matrix-synapse-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "matrix-synapse-with-sqlite",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "mattermost",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "mealie",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "memos",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "metabase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "metamcp",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "metube",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "miniflux",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "mixpost",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "moodle",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "mosquitto",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "n8n-with-postgres-and-worker",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "n8n-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "n8n",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "navidrome",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "netbird-client",
+   "reason": "forbidden:host-network"
+  },
+  {
+   "source": "coolify",
+   "slug": "newt-pangolin",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "nextcloud",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "nocodb",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "ntfy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "observium",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "onedev",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "open-webui",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "openclaw",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "openpanel",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "opnform",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "osticket",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "overseerr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "owncloud",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "pairdrop",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "palworld",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "paperless",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "passbolt",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "paymenter",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "penpot-with-s3",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "penpot",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "phpmyadmin",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "pi-hole",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "plane",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "plex",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "plunk",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "pocket-id-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "pocket-id",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "pocketbase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "portainer",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "postiz",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "prefect",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "privatebin",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "prowlarr",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "qbittorrent",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "qdrant",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "radarr",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "rallly",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "reactive-resume",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "readeck",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "redlib",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "rocketchat",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "rybbit",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "satisfactory",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "seafile",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "searxng",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "sequin",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "sftpgo",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "shlink",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "silverbullet",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "snapdrop",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "soketi-app-manager",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "sonarr",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "spacebot",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "sparkyfitness",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "stirling-pdf",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "strapi",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "supabase",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "sure",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "swetrix",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "coolify",
+   "slug": "syncthing",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "tailscale-client",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "coolify",
+   "slug": "teable",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "trigger",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "twenty",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "umami",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "unleash-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "unleash-without-database",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "uptime-kuma",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "usesend",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "vaultwarden",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "vert",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "vikunja-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "vikunja",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "web-check",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "weblate",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "whoogle",
+   "reason": "curated-drop"
+  },
+  {
+   "source": "coolify",
+   "slug": "wikijs",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "windmill",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "wings",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "coolify",
+   "slug": "wireguard-easy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "yamtrack-with-postgresql",
+   "reason": "needs-url"
+  },
+  {
+   "source": "coolify",
+   "slug": "yamtrack",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "zipline",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "convertx",
+   "reason": "duplicate"
+  },
+  {
+   "source": "coolify",
+   "slug": "pydio-cells",
+   "reason": "needs-url"
+  },
+  {
+   "source": "caprover",
+   "slug": "ackee",
+   "reason": "required-input:$$cap_ackee_username"
+  },
+  {
+   "source": "caprover",
+   "slug": "activepieces",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "adguard-home",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "adminer",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "affine",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "airflow",
+   "reason": "required-input:$$cap_airflow_email"
+  },
+  {
+   "source": "caprover",
+   "slug": "akaunting",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "apprise",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "appsmith",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "appwrite",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "arangodb",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "archivebox",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "audiobookshelf",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "authentik",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "azuracast",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "baikal",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "baserow",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "bazarr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "beszel",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "bitwardenrs",
+   "reason": "required-input:$$cap_admin_token"
+  },
+  {
+   "source": "caprover",
+   "slug": "bookstack",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "botpress",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "boxy-hq-only",
+   "reason": "required-input:$$cap_pre_loaded_connection"
+  },
+  {
+   "source": "caprover",
+   "slug": "browserless",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "btcpayserver",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "budibase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "bugsink",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "cachet",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "calcom",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "calibre",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "call-only",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "chadburn",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "changedetection",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "chaskiq",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "chatwoot-botpress-bridge",
+   "reason": "required-input:$$cap_secret_key_base"
+  },
+  {
+   "source": "caprover",
+   "slug": "chatwoot",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "chevereto",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "claper",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "clickhouse",
+   "reason": "no-web-service"
+  },
+  {
+   "source": "caprover",
+   "slug": "cloudflare-tunnel",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "cloudflareddns",
+   "reason": "required-input:$$cap_api_key"
+  },
+  {
+   "source": "caprover",
+   "slug": "cockpit",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "collabora-online",
+   "reason": "required-input:$$cap_wopihost_domain"
+  },
+  {
+   "source": "caprover",
+   "slug": "commento",
+   "reason": "required-input:$$cap_commento_postgres_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "corteza",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "couchbase",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "couchdb-clouseau",
+   "reason": "required-input:$$cap_couchdb_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "couchdb",
+   "reason": "required-input:$$cap_couchdb_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "crater",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "cronicle",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "cyberchef",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "dagu",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "databag",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "databasus",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "davos",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "deluge",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "directus-mysql-redis",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "directus",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "discourse",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "docmost",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "docuseal",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "dokuwiki",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "dolibarr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "dozzle",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "dragonflydb",
+   "reason": "required-input:$$cap_dragonflydb_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "drone-gitea",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "duplicati",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "eclipse-mosquitto",
+   "reason": "no-web-service"
+  },
+  {
+   "source": "caprover",
+   "slug": "elasticsearch",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "elkarbackup",
+   "reason": "required-input:$$cap_mariadb-pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "etesync",
+   "reason": "required-input:$$cap_SUPER_PASS"
+  },
+  {
+   "source": "caprover",
+   "slug": "etherpad",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "evolution-api",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "excalidraw",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "ferretdb",
+   "reason": "no-web-service"
+  },
+  {
+   "source": "caprover",
+   "slug": "fider",
+   "reason": "required-input:$$cap_db_url"
+  },
+  {
+   "source": "caprover",
+   "slug": "filebrowser",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "filerun",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "filezilla",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "firefly-iii",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "fireflyiii-data-importer",
+   "reason": "required-input:$$cap_ff_token"
+  },
+  {
+   "source": "caprover",
+   "slug": "firefox",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "flagsmith",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "flaresolverr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "focalboard",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "forge-minecraft",
+   "reason": "required-input:$$cap_cf_api_key"
+  },
+  {
+   "source": "caprover",
+   "slug": "formance-ledger",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "formbricks",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "formio",
+   "reason": "required-input:$$cap_admin_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "foundryvtt",
+   "reason": "required-input:$$cap_foundry_admin_key"
+  },
+  {
+   "source": "caprover",
+   "slug": "freshrss",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "fusionauth",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "ghost-only",
+   "reason": "required-input:$$cap_db_host"
+  },
+  {
+   "source": "caprover",
+   "slug": "ghost",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "ghostfolio",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "gitea",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "gitlab-ce",
+   "reason": "required-input:$$cap_gitlab_omnibus_config"
+  },
+  {
+   "source": "caprover",
+   "slug": "gitlab-runner",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "glitchtip",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "gogost",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "gokapi",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "gotenberg",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "gotify",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "grafana",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "greenlight",
+   "reason": "required-input:$$cap_BIGBLUEBUTTON_SECRET"
+  },
+  {
+   "source": "caprover",
+   "slug": "grocy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "guacamole",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "hasura-only",
+   "reason": "required-input:$$cap_admin_secret"
+  },
+  {
+   "source": "caprover",
+   "slug": "hasura",
+   "reason": "required-input:$$cap_admin_secret"
+  },
+  {
+   "source": "caprover",
+   "slug": "healthchecks",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "hedgedoc",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "heimdall",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "homarr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "home-assistant",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "homepage",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "humhub",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "imagor-s3",
+   "reason": "required-input:$$cap_env_aws_key_id"
+  },
+  {
+   "source": "caprover",
+   "slug": "immich",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "influxdb",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "influxdb2",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "invidious",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "invoiceninja",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "invoiceplane",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "iredmail",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "jellyfin",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "joomla",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "joplin",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "jsreport",
+   "reason": "required-input:$$cap_jsreport_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "jupyter-lab",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "jupyter-tensorflow",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "kanboard-sqlite",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "karakeep",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "keila",
+   "reason": "required-input:$$cap_KEILA_USER"
+  },
+  {
+   "source": "caprover",
+   "slug": "keycloak",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "keydb",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "kibana",
+   "reason": "required-input:$$cap_ELASTICSEARCH_HOSTS"
+  },
+  {
+   "source": "caprover",
+   "slug": "kimai2",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "kutt",
+   "reason": "required-input:$$cap_KUTT_ADMIN_EMAILS"
+  },
+  {
+   "source": "caprover",
+   "slug": "lago",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "languagetool",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "leantime",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "lemmy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "libredb-studio",
+   "reason": "required-input:$$cap_llm_provider"
+  },
+  {
+   "source": "caprover",
+   "slug": "limesurvey",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "linkace",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "linkding",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "linkwarden",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "listmonk",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "litestream",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "logzio-collector",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "lychee",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "mailtrain",
+   "reason": "required-input:$$cap_mariadb_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "mariadb",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "mastodon",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "matomo",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "matrix-conduit",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "matrix-synapse-only",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "matrix-synapse",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "mattermost-ee",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "mattermost-team",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "mautic-only",
+   "reason": "required-input:$$cap_db_host"
+  },
+  {
+   "source": "caprover",
+   "slug": "mautic",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "mayan-edms",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "maybe-finance",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "mcp-context-forge",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "meilisearch",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "memos",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "mercure",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "metabase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "minecraft-bedrock",
+   "reason": "required-input:$$cap_eula"
+  },
+  {
+   "source": "caprover",
+   "slug": "miniflux",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "minio",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "mixpost",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "mongo-express",
+   "reason": "required-input:$$cap_me_server_address"
+  },
+  {
+   "source": "caprover",
+   "slug": "mongodb-backup-s3",
+   "reason": "required-input:$$cap_aws_access_key_id"
+  },
+  {
+   "source": "caprover",
+   "slug": "mongodb",
+   "reason": "required-input:$$cap_mongo_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "monica",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "moodle",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "mssql",
+   "reason": "required-input:$$cap_sa_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "mumble",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "mysql-backup",
+   "reason": "required-input:$$cap_db_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "mysql",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "n8n-io-queue-mode",
+   "reason": "required-input:$$cap_N8N_SMTP_HOST"
+  },
+  {
+   "source": "caprover",
+   "slug": "n8n-io-sqlite",
+   "reason": "required-input:$$cap_N8N_SMTP_HOST"
+  },
+  {
+   "source": "caprover",
+   "slug": "n8n-io",
+   "reason": "required-input:$$cap_N8N_SMTP_HOST"
+  },
+  {
+   "source": "caprover",
+   "slug": "neo4j",
+   "reason": "no-web-service"
+  },
+  {
+   "source": "caprover",
+   "slug": "netbox",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "nextcloud",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "nginx-reverse-proxy",
+   "reason": "required-input:$$cap_upstream_http_address"
+  },
+  {
+   "source": "caprover",
+   "slug": "nightscout",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "nocodb",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "node-exporter",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "node-red",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "novu",
+   "reason": "required-input:$$cap_NOVU_API_SENTRY_DSN"
+  },
+  {
+   "source": "caprover",
+   "slug": "ntfy",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "odoo",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "offen-docker-backup",
+   "reason": "required-input:$$cap_volume_to_backup"
+  },
+  {
+   "source": "caprover",
+   "slug": "offen-local-docker-backup",
+   "reason": "required-input:$$cap_volume_to_backup"
+  },
+  {
+   "source": "caprover",
+   "slug": "ohmyform",
+   "reason": "required-input:$$cap_ohmyform_email"
+  },
+  {
+   "source": "caprover",
+   "slug": "ombi",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "onlyoffice-documentserver",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "openvpn-as",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "caprover",
+   "slug": "openvscode-server",
+   "reason": "required-input:$$cap_openvscode_server_connection_secret"
+  },
+  {
+   "source": "caprover",
+   "slug": "orangehrm",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "organizr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "outline",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "overseerr",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "owncast",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "pairdrop",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "papercups",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "paperless-ng",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "paperless-ngx",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "papermerge",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "parse",
+   "reason": "required-input:$$cap_mongo_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "peertube",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "penpot",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "percona",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "pgadmin4",
+   "reason": "required-input:$$cap_email"
+  },
+  {
+   "source": "caprover",
+   "slug": "photoprism",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "photoview",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "phpldapadmin",
+   "reason": "required-input:$$cap_openldap_ldap-organisation"
+  },
+  {
+   "source": "caprover",
+   "slug": "picoshare",
+   "reason": "required-input:$$cap_ps_shared_secret"
+  },
+  {
+   "source": "caprover",
+   "slug": "pigallery2",
+   "reason": "required-input:$$cap_images"
+  },
+  {
+   "source": "caprover",
+   "slug": "pihole",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "planka",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "plausible",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "plex-arm",
+   "reason": "required-input:$$cap_plex_token"
+  },
+  {
+   "source": "caprover",
+   "slug": "plex",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "pocketbase",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "portainer",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "poste-io",
+   "reason": "required-input:$$cap_POSTE_DISABLE_CLAMAV"
+  },
+  {
+   "source": "caprover",
+   "slug": "postgres",
+   "reason": "required-input:$$cap_pg_initdb_args"
+  },
+  {
+   "source": "caprover",
+   "slug": "posthog",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "prerender",
+   "reason": "required-input:$$cap_blacklisted_domains"
+  },
+  {
+   "source": "caprover",
+   "slug": "prisma",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "privatebin",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "projectsend",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "prometheus",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "prowlarr",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "proxypool",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "pydio",
+   "reason": "required-input:$$cap_mariadb-pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "pyload",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "qbittorrent",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "qdrant",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "rabbitmq",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "radarr",
+   "reason": "required-input:$$cap_path_to_downloads"
+  },
+  {
+   "source": "caprover",
+   "slug": "radicale",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "rallly",
+   "reason": "required-input:$$cap_rallly_email"
+  },
+  {
+   "source": "caprover",
+   "slug": "raneto",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "readarr",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "redash",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "redis",
+   "reason": "required-input:$$cap_redis_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "redlib",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "redmine-mysql",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "redmine",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "remark42",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "caprover",
+   "slug": "rethinkdb",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "rocketchat",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "rss-bridge",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "rstudio",
+   "reason": "required-input:$$cap_rstudio_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "rsync-looped",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "rudder-stack",
+   "reason": "required-input:$$cap_rudder_workspace_token"
+  },
+  {
+   "source": "caprover",
+   "slug": "rustfs",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "saleor",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "seafile-nomemcached",
+   "reason": "required-input:$$cap_seafile_hostname"
+  },
+  {
+   "source": "caprover",
+   "slug": "seafile",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "seatable",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "sentry",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "serpbear",
+   "reason": "required-input:$$cap_serpbear_version"
+  },
+  {
+   "source": "caprover",
+   "slug": "shiori",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "shopware",
+   "reason": "required-input:$$cap_db_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "silex-platform",
+   "reason": "required-input:$$cap_gitlab_client_id"
+  },
+  {
+   "source": "caprover",
+   "slug": "smokeping",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "sonarqube",
+   "reason": "required-input:$$cap_pg_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "sonarr",
+   "reason": "required-input:$$cap_path_to_downloads"
+  },
+  {
+   "source": "caprover",
+   "slug": "spigot",
+   "reason": "required-input:$$cap_eula"
+  },
+  {
+   "source": "caprover",
+   "slug": "splitpro",
+   "reason": "required-input:$$cap_google_client_id"
+  },
+  {
+   "source": "caprover",
+   "slug": "squidex",
+   "reason": "required-input:$$cap_mongo_password"
+  },
+  {
+   "source": "caprover",
+   "slug": "sshd",
+   "reason": "required-input:$$cap_sshd_public_key"
+  },
+  {
+   "source": "caprover",
+   "slug": "stalwart",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "statping",
+   "reason": "required-input:$$cap_admin_user"
+  },
+  {
+   "source": "caprover",
+   "slug": "steam-openid-provider",
+   "reason": "required-input:$$cap_api_key"
+  },
+  {
+   "source": "caprover",
+   "slug": "stirling-pdf",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "supabase-postgres",
+   "reason": "required-input:$$cap_pg_initdb_args"
+  },
+  {
+   "source": "caprover",
+   "slug": "surrealdb",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "syncthing",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "tautulli",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "teamspeak",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "telegraf",
+   "reason": "no-web-service"
+  },
+  {
+   "source": "caprover",
+   "slug": "termix",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "teslamate",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "the-lounge",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "tiddlywiki",
+   "reason": "required-input:$$cap_wikipassword"
+  },
+  {
+   "source": "caprover",
+   "slug": "traggo",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "transfer-sh",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "transmission",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "trudesk",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "tubesync",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "typebot",
+   "reason": "required-input:$$cap_TYPEBOT_ADMIN_EMAIL"
+  },
+  {
+   "source": "caprover",
+   "slug": "ubooquity",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "umami-only",
+   "reason": "required-input:$$cap_db_url"
+  },
+  {
+   "source": "caprover",
+   "slug": "umami-postgresql",
+   "reason": "required-input:$$cap_pg_initdb_args"
+  },
+  {
+   "source": "caprover",
+   "slug": "uptime-kuma",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "valheim",
+   "reason": "forbidden:cap_add"
+  },
+  {
+   "source": "caprover",
+   "slug": "valkey",
+   "reason": "required-input:$$cap_valkey_extra_flags"
+  },
+  {
+   "source": "caprover",
+   "slug": "vikunja",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "vscode-coder",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "vsts",
+   "reason": "forbidden:docker-sock"
+  },
+  {
+   "source": "caprover",
+   "slug": "vvveb",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "wakapi",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "wallabag",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "weblate",
+   "reason": "required-input:$$cap_pg_pass"
+  },
+  {
+   "source": "caprover",
+   "slug": "webtop",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "wekan",
+   "reason": "unresolved-var"
+  },
+  {
+   "source": "caprover",
+   "slug": "wiki-js",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "windmill",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "woodpecker",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "wordpress",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "yagpdb",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "caprover",
+   "slug": "yourls",
+   "reason": "duplicate"
+  },
+  {
+   "source": "caprover",
+   "slug": "zammad",
+   "reason": "dockerfile-build"
+  },
+  {
+   "source": "coolify",
+   "slug": "apprise-api",
+   "reason": "host-bind"
+  },
+  {
+   "source": "caprover",
+   "slug": "checkmk",
+   "reason": "host-bind"
+  },
+  {
+   "source": "coolify",
+   "slug": "chibisafe",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "docker-registry",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "firefly",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "garage",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "jupyter-notebook-python",
+   "reason": "host-bind"
+  },
+  {
+   "source": "coolify",
+   "slug": "mailpit",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "seaweedfs",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "signoz",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "soju",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "superset-with-postgresql",
+   "reason": "content-mount"
+  },
+  {
+   "source": "coolify",
+   "slug": "traccar",
+   "reason": "content-mount"
+  }
+ ]
+}

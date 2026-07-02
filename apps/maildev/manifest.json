@@ -1,0 +1,17 @@
+{
+ "slug": "maildev",
+ "name": "Maildev",
+ "section": "app",
+ "tagline": "MailDev is a simple way to test your project's generated email during development, with an easy to use web interface that runs on your machine built on top of",
+ "description": "MailDev is a simple way to test your project's generated email during development, with an easy to use web interface that runs on your machine built on top of\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "2.1.0",
+ "port": 42063,
+ "subdomain": "maildev",
+ "env": [],
+ "internalPort": 1080,
+ "mainService": "maildev",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  maildev:\n    image: maildev/maildev:2.1.0\n    volumes:\n      - maildev-data:/data\n    restart: unless-stopped\n    environment:\n      MAILDEV_SMTP_PORT: 1025\n      MAILDEV_MAIL_DIRECTORY: /data\n      MAILDEV_WEB_USER: admin\n      MAILDEV_WEB_PASS: efbbf896\n      MAILDEV_IP: '::'\n    ports:\n      - 42063:1080\nvolumes:\n  maildev-data: null\n"
+}

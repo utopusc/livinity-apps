@@ -1,0 +1,17 @@
+{
+ "slug": "typesense",
+ "name": "Typesense",
+ "section": "app",
+ "tagline": "Cutting-edge, in-memory search engine for mere mortals. Knowledge of rocket science optional.",
+ "description": "Cutting-edge, in-memory search engine for mere mortals. Knowledge of rocket science optional.\n\nDocs: https://typesense.org/docs?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "privacy",
+ "version": "28.0",
+ "port": 42129,
+ "subdomain": "typesense",
+ "env": [],
+ "internalPort": 8108,
+ "mainService": "typesense",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  typesense:\n    image: typesense/typesense:28.0\n    environment:\n      - TYPESENSE_ENABLE_CORS=${TYPESENSE_ENABLE_CORS:-true}\n      - TYPESENSE_DATA_DIR=/data\n      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY:-e87677737275d54875c75adc58406d3f}\n    volumes:\n      - typesense_data:/data\n    healthcheck:\n      test:\n        - CMD\n        - bash\n        - -c\n        - 'exec 3<>/dev/tcp/localhost/8108 && printf ''GET /health HTTP/1.1\\r\\nConnection: close\\r\\n\\r\\n'' >&3 && head -n1 <&3 | grep ''200'' && exec 3>&-'\n      retries: 5\n      timeout: 7s\n    restart: unless-stopped\n    ports:\n      - 42129:8108\nvolumes:\n  typesense_data: null\n"
+}

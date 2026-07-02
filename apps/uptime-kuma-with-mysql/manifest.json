@@ -1,0 +1,17 @@
+{
+ "slug": "uptime-kuma-with-mysql",
+ "name": "Uptime Kuma With Mysql",
+ "section": "app",
+ "tagline": "Uptime Kuma is a monitoring tool for tracking the status and performance of your applications in real-time.",
+ "description": "Uptime Kuma is a monitoring tool for tracking the status and performance of your applications in real-time.\n\nDocs: https://github.com/louislam/uptime-kuma?tab=readme-ov-file?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "2",
+ "port": 42132,
+ "subdomain": "uptime-kuma-with-mysql",
+ "env": [],
+ "internalPort": 3001,
+ "mainService": "uptime-kuma",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  uptime-kuma:\n    image: louislam/uptime-kuma:2\n    environment:\n      - TZ=${TZ:-Etc/UTC}\n    volumes:\n      - uptime-kuma-data:/app/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - extra/healthcheck\n      interval: 5s\n      timeout: 5s\n      retries: 10\n    depends_on:\n      mysql:\n        condition: service_healthy\n    restart: unless-stopped\n    ports:\n      - 42132:3001\n  mysql:\n    image: mysql:8\n    environment:\n      - MYSQL_USER=u9ca16f6a9b\n      - MYSQL_PASSWORD=cb1273a86cf1cba124af941f2973bb43\n      - MYSQL_ROOT_PASSWORD=544a23f4aaf304c56746ea27ebe841ac\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-uptime-kuma-db}\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    volumes:\n      - mysql-data:/var/lib/mysql\n    restart: unless-stopped\nvolumes:\n  uptime-kuma-data: null\n  mysql-data: null\n"
+}

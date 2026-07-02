@@ -1,0 +1,17 @@
+{
+ "slug": "embystat",
+ "name": "Embystat",
+ "section": "app",
+ "tagline": "EmbyStat is a web analytics tool, designed to provide insight into website traffic and user behavior.",
+ "description": "EmbyStat is a web analytics tool, designed to provide insight into website traffic and user behavior.\n\nDocs: https://github.com/mregni/EmbyStat?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "latest",
+ "port": 42029,
+ "subdomain": "embystat",
+ "env": [],
+ "internalPort": 6555,
+ "mainService": "embystat",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  embystat:\n    image: lscr.io/linuxserver/embystat:latest\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/Madrid\n    volumes:\n      - embystat-config:/config\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:6555\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42029:6555\nvolumes:\n  embystat-config: null\n"
+}

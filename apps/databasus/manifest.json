@@ -1,0 +1,17 @@
+{
+ "slug": "databasus",
+ "name": "Databasus",
+ "section": "app",
+ "tagline": "Databasus is a free, open source and self-hosted tool to backup PostgreSQL, MySQL, and MongoDB.",
+ "description": "Databasus is a free, open source and self-hosted tool to backup PostgreSQL, MySQL, and MongoDB.\n\nDocs: https://databasus.com/installation?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "files",
+ "version": "v3.16.2",
+ "port": 42021,
+ "subdomain": "databasus",
+ "env": [],
+ "internalPort": 4005,
+ "mainService": "databasus",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  databasus:\n    image: databasus/databasus:v3.16.2\n    volumes:\n      - databasus-data:/databasus-data\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://localhost:4005/api/v1/system/health\n      interval: 5s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42021:4005\nvolumes:\n  databasus-data: null\n"
+}

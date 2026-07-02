@@ -1,0 +1,17 @@
+{
+ "slug": "phpmyadmin",
+ "name": "phpMyAdmin",
+ "section": "app",
+ "tagline": "PhpMyAdmin is the most popular web interface for MySQL & MariaDB. Simply install PhpMyAdmin and then select what database you want to connect to. Enter your P",
+ "description": "PhpMyAdmin is the most popular web interface for MySQL & MariaDB. Simply install PhpMyAdmin and then select what database you want to connect to. Enter your P\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "developer-tools",
+ "version": "5.0.2",
+ "port": 42097,
+ "subdomain": "phpmyadmin",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "phpmyadmin",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  phpmyadmin:\n    image: phpmyadmin/phpmyadmin:5.0.2\n    restart: unless-stopped\n    environment:\n      PMA_ARBITRARY: '1'\n      UPLOAD_LIMIT: 2M\n    ports:\n      - 42097:80\n"
+}

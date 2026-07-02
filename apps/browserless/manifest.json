@@ -1,0 +1,17 @@
+{
+ "slug": "browserless",
+ "name": "Browserless",
+ "section": "app",
+ "tagline": "A headless Chrome browser as a service.",
+ "description": "A headless Chrome browser as a service.\n\nDocs: https://docs.browserless.io/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "1.0.0",
+ "port": 42004,
+ "subdomain": "browserless",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "browserless",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  browserless:\n    image: ghcr.io/browserless/chromium\n    environment:\n      - TOKEN=a99925719d274d7e7ee47f8075b85ad6\n    expose:\n      - 3000\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000/docs\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42004:3000\n"
+}

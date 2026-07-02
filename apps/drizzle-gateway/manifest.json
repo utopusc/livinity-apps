@@ -1,0 +1,17 @@
+{
+ "slug": "drizzle-gateway",
+ "name": "Drizzle Gateway",
+ "section": "app",
+ "tagline": "Free self-hosted Drizzle Studio on steroids",
+ "description": "Free self-hosted Drizzle Studio on steroids\n\nDocs: https://gateway.drizzle.team/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42025,
+ "subdomain": "drizzle-gateway",
+ "env": [],
+ "internalPort": 4983,
+ "mainService": "drizzle-gateway",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  drizzle-gateway:\n    image: ghcr.io/drizzle-team/gateway:latest\n    environment:\n      - STORE_PATH=/app\n      - MASTERPASS=ecdd0c61346397313bd1cd4d5bd852b0\n    volumes:\n      - drizzle-gateway-data:/app\n    restart: unless-stopped\n    ports:\n      - 42025:4983\nvolumes:\n  drizzle-gateway-data: null\n"
+}

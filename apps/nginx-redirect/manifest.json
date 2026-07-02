@@ -1,0 +1,17 @@
+{
+ "slug": "nginx-redirect",
+ "name": "Nginx Redirect",
+ "section": "app",
+ "tagline": "This is a very simply redirect nginx image. It redirects all HTTP requests to the HTTP address that you define. It's useful when you want to redirect all traf",
+ "description": "This is a very simply redirect nginx image. It redirects all HTTP requests to the HTTP address that you define. It's useful when you want to redirect all traf\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "latest",
+ "port": 42079,
+ "subdomain": "nginx-redirect",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "nginx-redirect",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  nginx-redirect:\n    image: caprover/nginx-redirect:latest\n    restart: unless-stopped\n    environment:\n      RETURN_LOCATION: return 301 https://caprover.com$request_uri;\n    ports:\n      - 42079:80\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "filestash",
+ "name": "Filestash",
+ "section": "app",
+ "tagline": "Filestash is a modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze...",
+ "description": "Filestash is a modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze...\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "b7b45f2",
+ "port": 42032,
+ "subdomain": "filestash",
+ "env": [],
+ "internalPort": 8334,
+ "mainService": "filestash",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  filestash:\n    image: machines/filestash:b7b45f2\n    volumes:\n      - filestash-app-data-state:/app/data/state\n    restart: unless-stopped\n    ports:\n      - 42032:8334\nvolumes:\n  filestash-app-data-state: null\n"
+}

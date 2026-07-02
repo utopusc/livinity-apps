@@ -1,0 +1,17 @@
+{
+ "slug": "gotenberg",
+ "name": "Gotenberg",
+ "section": "app",
+ "tagline": "Gotenberg is a Docker-powered stateless API for PDF files.",
+ "description": "Gotenberg is a Docker-powered stateless API for PDF files.\n\nDocs: https://gotenberg.dev/docs/getting-started/introduction?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42046,
+ "subdomain": "gotenberg",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "gotenberg",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  gotenberg:\n    image: gotenberg/gotenberg:latest\n    environment:\n      - GOTENBERG_API_BASIC_AUTH_USERNAME=ub07ab40016\n      - GOTENBERG_API_BASIC_AUTH_PASSWORD=972b7b4ba94588c2f1ee9ba04f5b3065\n    command:\n      - gotenberg\n      - --api-enable-basic-auth\n      - --api-disable-health-check-logging\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000/health\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42046:3000\n"
+}

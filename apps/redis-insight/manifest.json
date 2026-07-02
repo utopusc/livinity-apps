@@ -1,0 +1,17 @@
+{
+ "slug": "redis-insight",
+ "name": "Redis Insight",
+ "section": "app",
+ "tagline": "Redis Insight lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.",
+ "description": "Redis Insight lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.\n\nDocs: https://redis.io/docs/latest/operate/redisinsight/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "2.70",
+ "port": 42101,
+ "subdomain": "redis-insight",
+ "env": [],
+ "internalPort": 5540,
+ "mainService": "redisinsight",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  redisinsight:\n    image: redis/redisinsight:2.70\n    environment:\n      - RI_APP_HOST=0.0.0.0\n      - RI_APP_PORT=5540\n      - RI_ENCRYPTION_KEY=79bf23537934d639f016832058473fb9\n      - RI_LOG_LEVEL=${RI_LOG_LEVEL:-info}\n      - RI_FILES_LOGGER=${RI_FILES_LOGGER:-true}\n      - RI_STDOUT_LOGGER=${RI_STDOUT_LOGGER:-true}\n    volumes:\n      - redis_insight_data:/data\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - --spider\n        - http://0.0.0.0:5540/api/health\n      interval: 10s\n      retries: 3\n      timeout: 10s\n      start_period: 10s\n    restart: unless-stopped\n    ports:\n      - 42101:5540\nvolumes:\n  redis_insight_data: null\n"
+}

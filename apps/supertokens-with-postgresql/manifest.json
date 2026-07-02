@@ -1,0 +1,17 @@
+{
+ "slug": "supertokens-with-postgresql",
+ "name": "Supertokens With Postgresql",
+ "section": "app",
+ "tagline": "An open-source authentication solution that simplifies the implementation of secure user authentication and session management for web and mobile applications",
+ "description": "An open-source authentication solution that simplifies the implementation of secure user authentication and session management for web and mobile applications\n\nDocs: https://supertokens.com/docs/guides?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42120,
+ "subdomain": "supertokens-with-postgresql",
+ "env": [],
+ "internalPort": 3567,
+ "mainService": "supertokens",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  supertokens:\n    image: registry.supertokens.io/supertokens/supertokens-postgresql:latest\n    depends_on:\n      postgres:\n        condition: service_healthy\n    environment:\n      - API_KEYS=${API_KEYS:-}\n      - POSTGRESQL_CONNECTION_URI=\"postgresql://uf63a4fa944:2ed0a9f9de6a7ab188975b3ae634a142@postgres:5432/${POSTGRES_DB:-supertokens}\"\n    healthcheck:\n      test: |\n        bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e \"GET /hello HTTP/1.1\\r\\nhost: 127.0.0.1:3567\\r\\nConnection: close\\r\\n\\r\\n\" >&3 && cat <&3 | grep \"Hello\"'\n      interval: 10s\n      timeout: 5s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42120:3567\n  postgres:\n    image: postgres:16\n    environment:\n      - POSTGRES_USER=uf63a4fa944\n      - POSTGRES_PASSWORD=2ed0a9f9de6a7ab188975b3ae634a142\n      - POSTGRES_DB=${POSTGRES_DB:-supertokens}\n    volumes:\n      - supertokens-postgres-data:/var/lib/postgresql/data\n    healthcheck:\n      test:\n        - CMD\n        - pg_isready\n        - -U\n        - uf63a4fa944\n        - -d\n        - ${POSTGRES_DB:-supertokens}\n      interval: 5s\n      timeout: 5s\n      retries: 5\n    restart: unless-stopped\nvolumes:\n  supertokens-postgres-data: null\n"
+}

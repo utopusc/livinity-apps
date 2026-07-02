@@ -1,0 +1,17 @@
+{
+ "slug": "thingsboard-postgres",
+ "name": "ThingsBoard - Postgres",
+ "section": "app",
+ "tagline": "ThingsBoard is an open-source IoT platform for data collection, processing, visualization, and device management. More details: https://thingsboard.io/",
+ "description": "ThingsBoard is an open-source IoT platform for data collection, processing, visualization, and device management. More details: https://thingsboard.io/\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "automation",
+ "version": "3.2.2",
+ "port": 42122,
+ "subdomain": "thingsboard-postgres",
+ "env": [],
+ "internalPort": 9090,
+ "mainService": "thingsboard-postgres",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  thingsboard-postgres:\n    image: thingsboard/tb-postgres:3.2.2\n    environment:\n      TB_QUEUE_TYPE: in-memory\n    volumes:\n      - thingsboard-postgres-data:/data\n      - thingsboard-postgres-logs:/var/log/thingsboard\n    restart: unless-stopped\n    ports:\n      - 42122:9090\nvolumes:\n  thingsboard-postgres-data: null\n  thingsboard-postgres-logs: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "gowa",
+ "name": "Gowa",
+ "section": "app",
+ "tagline": "Golang WhatsApp - Built with Go for efficient memory use",
+ "description": "Golang WhatsApp - Built with Go for efficient memory use\n\nDocs: https://github.com/aldinokemal/go-whatsapp-web-multidevice?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42047,
+ "subdomain": "gowa",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "gowa",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  gowa:\n    image: aldinokemal2104/go-whatsapp-web-multidevice:latest\n    environment:\n      - SERVICE_USER_GOWA\n      - SERVICE_PASSWORD_GOWA\n      - APP_BASIC_AUTH=ud1379d4129:d6439e91addd8dabaf1bd5cce6f31ba2\n      - APP_PORT=3000\n      - APP_DEBUG=${APP_DEBUG:-false}\n      - APP_ACCOUNT_VALIDATION=${APP_ACCOUNT_VALIDATION:-false}\n      - WHATSAPP_WEBHOOK=${WHATSAPP_WEBHOOK}\n      - WHATSAPP_WEBHOOK_SECRET=${WHATSAPP_WEBHOOK_SECRET:-12294139b982fbcc2c75ef5defd6c9ed}\n    volumes:\n      - gowa_data:/app/storages\n    restart: unless-stopped\n    ports:\n      - 42047:3000\nvolumes:\n  gowa_data: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "trailbase",
+ "name": "Trailbase",
+ "section": "app",
+ "tagline": "A blazingly fast Rust/SQLite/Wasmtime app server with type-safe APIs",
+ "description": "A blazingly fast Rust/SQLite/Wasmtime app server with type-safe APIs\n\nDocs: https://trailbase.io/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "0.22.6",
+ "port": 42126,
+ "subdomain": "trailbase",
+ "env": [],
+ "internalPort": 4000,
+ "mainService": "trailbase",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  trailbase:\n    image: trailbase/trailbase:0.22.6\n    volumes:\n      - trailbase-data:/app/traildepot\n    restart: unless-stopped\n    ports:\n      - 42126:4000\nvolumes:\n  trailbase-data: null\n"
+}

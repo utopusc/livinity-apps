@@ -1,0 +1,17 @@
+{
+ "slug": "faraday",
+ "name": "Faraday",
+ "section": "app",
+ "tagline": "Faraday is a powerful, open-source, web-based vulnerability management tool.",
+ "description": "Faraday is a powerful, open-source, web-based vulnerability management tool.\n\nDocs: https://faradaysec.com/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "security",
+ "version": "latest",
+ "port": 42031,
+ "subdomain": "faraday",
+ "env": [],
+ "internalPort": 5985,
+ "mainService": "faraday",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  postgresql:\n    image: postgres:latest\n    volumes:\n      - faraday-db:/var/lib/postgresql/data\n    environment:\n      - POSTGRES_PASSWORD=8a5a1fdeda2f2b7eb38dcda5639d9410\n      - POSTGRES_USER=u6f3e736562\n      - POSTGRES_DB=${POSTGRES_DB:-faraday}\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -d $${POSTGRES_DB:-faraday} -U $${POSTGRES_USER:-livacc469df}\n      interval: 15s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n  redis:\n    image: redis:alpine\n    command: --save 60 1 --loglevel warning\n    volumes:\n      - redis:/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - redis-cli ping | grep PONG\n      interval: 15s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n  faraday:\n    image: faradaysec/faraday:latest\n    entrypoint: /entrypoint.sh\n    environment:\n      - AUTHENTIK_POSTGRESQL__PASSWORD=8a5a1fdeda2f2b7eb38dcda5639d9410\n      - PGSQL_USER=u6f3e736562\n      - PGSQL_PASSWD=8a5a1fdeda2f2b7eb38dcda5639d9410\n      - PGSQL_DBNAME=${POSTGRES_DB:-faraday}\n      - PGSQL_HOST=postgresql\n      - REDIS_SERVER=redis\n    volumes:\n      - faraday:/home/faraday/.faraday:rw\n    depends_on:\n      postgresql:\n        condition: service_healthy\n      redis:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - nc\n        - -z\n        - localhost\n        - '5985'\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42031:5985\nvolumes:\n  faraday-db: null\n  redis: null\n  faraday: null\n"
+}

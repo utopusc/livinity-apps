@@ -1,0 +1,17 @@
+{
+ "slug": "statusnook",
+ "name": "Statusnook",
+ "section": "app",
+ "tagline": "Effortlessly deploy a status page and start monitoring endpoints in minutes",
+ "description": "Effortlessly deploy a status page and start monitoring endpoints in minutes\n\nDocs: https://statusnook.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "1.0.0",
+ "port": 42116,
+ "subdomain": "statusnook",
+ "env": [],
+ "internalPort": 8000,
+ "mainService": "statusnook",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  statusnook:\n    volumes:\n      - statusnook-data:/app/statusnook-data\n    image: goksan/statusnook\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -q\n        - --spider\n        - http://127.0.0.1:8000\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42116:8000\nvolumes:\n  statusnook-data: null\n"
+}

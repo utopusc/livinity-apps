@@ -1,0 +1,17 @@
+{
+ "slug": "vvveb-only",
+ "name": "Vvveb CMS - No Database",
+ "section": "app",
+ "tagline": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.. Enter your Vvveb Configuration parameters and click on next. A Vvveb container wil",
+ "description": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.. Enter your Vvveb Configuration parameters and click on next. A Vvveb container wil\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "php8.3-fpm-alpine",
+ "port": 42135,
+ "subdomain": "vvveb-only",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "vvveb-only-vvveb",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  vvveb-only-vvveb:\n    image: vvveb/vvvebcms:php8.3-fpm-alpine\n    volumes:\n      - vvveb-only-vvveb-data:/var/www/html\n    restart: unless-stopped\n    environment:\n      DB_ENGINE: mysqli\n      DB_HOST: xxx\n      DB_DATABASE: vvveb\n      DB_USER: vvvebuser\n      DB_PASSWORD: ceb3d464b934f633\n    ports:\n      - 42135:80\nvolumes:\n  vvveb-only-vvveb-data: null\n"
+}

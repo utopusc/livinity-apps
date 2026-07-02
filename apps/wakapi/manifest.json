@@ -1,0 +1,17 @@
+{
+ "slug": "wakapi",
+ "name": "Wakapi",
+ "section": "app",
+ "tagline": "A minimalist, self-hosted WakaTime-compatible backend for coding statistics",
+ "description": "A minimalist, self-hosted WakaTime-compatible backend for coding statistics\n\nDocs: https://wakapi.dev/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "latest",
+ "port": 42138,
+ "subdomain": "wakapi",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "wakapi",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  wakapi:\n    image: ghcr.io/muety/wakapi:latest\n    environment:\n      - TZ=${TIMEZONE:-Europe/Berlin}\n      - WAKAPI_SERVER_LISTEN_IPV6=\"-\"\n      - WAKAPI_ENV=${WAKAPI_ENVIRONMENT:-production}\n      - WAKAPI_SECURITY_PASSWORD_SALT=Y2QwYjQ2MGY5NjkxZjczMjY4NTZlYzg1\n      - WAKAPI_SECURITY_EXPOSE_METRICS=${WAKAPI_SECURITY_EXPOSE_METRICS:-false}\n      - WAKAPI_DB_TYPE=postgres\n      - WAKAPI_DB_NAME=${WAKAPI_DB_NAME:-wakapi}\n      - WAKAPI_DB_USER=ub5c172164c\n      - WAKAPI_DB_PASSWORD=f68ed2c8b677ebe822e7296d4d685884\n      - WAKAPI_DB_HOST=${WAKAPI_DB_HOST:-postgres}\n      - WAKAPI_DB_PORT=${WAKAPI_DB_PORT:-5432}\n      - WAKAPI_MAIL_ENABLED=${WAKAPI_MAIL_ENABLED:-false}\n      - WAKAPI_MAIL_PROVIDER=smtp\n      - WAKAPI_MAIL_SENDER=${WAKAPI_MAIL_SENDER}\n      - WAKAPI_MAIL_SMTP_HOST=${WAKAPI_MAIL_SMTP_HOST}\n      - WAKAPI_MAIL_SMTP_PORT=${WAKAPI_MAIL_SMTP_PORT:-587}\n      - WAKAPI_MAIL_SMTP_USER=${WAKAPI_MAIL_SMTP_USERNAME:-liv8bcdbe9d}\n      - WAKAPI_MAIL_SMTP_PASS=${WAKAPI_MAIL_SMTP_PASSWORD:-baa1e37dbd824d80270e2fc35a8aa1e3}\n      - WAKAPI_MAIL_SMTP_TLS=${WAKAPI_MAIL_SMTP_TLS:-true}\n      - WAKAPI_ALLOW_SIGNUP=${WAKAPI_ALLOW_SIGNUP:-true}\n      - WAKAPI_LEADERBOARD_ENABLED=${WAKAPI_LEADERBOARD_ENABLED:-true}\n      - WAKAPI_DISABLE_FRONTPAGE=${WAKAPI_DISABLE_FRONTPAGE:-true}\n      - WAKAPI_PUBLIC_URL=${WAKAPI_PUBLIC_URL}\n    volumes:\n      - wakapi-data:/data\n    depends_on:\n      postgres:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - wget -qO- http://127.0.0.1:3000/\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42138:3000\n  postgres:\n    image: postgres:16-alpine\n    volumes:\n      - wakapi-postgres-data:/var/lib/postgresql/data\n    environment:\n      - POSTGRES_USER=ub5c172164c\n      - POSTGRES_PASSWORD=f68ed2c8b677ebe822e7296d4d685884\n      - POSTGRES_DB=${WAKAPI_DB_NAME:-wakapi}\n      - POSTGRES_PORT=${WAKAPI_DB_PORT:-5432}\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U $${POSTGRES_USER:-livcf4e0dc0} -d $${POSTGRES_DB:-wakapi}\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  wakapi-data: null\n  wakapi-postgres-data: null\n"
+}

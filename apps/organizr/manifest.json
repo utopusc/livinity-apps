@@ -1,0 +1,17 @@
+{
+ "slug": "organizr",
+ "name": "Organizr",
+ "section": "app",
+ "tagline": "Homelab Services Organizer",
+ "description": "Homelab Services Organizer\n\nDocs: https://docs.organizr.app/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42092,
+ "subdomain": "organizr",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "organizr",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  organizr:\n    image: organizr/organizr:latest\n    environment:\n      - branch=${branch:-v2-master}\n    volumes:\n      - organizr-data:/config\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - curl -sf http://localhost:80 || exit 1\n      interval: 10s\n      timeout: 1s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42092:80\nvolumes:\n  organizr-data: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "wordpress-only",
+ "name": "WordPress - No Database",
+ "section": "app",
+ "tagline": "WordPress is an online, open source website creation tool written in PHP. But in non-geek speak, it’s probably the easiest and most powerful blogging and webs",
+ "description": "WordPress is an online, open source website creation tool written in PHP. But in non-geek speak, it’s probably the easiest and most powerful blogging and webs\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "5.4.0",
+ "port": 42140,
+ "subdomain": "wordpress-only",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "wordpress-only-wordpress",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  wordpress-only-wordpress:\n    image: wordpress:5.4.0\n    volumes:\n      - wordpress-only-wp-data:/var/www/html\n    restart: unless-stopped\n    environment:\n      WORDPRESS_DB_HOST: xxx:3306\n      WORDPRESS_DB_NAME: wordpress\n      WORDPRESS_TABLE_PREFIX: WP_\n      WORDPRESS_DB_USER: wordpressuser\n      WORDPRESS_DB_PASSWORD: 543d9233d42cb1a2\n    ports:\n      - 42140:80\nvolumes:\n  wordpress-only-wp-data: null\n"
+}

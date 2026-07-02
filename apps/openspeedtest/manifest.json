@@ -1,0 +1,17 @@
+{
+ "slug": "openspeedtest",
+ "name": "OpenSpeedTest",
+ "section": "app",
+ "tagline": "OpenSpeedTest is a self-hosted speedtest. You can read more about this on https://openspeedtest.com/selfhosted-speedtest.",
+ "description": "OpenSpeedTest is a self-hosted speedtest. You can read more about this on https://openspeedtest.com/selfhosted-speedtest.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "speedtest",
+ "port": 42090,
+ "subdomain": "openspeedtest",
+ "env": [],
+ "internalPort": 3000,
+ "mainService": "openspeedtest",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  openspeedtest:\n    image: index.docker.io/openspeedtest/latest:speedtest\n    restart: unless-stopped\n    ports:\n      - 42090:3000\n"
+}

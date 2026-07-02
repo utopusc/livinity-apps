@@ -1,0 +1,17 @@
+{
+ "slug": "transmission",
+ "name": "Transmission",
+ "section": "app",
+ "tagline": "Fast, easy, and free BitTorrent client.",
+ "description": "Fast, easy, and free BitTorrent client.\n\nDocs: https://docs.linuxserver.io/images/docker-transmission/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "media",
+ "version": "latest",
+ "port": 42127,
+ "subdomain": "transmission",
+ "env": [],
+ "internalPort": 9091,
+ "mainService": "transmission",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  transmission:\n    image: lscr.io/linuxserver/transmission:latest\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - USER=ud9187d6022\n      - PASS=cd5e3822998dad94eec51d0fbcd4b4a2\n    volumes:\n      - transmission-config:/config\n      - transmission-downloads:/downloads\n      - transmission-watch:/watch\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -sSfL\n        - -u\n        - ud9187d6022:cd5e3822998dad94eec51d0fbcd4b4a2\n        - http://localhost:9091/\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42127:9091\nvolumes:\n  transmission-config: null\n  transmission-downloads: null\n  transmission-watch: null\n"
+}

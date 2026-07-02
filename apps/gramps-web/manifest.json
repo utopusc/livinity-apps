@@ -1,0 +1,17 @@
+{
+ "slug": "gramps-web",
+ "name": "Gramps Web",
+ "section": "app",
+ "tagline": "Open Source Online Genealogy System.",
+ "description": "Open Source Online Genealogy System.\n\nDocs: https://www.grampsweb.org/install_setup/setup/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "25.9.0",
+ "port": 42048,
+ "subdomain": "gramps-web",
+ "env": [],
+ "internalPort": 5000,
+ "mainService": "grampsweb",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  grampsweb:\n    image: ghcr.io/gramps-project/grampsweb:25.9.0\n    environment:\n      - GRAMPSWEB_TREE=${GRAMPSWEB_TREE:-Gramps Web}\n      - GRAMPSWEB_CELERY_CONFIG__broker_url=redis://grampsweb_redis:6379/0\n      - GRAMPSWEB_CELERY_CONFIG__result_backend=redis://grampsweb_redis:6379/0\n      - GRAMPSWEB_RATELIMIT_STORAGE_URI=redis://grampsweb_redis:6379/1\n      - GUNICORN_NUM_WORKERS=${GUNICORN_NUM_WORKERS:-2}\n    depends_on:\n      - grampsweb_redis\n    volumes:\n      - gramps_users:/app/users\n      - gramps_index:/app/indexdir\n      - gramps_thumb_cache:/app/thumbnail_cache\n      - gramps_cache:/app/cache\n      - gramps_secret:/app/secret\n      - gramps_db:/root/.gramps/grampsdb\n      - gramps_media:/app/media\n      - gramps_tmp:/tmp\n    healthcheck:\n      test: wget -O - http://localhost:5000 > /dev/null 2>&1\n      interval: 5s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42048:5000\n  grampsweb_celery:\n    image: ghcr.io/gramps-project/grampsweb:25.9.0\n    environment:\n      - GRAMPSWEB_TREE=${GRAMPSWEB_TREE:-Gramps Web}\n      - GRAMPSWEB_CELERY_CONFIG__broker_url=redis://grampsweb_redis:6379/0\n      - GRAMPSWEB_CELERY_CONFIG__result_backend=redis://grampsweb_redis:6379/0\n      - GRAMPSWEB_RATELIMIT_STORAGE_URI=redis://grampsweb_redis:6379/1\n    depends_on:\n      - grampsweb_redis\n    volumes:\n      - gramps_users:/app/users\n      - gramps_index:/app/indexdir\n      - gramps_thumb_cache:/app/thumbnail_cache\n      - gramps_cache:/app/cache\n      - gramps_secret:/app/secret\n      - gramps_db:/root/.gramps/grampsdb\n      - gramps_media:/app/media\n      - gramps_tmp:/tmp\n    command: celery -A gramps_webapi.celery worker --loglevel=INFO --concurrency=2\n    healthcheck:\n      test: SECRET_KEY=\"$(cat secret/secret)\" celery -A gramps_webapi.celery status || exit 1\n      interval: 5s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n  grampsweb_redis:\n    image: docker.io/library/redis:7.2.4-alpine\n    healthcheck:\n      test: redis-cli ping | grep PONG\n      interval: 5s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\nvolumes:\n  gramps_users: null\n  gramps_index: null\n  gramps_thumb_cache: null\n  gramps_cache: null\n  gramps_secret: null\n  gramps_db: null\n  gramps_media: null\n  gramps_tmp: null\n"
+}

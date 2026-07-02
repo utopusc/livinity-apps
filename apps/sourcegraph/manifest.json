@@ -1,0 +1,17 @@
+{
+ "slug": "sourcegraph",
+ "name": "Sourcegraph",
+ "section": "app",
+ "tagline": "Sourcegraph is a code search and navigation tool (open-source/self-hosted). More information about this container can be found here: https://hub.docker.com/r/",
+ "description": "Sourcegraph is a code search and navigation tool (open-source/self-hosted). More information about this container can be found here: https://hub.docker.com/r/\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "3.2.2",
+ "port": 42115,
+ "subdomain": "sourcegraph",
+ "env": [],
+ "internalPort": 7080,
+ "mainService": "sourcegraph",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  sourcegraph:\n    image: sourcegraph/server:3.2.2\n    volumes:\n      - sourcegraph-config:/etc/sourcegraph\n      - sourcegraph-data:/var/opt/sourcegraph\n    restart: unless-stopped\n    ports:\n      - 42115:7080\nvolumes:\n  sourcegraph-config: null\n  sourcegraph-data: null\n"
+}

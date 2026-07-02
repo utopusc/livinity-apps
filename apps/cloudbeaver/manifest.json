@@ -1,0 +1,17 @@
+{
+ "slug": "cloudbeaver",
+ "name": "Cloudbeaver",
+ "section": "app",
+ "tagline": "CloudBeaver is a lightweight web application designed for comprehensive data management.",
+ "description": "CloudBeaver is a lightweight web application designed for comprehensive data management.\n\nDocs: https://dbeaver.com/docs/cloudbeaver/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "developer-tools",
+ "version": "24",
+ "port": 42014,
+ "subdomain": "cloudbeaver",
+ "env": [],
+ "internalPort": 8978,
+ "mainService": "cloudbeaver",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  cloudbeaver:\n    image: dbeaver/cloudbeaver:24\n    volumes:\n      - cloudbeaver-data:/opt/cloudbeaver/workspace\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -q\n        - --spider\n        - http://127.0.0.1:8978/\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42014:8978\nvolumes:\n  cloudbeaver-data: null\n"
+}

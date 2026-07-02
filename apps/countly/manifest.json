@@ -1,0 +1,17 @@
+{
+ "slug": "countly",
+ "name": "Countly",
+ "section": "app",
+ "tagline": "Countly will only work over HTTPS, so please enable it. | Product Analytics for Mobile, Web, Desktop and IoT | https://count.ly",
+ "description": "Countly will only work over HTTPS, so please enable it. | Product Analytics for Mobile, Web, Desktop and IoT | https://count.ly\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "19.08.1",
+ "port": 42019,
+ "subdomain": "countly",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "countly",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  countly:\n    image: countly/countly-server:19.08.1\n    volumes:\n      - countly-data:/var/lib/mongodb\n    restart: unless-stopped\n    environment: {}\n    ports:\n      - 42019:80\nvolumes:\n  countly-data: null\n"
+}

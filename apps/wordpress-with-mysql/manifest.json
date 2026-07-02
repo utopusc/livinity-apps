@@ -1,0 +1,17 @@
+{
+ "slug": "wordpress-with-mysql",
+ "name": "Wordpress With Mysql",
+ "section": "app",
+ "tagline": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
+ "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.\n\nDocs: https://wordpress.org?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42142,
+ "subdomain": "wordpress-with-mysql",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "wordpress",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  wordpress:\n    image: wordpress:latest\n    volumes:\n      - wordpress-files:/var/www/html\n    environment:\n      - WORDPRESS_DB_HOST=mysql\n      - WORDPRESS_DB_USER=uca2b499035\n      - WORDPRESS_DB_PASSWORD=a25a82563daff7f9c14e1208d0f63c67\n      - WORDPRESS_DB_NAME=wordpress\n    depends_on:\n      - mysql\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42142:80\n  mysql:\n    image: mysql:8\n    volumes:\n      - mysql-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=6d0c48bee41eeb9fdd009c60d524124e\n      - MYSQL_DATABASE=wordpress\n      - MYSQL_USER=uca2b499035\n      - MYSQL_PASSWORD=a25a82563daff7f9c14e1208d0f63c67\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  wordpress-files: null\n  mysql-data: null\n"
+}

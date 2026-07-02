@@ -1,0 +1,17 @@
+{
+ "slug": "pgadmin",
+ "name": "Pgadmin",
+ "section": "app",
+ "tagline": "pgAdmin is a web-based database management tool for administering your PostgreSQL databases through a user-friendly interface.",
+ "description": "pgAdmin is a web-based database management tool for administering your PostgreSQL databases through a user-friendly interface.\n\nDocs: https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "developer-tools",
+ "version": "latest",
+ "port": 42094,
+ "subdomain": "pgadmin",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "pgadmin",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  pgadmin:\n    image: dpage/pgadmin4:latest\n    environment:\n      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-admin@pgadmin.local}\n      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-9c992b660003fce2cd8bac37d86ca884}\n    volumes:\n      - pgadmin-data:/var/lib/pgadmin\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://localhost:80/login\n      interval: 5s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42094:80\nvolumes:\n  pgadmin-data: null\n"
+}

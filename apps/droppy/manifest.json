@@ -1,0 +1,17 @@
+{
+ "slug": "droppy",
+ "name": "droppy",
+ "section": "app",
+ "tagline": "droppy is a self-hosted file storage server with a web interface.",
+ "description": "droppy is a self-hosted file storage server with a web interface.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "cloud-storage",
+ "version": "v0.0.6",
+ "port": 42026,
+ "subdomain": "droppy",
+ "env": [],
+ "internalPort": 8989,
+ "mainService": "droppy",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  droppy:\n    image: ghcr.io/droppyjs/droppy:v0.0.6\n    volumes:\n      - droppy-config:/config\n      - droppy-files:/files\n    restart: unless-stopped\n    ports:\n      - 42026:8989\nvolumes:\n  droppy-config: null\n  droppy-files: null\n"
+}

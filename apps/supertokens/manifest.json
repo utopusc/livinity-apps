@@ -1,0 +1,17 @@
+{
+ "slug": "supertokens",
+ "name": "SuperTokens",
+ "section": "app",
+ "tagline": "SuperTokens is an open source user authentication solution. More details: https://supertokens.com",
+ "description": "SuperTokens is an open source user authentication solution. More details: https://supertokens.com\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "7.0",
+ "port": 42118,
+ "subdomain": "supertokens",
+ "env": [],
+ "internalPort": 3567,
+ "mainService": "supertokens",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  supertokens-postgres:\n    image: postgres:15-alpine\n    volumes:\n      - supertokens-postgres-data:/var/lib/postgresql/data\n    restart: unless-stopped\n    environment:\n      POSTGRES_USER: supertokens\n      POSTGRES_PASSWORD: 9cc81d7b89b8b162\n      POSTGRES_DB: supertokens\n  supertokens:\n    depends_on:\n      - supertokens-postgres\n    image: supertokens/supertokens-postgresql:7.0\n    restart: unless-stopped\n    environment:\n      API_KEYS: 828df1203a7c05a6d7972f07943cd0ea52c701153f254a702c6053986f76ec7c\n      DISABLE_TELEMETRY: true\n      POSTGRESQL_CONNECTION_URI: postgresql://supertokens:9cc81d7b89b8b162@supertokens-postgres:5432/supertokens\n    ports:\n      - 42118:3567\nvolumes:\n  supertokens-postgres-data: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "odoo",
+ "name": "Odoo",
+ "section": "app",
+ "tagline": "Odoo is a suite of open-source business apps that cover all your company needs.",
+ "description": "Odoo is a suite of open-source business apps that cover all your company needs.\n\nDocs: https://www.odoo.com/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "18",
+ "port": 42084,
+ "subdomain": "odoo",
+ "env": [],
+ "internalPort": 8069,
+ "mainService": "odoo",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  odoo:\n    image: odoo:18\n    environment:\n      - HOST=postgresql\n      - USER=udff065aa5b\n      - PASSWORD=316ed272b1ab0a2e8c0e6e184a79e581\n    volumes:\n      - odoo-web-data:/var/lib/odoo\n      - odoo-extra-addons:/mnt/extra-addons\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:8069\n      interval: 2s\n      timeout: 10s\n      retries: 30\n    restart: unless-stopped\n    ports:\n      - 42084:8069\n  postgresql:\n    image: postgres:16-alpine\n    volumes:\n      - postgresql-data:/var/lib/postgresql/data\n    environment:\n      - POSTGRES_USER=udff065aa5b\n      - POSTGRES_PASSWORD=316ed272b1ab0a2e8c0e6e184a79e581\n      - POSTGRES_DB=postgres\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U $${POSTGRES_USER:-liv1084aad5} -d postgres\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  odoo-web-data: null\n  odoo-extra-addons: null\n  postgresql-data: null\n"
+}

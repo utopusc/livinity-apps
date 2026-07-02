@@ -1,0 +1,17 @@
+{
+ "slug": "rainloop",
+ "name": "RainLoop",
+ "section": "app",
+ "tagline": "Rainloop is a simple, modern & fast web-based email client. For initial configuration, see https://www.rainloop.net/docs/configuration/",
+ "description": "Rainloop is a simple, modern & fast web-based email client. For initial configuration, see https://www.rainloop.net/docs/configuration/\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "communication",
+ "version": "1.12.0",
+ "port": 42100,
+ "subdomain": "rainloop",
+ "env": [],
+ "internalPort": 8888,
+ "mainService": "rainloop",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  rainloop:\n    image: hardware/rainloop:1.12.0\n    restart: unless-stopped\n    volumes:\n      - rainloop-data:/rainloop/data\n    ports:\n      - 42100:8888\nvolumes:\n  rainloop-data: null\n"
+}

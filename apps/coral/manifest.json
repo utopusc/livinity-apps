@@ -1,0 +1,17 @@
+{
+ "slug": "coral",
+ "name": "Coral Talk",
+ "section": "app",
+ "tagline": "Online comments are broken. Our open-source commenting platform, Coral, rethinks how moderation, comment display, and conversation function, creating the oppo",
+ "description": "Online comments are broken. Our open-source commenting platform, Coral, rethinks how moderation, comment display, and conversation function, creating the oppo\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "6",
+ "port": 42018,
+ "subdomain": "coral",
+ "env": [],
+ "internalPort": 5000,
+ "mainService": "coral-talk",
+ "importSource": "caprover@bd357c9",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  coral-mongo:\n    image: mongo:4.2\n    volumes:\n      - coral-mongo:/data/db\n    restart: unless-stopped\n  coral-redis:\n    image: redis:3.2\n    volumes:\n      - coral-redis:/data\n    restart: unless-stopped\n  coral-talk:\n    depends_on:\n      - coral-mongo\n      - coral-redis\n    image: coralproject/talk:6\n    restart: unless-stopped\n    environment:\n      MONGODB_URI: mongodb://coral-mongo:27017/coral\n      REDIS_URI: redis://coral-redis:6379\n      SIGNING_SECRET: 4a7b79a920f837d936e6e7c3fc612f33\n    ports:\n      - 42018:5000\nvolumes:\n  coral-mongo: null\n  coral-redis: null\n"
+}

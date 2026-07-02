@@ -1,0 +1,17 @@
+{
+ "slug": "vvveb-with-mysql",
+ "name": "Vvveb With Mysql",
+ "section": "app",
+ "tagline": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.",
+ "description": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.\n\nDocs: https://docs.vvveb.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42137,
+ "subdomain": "vvveb-with-mysql",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "vvveb",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  vvveb:\n    image: vvveb/vvvebcms:latest\n    volumes:\n      - vvveb-data:/var/www/html\n    environment:\n      - DB_ENGINE=mysqli\n      - DB_HOST=mysql\n      - DB_USER=ub05ff2c9c4\n      - DB_PASSWORD=03822bef7157aab8824b40726b182bca\n      - DB_NAME=${MYSQL_DATABASE:-vvveb}\n    depends_on:\n      mysql:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42137:80\n  mysql:\n    image: mysql:8.4.2\n    volumes:\n      - vvveb-mysql-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=0afa798dbb78e6c14e9746f2fccb741f\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-vvveb}\n      - MYSQL_USER=ub05ff2c9c4\n      - MYSQL_PASSWORD=03822bef7157aab8824b40726b182bca\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  vvveb-data: null\n  vvveb-mysql-data: null\n"
+}

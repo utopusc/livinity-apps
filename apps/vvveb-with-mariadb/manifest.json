@@ -1,0 +1,17 @@
+{
+ "slug": "vvveb-with-mariadb",
+ "name": "Vvveb With Mariadb",
+ "section": "app",
+ "tagline": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.",
+ "description": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.\n\nDocs: https://docs.vvveb.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "latest",
+ "port": 42136,
+ "subdomain": "vvveb-with-mariadb",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "vvveb",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  vvveb:\n    image: vvveb/vvvebcms:latest\n    volumes:\n      - vvveb-data:/var/www/html\n    environment:\n      - DB_ENGINE=mysqli\n      - DB_HOST=mariadb\n      - DB_USER=uae7db2f4d3\n      - DB_PASSWORD=19759d891a9a63eb03bd30844333443c\n      - DB_NAME=${MARIADB_DATABASE:-vvveb}\n    depends_on:\n      mariadb:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42136:80\n  mariadb:\n    image: mariadb:11\n    volumes:\n      - vvveb-mariadb-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=b68992df0cd3b912cf6561f74de29d11\n      - MYSQL_DATABASE=${MARIADB_DATABASE:-vvveb}\n      - MYSQL_USER=uae7db2f4d3\n      - MYSQL_PASSWORD=19759d891a9a63eb03bd30844333443c\n    healthcheck:\n      test:\n        - CMD\n        - healthcheck.sh\n        - --connect\n        - --innodb_initialized\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  vvveb-data: null\n  vvveb-mariadb-data: null\n"
+}

@@ -1,0 +1,17 @@
+{
+ "slug": "gitea-with-mariadb",
+ "name": "Gitea With Mariadb",
+ "section": "app",
+ "tagline": "Gitea is a self-hosted, lightweight Git service, offering version control, collaboration, and code hosting.",
+ "description": "Gitea is a self-hosted, lightweight Git service, offering version control, collaboration, and code hosting.\n\nDocs: https://docs.gitea.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "latest",
+ "port": 42041,
+ "subdomain": "gitea-with-mariadb",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "gitea",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  gitea:\n    image: gitea/gitea:latest\n    environment:\n      - USER_UID=1000\n      - USER_GID=1000\n      - GITEA__database__DB_TYPE=mysql\n      - GITEA__database__HOST=mariadb\n      - GITEA__database__NAME=${MYSQL_DATABASE-gitea}\n      - GITEA__database__USER=ud385c88004\n      - GITEA__database__PASSWD=ab555595c92d2f23a46e89b9630e477f\n    volumes:\n      - gitea-data:/data\n      - gitea-timezone:/etc/timezone:ro\n      - gitea-localtime:/etc/localtime:ro\n    depends_on:\n      mariadb:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42041:80\n  mariadb:\n    image: mariadb:11\n    volumes:\n      - gitea-mariadb-data:/var/lib/mysql\n    environment:\n      - MYSQL_USER=ud385c88004\n      - MYSQL_PASSWORD=ab555595c92d2f23a46e89b9630e477f\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-gitea_with_mariadb}\n      - MYSQL_ROOT_PASSWORD=587232fcbb315fac8ce451fe7b6b5296\n    healthcheck:\n      test:\n        - CMD\n        - healthcheck.sh\n        - --connect\n        - --innodb_initialized\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  gitea-data: null\n  gitea-timezone: null\n  gitea-localtime: null\n  gitea-mariadb-data: null\n"
+}

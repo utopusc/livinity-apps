@@ -1,0 +1,17 @@
+{
+ "slug": "elasticsearch",
+ "name": "Elasticsearch",
+ "section": "app",
+ "tagline": "Elasticsearch is free and Open Source, Distributed, RESTful Search Engine.",
+ "description": "Elasticsearch is free and Open Source, Distributed, RESTful Search Engine.\n\nDocs: https://www.elastic.co/products/elasticsearch?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "privacy",
+ "version": "8.19.0",
+ "port": 42028,
+ "subdomain": "elasticsearch",
+ "env": [],
+ "internalPort": 9200,
+ "mainService": "elasticsearch",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  elasticsearch:\n    image: docker.elastic.co/elasticsearch/elasticsearch-wolfi:8.19.0\n    environment:\n      - ELASTIC_PASSWORD=53d3fcf513d0e53d5f882ef98f5b4d82\n      - ES_JAVA_OPTS=-Xms512m -Xmx512m\n      - discovery.type=single-node\n      - bootstrap.memory_lock=true\n      - xpack.security.http.ssl.enabled=false\n    volumes:\n      - elasticsearch-data:/usr/share/elasticsearch/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - curl --user elastic:53d3fcf513d0e53d5f882ef98f5b4d82 --silent --fail http://localhost:9200/_cluster/health\n      interval: 10s\n      timeout: 10s\n      retries: 24\n    restart: unless-stopped\n    ports:\n      - 42028:9200\nvolumes:\n  elasticsearch-data: null\n"
+}

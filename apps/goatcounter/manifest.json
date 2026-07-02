@@ -1,0 +1,17 @@
+{
+ "slug": "goatcounter",
+ "name": "Goatcounter",
+ "section": "app",
+ "tagline": "Lightweight web analytics platform.",
+ "description": "Lightweight web analytics platform.\n\nDocs: https://www.goatcounter.com/help?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "monitoring",
+ "version": "2.7",
+ "port": 42045,
+ "subdomain": "goatcounter",
+ "env": [],
+ "internalPort": 8080,
+ "mainService": "goatcounter",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  goatcounter:\n    image: arp242/goatcounter:2.7\n    volumes:\n      - goatcounter-data:/home/goatcounter/goatcounter-data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - wget -qO- http://127.0.0.1:8080/status >/dev/null 2>&1 || exit 1\n      interval: 10s\n      timeout: 5s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42045:8080\nvolumes:\n  goatcounter-data: null\n"
+}

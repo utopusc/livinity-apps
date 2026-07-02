@@ -1,0 +1,17 @@
+{
+ "slug": "slash",
+ "name": "Slash",
+ "section": "app",
+ "tagline": "An open source, self-hosted links shortener and sharing platform.",
+ "description": "An open source, self-hosted links shortener and sharing platform.\n\nDocs: https://github.com/yourselfhosted/slash?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "1.0.0",
+ "port": 42112,
+ "subdomain": "slash",
+ "env": [],
+ "internalPort": 5231,
+ "mainService": "slash",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  slash:\n    image: yourselfhosted/slash\n    volumes:\n      - slash-data:/var/opt/slash\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -q\n        - --spider\n        - http://127.0.0.1:5231\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42112:5231\nvolumes:\n  slash-data: null\n"
+}

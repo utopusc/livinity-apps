@@ -1,0 +1,17 @@
+{
+ "slug": "terraria-server",
+ "name": "Terraria Server",
+ "section": "app",
+ "tagline": "Docker multi-arch Image for Terraria Server.",
+ "description": "Docker multi-arch Image for Terraria Server.\n\nDocs: https://github.com/hexlo/terraria-server-docker?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "media",
+ "version": "1.4.4.9",
+ "port": 42121,
+ "subdomain": "terraria-server",
+ "env": [],
+ "internalPort": 7777,
+ "mainService": "terraria-server",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  terraria-server:\n    image: hexlo/terraria-server-docker:1.4.4.9\n    stdin_open: true\n    tty: true\n    volumes:\n      - terraria-server:/root/.local/share/Terraria/Worlds\n    environment:\n      - WORLD=${WORLD:-/root/.local/share/Terraria/Worlds/world1.wld}\n      - AUTOCREATE=${AUTOCREATE:-2}\n      - WORLDNAME=${WORLDNAME:-world1}\n      - DIFFICULTY=${DIFFICULTY:-1}\n      - MAXPLAYERS=${MAXPLAYERS:-8}\n      - PASSWORD=${PASSWORD:-mypassword}\n      - MOTD=${MOTD:-Welcome to the server!}\n      - LANGUAGE=${LANGUAGE:-en/US}\n      - SECURE=${SECURE:-1}\n    restart: unless-stopped\n    ports:\n      - 42121:7777\nvolumes:\n  terraria-server: null\n"
+}

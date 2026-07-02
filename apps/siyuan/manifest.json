@@ -1,0 +1,17 @@
+{
+ "slug": "siyuan",
+ "name": "Siyuan",
+ "section": "app",
+ "tagline": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
+ "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.\n\nDocs: https://github.com/siyuan-note/siyuan?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "productivity",
+ "version": "v3.3.5",
+ "port": 42111,
+ "subdomain": "siyuan",
+ "env": [],
+ "internalPort": 6806,
+ "mainService": "siyuan",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  siyuan:\n    image: b3log/siyuan:v3.3.5\n    volumes:\n      - siyuan_workspace:/siyuan/workspace\n    environment:\n      - TZ=${TZ:-UTC}\n      - PUID=1000\n      - PGID=1000\n      - SIYUAN_ACCESS_AUTH_CODE=b69918bc8fe89e66adc69c446730ae9f\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - --spider\n        - --quiet\n        - http://127.0.0.1:6806/api/system/version\n      interval: 15s\n      timeout: 10s\n      retries: 5\n      start_period: 20s\n    restart: unless-stopped\n    ports:\n      - 42111:6806\nvolumes:\n  siyuan_workspace: null\n"
+}

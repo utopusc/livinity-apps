@@ -1,0 +1,17 @@
+{
+ "slug": "bitcoin-core",
+ "name": "Bitcoin Core",
+ "section": "app",
+ "tagline": "A self-hosted Bitcoin Core full node.",
+ "description": "A self-hosted Bitcoin Core full node.\n\nDocs: https://hub.docker.com/r/ruimarinho/bitcoin-core/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "ai",
+ "version": "latest",
+ "port": 42003,
+ "subdomain": "bitcoin-core",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "bitcoin-core",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  bitcoin-core:\n    image: ruimarinho/bitcoin-core:latest\n    environment:\n      - BITCOIN_RPCUSER=${BITCOIN_RPCUSER:-bitcoinuser}\n      - BITCOIN_RPCPASSWORD=32dbe994dde37398f8d87f396e7c93c8\n      - BITCOIN_PRINTTOCONSOLE=${BITCOIN_PRINTTOCONSOLE:-1}\n      - BITCOIN_TXINDEX=${BITCOIN_TXINDEX:-1}\n      - BITCOIN_SERVER=${BITCOIN_SERVER:-1}\n    volumes:\n      - blockchain-data:/home/bitcoin/.bitcoin\n    command:\n      - -datadir=/home/bitcoin/.bitcoin\n      - -rpcbind=127.0.0.1\n      - -rpcallowip=127.0.0.1\n      - -rpcuser=${BITCOIN_RPCUSER:-liveeb16563}\n      - -rpcpassword=32dbe994dde37398f8d87f396e7c93c8\n      - -printtoconsole=${BITCOIN_PRINTTOCONSOLE}\n      - -txindex=${BITCOIN_TXINDEX}\n      - -server=${BITCOIN_SERVER}\n    restart: unless-stopped\n    ports:\n      - 42003:80\nvolumes:\n  blockchain-data: null\n"
+}

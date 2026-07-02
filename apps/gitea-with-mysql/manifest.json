@@ -1,0 +1,17 @@
+{
+ "slug": "gitea-with-mysql",
+ "name": "Gitea With Mysql",
+ "section": "app",
+ "tagline": "Gitea is a self-hosted, lightweight Git service, offering version control, collaboration, and code hosting.",
+ "description": "Gitea is a self-hosted, lightweight Git service, offering version control, collaboration, and code hosting.\n\nDocs: https://docs.gitea.com?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
+ "category": "development",
+ "version": "latest",
+ "port": 42042,
+ "subdomain": "gitea-with-mysql",
+ "env": [],
+ "internalPort": 80,
+ "mainService": "gitea",
+ "importSource": "coolify@e7dff30",
+ "importedAt": "2026-07-02",
+ "docker_compose": "services:\n  gitea:\n    image: gitea/gitea:latest\n    environment:\n      - USER_UID=1000\n      - USER_GID=1000\n      - GITEA__database__DB_TYPE=mysql\n      - GITEA__database__HOST=mysql\n      - GITEA__database__NAME=${MYSQL_DATABASE-gitea}\n      - GITEA__database__USER=u4ec252bebd\n      - GITEA__database__PASSWD=094be1966aaaf861aa6fd14fe9cc7dff\n    volumes:\n      - gitea-data:/data\n      - gitea-timezone:/etc/timezone:ro\n      - gitea-localtime:/etc/localtime:ro\n    depends_on:\n      mysql:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42042:80\n  mysql:\n    image: mysql:8.0\n    volumes:\n      - gitea-mysql-data:/var/lib/mysql\n    environment:\n      - MYSQL_USER=u4ec252bebd\n      - MYSQL_PASSWORD=094be1966aaaf861aa6fd14fe9cc7dff\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-gitea_with_mysql}\n      - MYSQL_ROOT_PASSWORD=ba718f5a99a507d29e9c7dd7da837b2e\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  gitea-data: null\n  gitea-timezone: null\n  gitea-localtime: null\n  gitea-mysql-data: null\n"
+}
