@@ -13,5 +13,6 @@
  "mainService": "vvveb",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/vvveb.svg",
  "docker_compose": "services:\n  vvveb:\n    image: vvveb/vvvebcms:latest\n    volumes:\n      - vvveb-data:/var/www/html\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42134:80\nvolumes:\n  vvveb-data: null\n"
 }

@@ -13,5 +13,6 @@
  "mainService": "rivet-engine",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/rivet.svg",
  "docker_compose": "services:\n  rivet-engine:\n    image: rivetdev/engine:2.2.0\n    environment:\n      - RIVET__FILE_SYSTEM__PATH=/data\n      - RIVET__AUTH__ADMIN_TOKEN=YjE5OGM5NTA0ZWMxN2Q4ZThkNjY1MzAw\n    volumes:\n      - rivet-data:/data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:6420/health\n      interval: 2s\n      timeout: 10s\n      retries: 10\n      start_period: 30s\n    restart: unless-stopped\n    ports:\n      - 42105:6420\nvolumes:\n  rivet-data: null\n"
 }

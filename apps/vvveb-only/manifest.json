@@ -13,5 +13,6 @@
  "mainService": "vvveb-only-vvveb",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/vvveb-only.png",
  "docker_compose": "services:\n  vvveb-only-vvveb:\n    image: vvveb/vvvebcms:php8.3-fpm-alpine\n    volumes:\n      - vvveb-only-vvveb-data:/var/www/html\n    restart: unless-stopped\n    environment:\n      DB_ENGINE: mysqli\n      DB_HOST: xxx\n      DB_DATABASE: vvveb\n      DB_USER: vvvebuser\n      DB_PASSWORD: ceb3d464b934f633\n    ports:\n      - 42135:80\nvolumes:\n  vvveb-only-vvveb-data: null\n"
 }

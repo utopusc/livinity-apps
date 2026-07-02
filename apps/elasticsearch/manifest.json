@@ -13,5 +13,6 @@
  "mainService": "elasticsearch",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/elasticsearch.svg",
  "docker_compose": "services:\n  elasticsearch:\n    image: docker.elastic.co/elasticsearch/elasticsearch-wolfi:8.19.0\n    environment:\n      - ELASTIC_PASSWORD=53d3fcf513d0e53d5f882ef98f5b4d82\n      - ES_JAVA_OPTS=-Xms512m -Xmx512m\n      - discovery.type=single-node\n      - bootstrap.memory_lock=true\n      - xpack.security.http.ssl.enabled=false\n    volumes:\n      - elasticsearch-data:/usr/share/elasticsearch/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - curl --user elastic:53d3fcf513d0e53d5f882ef98f5b4d82 --silent --fail http://localhost:9200/_cluster/health\n      interval: 10s\n      timeout: 10s\n      retries: 24\n    restart: unless-stopped\n    ports:\n      - 42028:9200\nvolumes:\n  elasticsearch-data: null\n"
 }

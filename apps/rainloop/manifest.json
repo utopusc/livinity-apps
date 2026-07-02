@@ -13,5 +13,6 @@
  "mainService": "rainloop",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/rainloop.png",
  "docker_compose": "services:\n  rainloop:\n    image: hardware/rainloop:1.12.0\n    restart: unless-stopped\n    volumes:\n      - rainloop-data:/rainloop/data\n    ports:\n      - 42100:8888\nvolumes:\n  rainloop-data: null\n"
 }

@@ -13,5 +13,6 @@
  "mainService": "gowa",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/gowa.svg",
  "docker_compose": "services:\n  gowa:\n    image: aldinokemal2104/go-whatsapp-web-multidevice:latest\n    environment:\n      - SERVICE_USER_GOWA\n      - SERVICE_PASSWORD_GOWA\n      - APP_BASIC_AUTH=ud1379d4129:d6439e91addd8dabaf1bd5cce6f31ba2\n      - APP_PORT=3000\n      - APP_DEBUG=${APP_DEBUG:-false}\n      - APP_ACCOUNT_VALIDATION=${APP_ACCOUNT_VALIDATION:-false}\n      - WHATSAPP_WEBHOOK=${WHATSAPP_WEBHOOK}\n      - WHATSAPP_WEBHOOK_SECRET=${WHATSAPP_WEBHOOK_SECRET:-12294139b982fbcc2c75ef5defd6c9ed}\n    volumes:\n      - gowa_data:/app/storages\n    restart: unless-stopped\n    ports:\n      - 42047:3000\nvolumes:\n  gowa_data: null\n"
 }

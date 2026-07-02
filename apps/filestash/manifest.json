@@ -13,5 +13,6 @@
  "mainService": "filestash",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/filestash.png",
  "docker_compose": "services:\n  filestash:\n    image: machines/filestash:b7b45f2\n    volumes:\n      - filestash-app-data-state:/app/data/state\n    restart: unless-stopped\n    ports:\n      - 42032:8334\nvolumes:\n  filestash-app-data-state: null\n"
 }

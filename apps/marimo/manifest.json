@@ -13,5 +13,6 @@
  "mainService": "marimo",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/marimo.svg",
  "docker_compose": "services:\n  marimo:\n    image: ghcr.io/marimo-team/marimo:latest-sql\n    environment:\n      - TOKEN_PASSWORD=4867e60b625d0f876da52f0c0341d57a\n    volumes:\n      - marimo:/app\n    command:\n      - marimo\n      - edit\n      - --token-password\n      - 4867e60b625d0f876da52f0c0341d57a\n      - --port\n      - '8080'\n      - --host\n      - 0.0.0.0\n    healthcheck:\n      test:\n        - CMD\n        - uvx\n        - --with\n        - httpx[cli]\n        - httpx\n        - http://localhost:8080/health\n      interval: 5s\n      timeout: 5s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42065:8080\nvolumes:\n  marimo: null\n"
 }

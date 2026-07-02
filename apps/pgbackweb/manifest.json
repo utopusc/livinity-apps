@@ -13,5 +13,6 @@
  "mainService": "pgbackweb",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": null,
  "docker_compose": "services:\n  pgbackweb:\n    image: eduardolat/pgbackweb:latest\n    volumes:\n      - pgbackweb_backups:/backups\n    environment:\n      - PBW_ENCRYPTION_KEY=6c7492367c57e82643341d8fcd3ae43d\n      - PBW_POSTGRES_CONN_STRING=postgresql://ub12dc06df3:364b037aadd16595012c9efe1c0d4e17@postgres:5432/${POSTGRES_DB:-pgbackweb-db}?sslmode=disable\n      - TZ=${TIME_ZONE:-UTC}\n    depends_on:\n      postgres:\n        condition: service_healthy\n    restart: unless-stopped\n    ports:\n      - 42095:8085\n  postgres:\n    image: postgres:17\n    environment:\n      - POSTGRES_USER=ub12dc06df3\n      - POSTGRES_PASSWORD=364b037aadd16595012c9efe1c0d4e17\n      - POSTGRES_DB=${POSTGRES_DB:-pgbackweb-db}\n    volumes:\n      - pgbackweb_postgres_data:/var/lib/postgresql/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U ub12dc06df3 -d pgbackweb\n      interval: 5s\n      timeout: 5s\n      retries: 5\n    restart: unless-stopped\nvolumes:\n  pgbackweb_backups: null\n  pgbackweb_postgres_data: null\n"
 }

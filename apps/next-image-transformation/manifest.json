@@ -13,5 +13,6 @@
  "mainService": "next-image-transformation",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/coolify-logo.svg",
  "docker_compose": "services:\n  next-image-transformation:\n    image: ghcr.io/coollabsio/next-image-transformation:latest\n    environment:\n      - NODE_ENV=production\n      - ALLOWED_REMOTE_DOMAINS=${ALLOWED_REMOTE_DOMAINS:-*}\n      - IMGPROXY_URL=${IMGPROXY_URL:-http://imgproxy:8080}\n    healthcheck:\n      test: wget -qO- http://127.0.0.1:3000/health || exit 1\n      interval: 2s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42072:3000\n  imgproxy:\n    image: darthsim/imgproxy\n    environment:\n      - IMGPROXY_ENABLE_WEBP_DETECTION=true\n      - IMGPROXY_JPEG_PROGRESSIVE=true\n      - IMGPROXY_USE_ETAG=true\n    healthcheck:\n      test:\n        - CMD\n        - imgproxy\n        - health\n      interval: 2s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n"
 }

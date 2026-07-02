@@ -13,5 +13,6 @@
  "mainService": "imagor-local",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/imagor-local.png",
  "docker_compose": "services:\n  imagor-local:\n    image: shumc/imagor:0.8.11\n    volumes:\n      - imagor-local-data:/mnt/data\n    environment:\n      PORT: 80\n      IMAGOR_UNSAFE: 1\n      IMAGOR_SECRET: 26759b747a71e955b54c6ecc71779277\n      FILE_LOADER_BASE_DIR: /mnt/data\n      FILE_STORAGE_BASE_DIR: /mnt/data\n      FILE_RESULT_STORAGE_BASE_DIR: /mnt/data/result\n    restart: unless-stopped\n    ports:\n      - 42051:80\nvolumes:\n  imagor-local-data: null\n"
 }

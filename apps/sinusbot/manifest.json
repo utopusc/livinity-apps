@@ -13,5 +13,6 @@
  "mainService": "sinusbot",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/sinusbot.png",
  "docker_compose": "services:\n  sinusbot:\n    environment:\n      UID: 1000\n      GID: 1000\n    image: sinusbot/docker:1.0.0-beta.10-202ee4d\n    restart: unless-stopped\n    volumes:\n      - sinusbot-data:/opt/sinusbot/data\n      - sinusbot-scripts:/opt/sinusbot/scripts\n    ports:\n      - 42110:8087\nvolumes:\n  sinusbot-data: null\n  sinusbot-scripts: null\n"
 }

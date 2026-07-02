@@ -13,5 +13,6 @@
  "mainService": "chromadb",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/chroma.svg",
  "docker_compose": "services:\n  chromadb:\n    image: chromadb/chroma:1.0.15\n    volumes:\n      - chroma-data:/data\n    environment:\n      - IS_PERSISTENT=TRUE\n      - PERSIST_DIRECTORY=/data\n    healthcheck:\n      test:\n        - CMD\n        - /bin/bash\n        - -c\n        - cat < /dev/null > /dev/tcp/localhost/8000\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42010:8000\nvolumes:\n  chroma-data: null\n"
 }

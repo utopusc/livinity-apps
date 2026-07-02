@@ -13,5 +13,6 @@
  "mainService": "nginx-redirect",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/nginx-redirect.png",
  "docker_compose": "services:\n  nginx-redirect:\n    image: caprover/nginx-redirect:latest\n    restart: unless-stopped\n    environment:\n      RETURN_LOCATION: return 301 https://caprover.com$request_uri;\n    ports:\n      - 42079:80\n"
 }

@@ -13,5 +13,6 @@
  "mainService": "openobserve",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/openobserve.svg",
  "docker_compose": "services:\n  openobserve:\n    image: public.ecr.aws/zinclabs/openobserve:v0.90.0\n    environment:\n      - ZO_DATA_DIR=/data\n      - ZO_ROOT_USER_EMAIL=${ZO_ROOT_USER_EMAIL:-root@example.com}\n      - ZO_ROOT_USER_PASSWORD=140272d543d62508e9105960ce0d124c\n      - ZO_TELEMETRY=${ZO_TELEMETRY:-false}\n      - ZO_COOKIE_SECURE_ONLY=${ZO_COOKIE_SECURE_ONLY:-true}\n    volumes:\n      - openobserve-data:/data\n    healthcheck:\n      test:\n        - CMD\n        - /openobserve\n        - node\n        - status\n      interval: 10s\n      timeout: 5s\n      retries: 5\n      start_period: 60s\n    restart: unless-stopped\n    ports:\n      - 42089:5080\nvolumes:\n  openobserve-data: null\n"
 }

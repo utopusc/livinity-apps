@@ -13,5 +13,6 @@
  "mainService": "unstructured",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/unstructured.png",
  "docker_compose": "services:\n  unstructured:\n    image: downloads.unstructured.io/unstructured-io/unstructured-api:latest\n    environment:\n      - UNSTRUCTURED_API_KEY=95e16c92ba80699f813120114c66bf7a\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://0.0.0.0:8000/healthcheck\n      interval: 5s\n      timeout: 30s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42130:8000\n"
 }

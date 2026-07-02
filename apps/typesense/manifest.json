@@ -13,5 +13,6 @@
  "mainService": "typesense",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/typesense.png",
  "docker_compose": "services:\n  typesense:\n    image: typesense/typesense:28.0\n    environment:\n      - TYPESENSE_ENABLE_CORS=${TYPESENSE_ENABLE_CORS:-true}\n      - TYPESENSE_DATA_DIR=/data\n      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY:-e87677737275d54875c75adc58406d3f}\n    volumes:\n      - typesense_data:/data\n    healthcheck:\n      test:\n        - CMD\n        - bash\n        - -c\n        - 'exec 3<>/dev/tcp/localhost/8108 && printf ''GET /health HTTP/1.1\\r\\nConnection: close\\r\\n\\r\\n'' >&3 && head -n1 <&3 | grep ''200'' && exec 3>&-'\n      retries: 5\n      timeout: 7s\n    restart: unless-stopped\n    ports:\n      - 42129:8108\nvolumes:\n  typesense_data: null\n"
 }

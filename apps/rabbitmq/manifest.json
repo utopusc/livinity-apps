@@ -13,5 +13,6 @@
  "mainService": "rabbitmq",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/rabbitmq.svg",
  "docker_compose": "services:\n  rabbitmq:\n    image: rabbitmq:3-management\n    hostname: rabbitmq\n    environment:\n      - RABBITMQ_DEFAULT_USER=u14675216b0\n      - RABBITMQ_DEFAULT_PASS=8897dd6d7da0ef07b8c9a8571a766f6f\n      - PORT=${PORT:-5672}\n    healthcheck:\n      test: rabbitmq-diagnostics -q ping\n      interval: 5s\n      timeout: 30s\n      retries: 10\n    volumes:\n      - rabbitmq-data:/var/lib/rabbitmq/\n    restart: unless-stopped\n    ports:\n      - 42099:15672\nvolumes:\n  rabbitmq-data: null\n"
 }

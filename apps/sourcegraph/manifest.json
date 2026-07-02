@@ -13,5 +13,6 @@
  "mainService": "sourcegraph",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/sourcegraph.png",
  "docker_compose": "services:\n  sourcegraph:\n    image: sourcegraph/server:3.2.2\n    volumes:\n      - sourcegraph-config:/etc/sourcegraph\n      - sourcegraph-data:/var/opt/sourcegraph\n    restart: unless-stopped\n    ports:\n      - 42115:7080\nvolumes:\n  sourcegraph-config: null\n  sourcegraph-data: null\n"
 }

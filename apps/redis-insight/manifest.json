@@ -13,5 +13,6 @@
  "mainService": "redisinsight",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/redisinsight.png",
  "docker_compose": "services:\n  redisinsight:\n    image: redis/redisinsight:2.70\n    environment:\n      - RI_APP_HOST=0.0.0.0\n      - RI_APP_PORT=5540\n      - RI_ENCRYPTION_KEY=79bf23537934d639f016832058473fb9\n      - RI_LOG_LEVEL=${RI_LOG_LEVEL:-info}\n      - RI_FILES_LOGGER=${RI_FILES_LOGGER:-true}\n      - RI_STDOUT_LOGGER=${RI_STDOUT_LOGGER:-true}\n    volumes:\n      - redis_insight_data:/data\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - --spider\n        - http://0.0.0.0:5540/api/health\n      interval: 10s\n      retries: 3\n      timeout: 10s\n      start_period: 10s\n    restart: unless-stopped\n    ports:\n      - 42101:5540\nvolumes:\n  redis_insight_data: null\n"
 }

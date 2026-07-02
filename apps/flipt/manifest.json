@@ -13,5 +13,6 @@
  "mainService": "flipt",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/flipt.svg",
  "docker_compose": "services:\n  flipt:\n    image: docker.flipt.io/flipt/flipt:latest\n    volumes:\n      - flipt-data:/var/opt/flipt\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - --spider\n        - --quiet\n        - http://127.0.0.1:8080\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42035:8080\nvolumes:\n  flipt-data: null\n"
 }

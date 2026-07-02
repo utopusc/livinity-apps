@@ -13,5 +13,6 @@
  "mainService": "nexus",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/nexus.png",
  "docker_compose": "services:\n  nexus:\n    image: sonatypecommunity/nexus3\n    environment:\n      - NEXUS_SECURITY_RANDOMPASSWORD=false\n      - INSTALL4J_ADD_VM_PARAMS=-Xms2703m -Xmx2703m -XX:MaxDirectMemorySize=2703m -Djava.util.prefs.userRoot=/nexus-data/javaprefs\n    volumes:\n      - nexus_data:/nexus-data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://localhost:8081/service/rest/v1/status\n      interval: 10s\n      timeout: 10s\n      retries: 3\n      start_period: 60s\n    restart: unless-stopped\n    ports:\n      - 42077:8081\nvolumes:\n  nexus_data: null\n"
 }

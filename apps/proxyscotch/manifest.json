@@ -13,5 +13,6 @@
  "mainService": "proxyscotch",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/hoppscotch.png",
  "docker_compose": "services:\n  proxyscotch:\n    image: hoppscotch/proxyscotch:v0.1.4\n    environment:\n      - PROXYSCOTCH_TOKEN=431e45a78865ee93067acc0b857bf424\n      - PROXYSCOTCH_ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}\n      - PROXYSCOTCH_BANNED_OUTPUTS=${BANNED_OUTPUTS}\n      - PROXYSCOTCH_BANNED_DESTS=${BANNED_DESTS}\n    restart: unless-stopped\n    ports:\n      - 42098:9159\n"
 }

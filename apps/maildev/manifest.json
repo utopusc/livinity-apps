@@ -13,5 +13,6 @@
  "mainService": "maildev",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/maildev.png",
  "docker_compose": "services:\n  maildev:\n    image: maildev/maildev:2.1.0\n    volumes:\n      - maildev-data:/data\n    restart: unless-stopped\n    environment:\n      MAILDEV_SMTP_PORT: 1025\n      MAILDEV_MAIL_DIRECTORY: /data\n      MAILDEV_WEB_USER: admin\n      MAILDEV_WEB_PASS: efbbf896\n      MAILDEV_IP: '::'\n    ports:\n      - 42063:1080\nvolumes:\n  maildev-data: null\n"
 }

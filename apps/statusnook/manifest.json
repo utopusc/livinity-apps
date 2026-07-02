@@ -13,5 +13,6 @@
  "mainService": "statusnook",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/statusnook.svg",
  "docker_compose": "services:\n  statusnook:\n    volumes:\n      - statusnook-data:/app/statusnook-data\n    image: goksan/statusnook\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -q\n        - --spider\n        - http://127.0.0.1:8000\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42116:8000\nvolumes:\n  statusnook-data: null\n"
 }

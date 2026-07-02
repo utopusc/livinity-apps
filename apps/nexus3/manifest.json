@@ -13,5 +13,6 @@
  "mainService": "nexus3",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/nexus3.png",
  "docker_compose": "services:\n  nexus3:\n    image: sonatype/nexus3:3.15.2\n    volumes:\n      - nexus3-data:/nexus-data\n    restart: unless-stopped\n    environment: {}\n    ports:\n      - 42078:8081\nvolumes:\n  nexus3-data: null\n"
 }

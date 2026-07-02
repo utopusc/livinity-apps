@@ -13,5 +13,6 @@
  "mainService": "app",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/cryptgeon.png",
  "docker_compose": "services:\n  app:\n    image: cupcakearmy/cryptgeon:latest\n    environment:\n      - SIZE_LIMIT=${SIZE_LIMIT:-4 MiB}\n      - MAX_VIEWS=${MAX_VIEWS:-100}\n      - MAX_EXPIRATION=${MAX_EXPIRATION:-360}\n      - ALLOW_ADVANCED=${ALLOW_ADVANCED:-true}\n      - ALLOW_FILES=${ALLOW_FILES:-true}\n    depends_on:\n      redis:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - --fail\n        - http://127.0.0.1:8000/api/live/\n      interval: 1m\n      timeout: 3s\n      retries: 2\n      start_period: 5s\n    restart: unless-stopped\n    ports:\n      - 42020:8000\n  redis:\n    image: redis:7-alpine\n    command: redis-server --maxmemory 200mb --maxmemory-policy allkeys-lru\n    healthcheck:\n      test:\n        - CMD\n        - redis-cli\n        - PING\n      interval: 5s\n      timeout: 10s\n      retries: 2\n    restart: unless-stopped\n"
 }

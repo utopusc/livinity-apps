@@ -13,5 +13,6 @@
  "mainService": "mediawiki",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/mediawiki.ico",
  "docker_compose": "services:\n  mediawiki:\n    image: mediawiki:latest\n    volumes:\n      - mediawiki-images:/var/www/html/images\n      - mediawiki-sqlite:/var/www/html/data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://localhost:80\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42066:80\nvolumes:\n  mediawiki-images: null\n  mediawiki-sqlite: null\n"
 }

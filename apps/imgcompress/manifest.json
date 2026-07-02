@@ -13,5 +13,6 @@
  "mainService": "imgcompress",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/imgcompress.png",
  "docker_compose": "services:\n  imgcompress:\n    image: karimz1/imgcompress:0.6.0\n    environment:\n      - DISABLE_LOGO=${DISABLE_LOGO:-false}\n      - DISABLE_STORAGE_MANAGEMENT=${DISABLE_STORAGE_MANAGEMENT:-false}\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:5000\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42052:5000\n"
 }

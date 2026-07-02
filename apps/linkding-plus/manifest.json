@@ -13,5 +13,6 @@
  "mainService": "linkding-plus",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/linkding.svg",
  "docker_compose": "services:\n  linkding-plus:\n    image: sissbruecker/linkding:latest-plus\n    volumes:\n      - linkding_data:/etc/linkding/data\n    environment:\n      - LD_SUPERUSER_NAME=u7cd5b8f945\n      - LD_SUPERUSER_PASSWORD=e97f0d2cef5e1402ac0e751b2fd47811\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - bash -c ':> /dev/tcp/127.0.0.1/9090' || exit 1\n      interval: 5s\n      timeout: 5s\n    restart: unless-stopped\n    ports:\n      - 42059:9090\nvolumes:\n  linkding_data: null\n"
 }

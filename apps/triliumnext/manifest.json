@@ -13,5 +13,6 @@
  "mainService": "triliumnext",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/triliumnext.svg",
  "docker_compose": "services:\n  triliumnext:\n    image: ghcr.io/triliumnext/trilium:stable\n    platform: linux/amd64\n    environment:\n      - TZ=${TZ:-Europe/Berlin}\n    volumes:\n      - triliumnext_data:/home/node/trilium-data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - wget --quiet --tries=1 --spider http://127.0.0.1:8080/api/health-check || exit 1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42128:8080\nvolumes:\n  triliumnext_data: null\n"
 }

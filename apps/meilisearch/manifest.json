@@ -13,5 +13,6 @@
  "mainService": "meilisearch",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/meilisearch.svg",
  "docker_compose": "services:\n  meilisearch:\n    image: getmeili/meilisearch:latest\n    environment:\n      - MEILI_NO_ANALYTICS=${MEILI_NO_ANALYTICS:-true}\n      - MEILI_ENV=${MEILI_ENV:-production}\n      - MEILI_MASTER_KEY=ebb4bf03e6fd8a55aba19930423eb37c\n    volumes:\n      - meilisearch-data:/meili_data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:7700/health\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42067:7700\nvolumes:\n  meilisearch-data: null\n"
 }

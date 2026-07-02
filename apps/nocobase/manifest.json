@@ -13,5 +13,6 @@
  "mainService": "nocobase",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/nocobase.png",
  "docker_compose": "services:\n  nocobase:\n    image: nocobase/nocobase:1.9.33\n    environment:\n      - APP_KEY=NzA4ZGIzYmIxNWRkYjcyZmViNTFlMzVj\n      - DB_DIALECT=postgres\n      - DB_HOST=postgres\n      - DB_PORT=5432\n      - DB_DATABASE=${POSTGRES_DB:-nocobase-db}\n      - DB_USER=u4173e3e994\n      - DB_PASSWORD=8a9f2aaceef753f2e868d4fa9030a723\n    volumes:\n      - nocobase-storage:/app/nocobase/storage\n    depends_on:\n      postgres:\n        condition: service_healthy\n    restart: unless-stopped\n    ports:\n      - 42082:13000\n  postgres:\n    image: postgres:17-alpine\n    environment:\n      - POSTGRES_USER=u4173e3e994\n      - POSTGRES_PASSWORD=8a9f2aaceef753f2e868d4fa9030a723\n      - POSTGRES_DB=${POSTGRES_DB:-nocobase-db}\n    volumes:\n      - postgres-data:/var/lib/postgresql/data\n    healthcheck:\n      test:\n        - CMD-SHELL\n        - pg_isready -U $${POSTGRES_USER:-liv1024b21c} -d $${POSTGRES_DB:-nocobase}\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  nocobase-storage: null\n  postgres-data: null\n"
 }

@@ -13,5 +13,6 @@
  "mainService": "classicpress",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/classicpress.svg",
  "docker_compose": "services:\n  classicpress:\n    image: classicpress/classicpress:latest\n    volumes:\n      - classicpress-files:/var/www/html\n    environment:\n      - CLASSICPRESS_DB_HOST=mysql\n      - CLASSICPRESS_DB_USER=u28a3559897\n      - CLASSICPRESS_DB_PASSWORD=175757878fc916fa278dc26ce4db4f4d\n      - CLASSICPRESS_DB_NAME=classicpress\n    depends_on:\n      - mysql\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42012:80\n  mysql:\n    image: mysql:8\n    volumes:\n      - mysql-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=6747a87923513d2b64cae54041b5a07a\n      - MYSQL_DATABASE=classicpress\n      - MYSQL_USER=u28a3559897\n      - MYSQL_PASSWORD=175757878fc916fa278dc26ce4db4f4d\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  classicpress-files: null\n  mysql-data: null\n"
 }

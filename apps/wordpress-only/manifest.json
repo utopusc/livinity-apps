@@ -13,5 +13,6 @@
  "mainService": "wordpress-only-wordpress",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/wordpress-only.png",
  "docker_compose": "services:\n  wordpress-only-wordpress:\n    image: wordpress:5.4.0\n    volumes:\n      - wordpress-only-wp-data:/var/www/html\n    restart: unless-stopped\n    environment:\n      WORDPRESS_DB_HOST: xxx:3306\n      WORDPRESS_DB_NAME: wordpress\n      WORDPRESS_TABLE_PREFIX: WP_\n      WORDPRESS_DB_USER: wordpressuser\n      WORDPRESS_DB_PASSWORD: 543d9233d42cb1a2\n    ports:\n      - 42140:80\nvolumes:\n  wordpress-only-wp-data: null\n"
 }

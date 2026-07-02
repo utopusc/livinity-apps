@@ -13,5 +13,6 @@
  "mainService": "nitropage",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/nitropage.svg",
  "docker_compose": "services:\n  nitropage:\n    image: nitropage/nitropage:sqlite\n    environment:\n      - NP_AUTH_SALT=ZDZjYjFlNWE1YTU1MzA3MzllYTQ3Zjgz\n      - NP_AUTH_PASSWORD=85c84029dc1e73988481c59baf9f6aba\n      - DATABASE_URL=file:../.data/dev.db\n    volumes:\n      - nitropage-data:/app/.data\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1:3000/admin\n      interval: 2s\n      timeout: 10s\n      retries: 15\n    restart: unless-stopped\n    ports:\n      - 42080:3000\nvolumes:\n  nitropage-data: null\n"
 }

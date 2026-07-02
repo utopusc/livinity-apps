@@ -13,5 +13,6 @@
  "mainService": "glpi",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/glpi.svg",
  "docker_compose": "services:\n  glpi:\n    image: glpi/glpi:11\n    environment:\n      - GLPI_DB_HOST=glpi-db\n      - GLPI_DB_PORT=3306\n      - GLPI_DB_NAME=${MYSQL_DATABASE:-glpi-db}\n      - GLPI_DB_USER=ua12fe31e7f\n      - GLPI_DB_PASSWORD=3fe41eb3f7b21047dea7b32342738ac6\n    volumes:\n      - glpi-data:/var/glpi:rw\n    depends_on:\n      glpi-db:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://localhost/\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42044:80\n  glpi-db:\n    image: mysql:8\n    volumes:\n      - mysql-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=bfaf0b1e62ca08f05dfe53c2e738d9b7\n      - MYSQL_DATABASE=${MYSQL_DATABASE:-glpi-db}\n      - MYSQL_USER=ua12fe31e7f\n      - MYSQL_PASSWORD=3fe41eb3f7b21047dea7b32342738ac6\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - -h\n        - 127.0.0.1\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  glpi-data: null\n  mysql-data: null\n"
 }

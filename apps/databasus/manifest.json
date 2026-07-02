@@ -13,5 +13,6 @@
  "mainService": "databasus",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/databasus.svg",
  "docker_compose": "services:\n  databasus:\n    image: databasus/databasus:v3.16.2\n    volumes:\n      - databasus-data:/databasus-data\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://localhost:4005/api/v1/system/health\n      interval: 5s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42021:4005\nvolumes:\n  databasus-data: null\n"
 }

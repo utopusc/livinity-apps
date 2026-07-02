@@ -13,5 +13,6 @@
  "mainService": "thumbor",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/thumbor.png",
  "docker_compose": "services:\n  thumbor:\n    image: minimalcompact/thumbor:6.7.0\n    volumes:\n      - thumbor-data:/data\n    restart: unless-stopped\n    environment:\n      THUMBOR_PORT: '80'\n    ports:\n      - 42123:80\nvolumes:\n  thumbor-data: null\n"
 }

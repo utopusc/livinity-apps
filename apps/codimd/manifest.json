@@ -13,5 +13,6 @@
  "mainService": "codimd",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/codimd.png",
  "docker_compose": "services:\n  codimd-mariadb:\n    image: linuxserver/mariadb:110.4.14mariabionic-ls77\n    environment:\n      MYSQL_ROOT_PASSWORD: c9b6bf42f1524393\n      MYSQL_DATABASE: codimd\n      MYSQL_USER: codimd\n      MYSQL_PASSWORD: c9b6bf42f1524393\n      PGID: 1000\n      PUID: 1000\n      TZ: Europe/London\n    volumes:\n      - codimd-mariadb-config:/config\n    restart: unless-stopped\n  codimd:\n    environment:\n      DB_HOST: codimd-mariadb\n      DB_USER: codimd\n      DB_PASS: c9b6bf42f1524393\n      DB_NAME: codimd\n      DB_PORT: 3306\n      PGID: 1000\n      PUID: 1000\n      TZ: Europe/London\n    image: linuxserver/codimd:1.6.0-ls44\n    restart: unless-stopped\n    volumes:\n      - codimd-config:/config\n    ports:\n      - 42017:3000\nvolumes:\n  codimd-mariadb-config: null\n  codimd-config: null\n"
 }

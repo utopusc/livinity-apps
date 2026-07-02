@@ -13,5 +13,6 @@
  "mainService": "onetimesecret",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/onetimesecret.svg",
  "docker_compose": "services:\n  onetimesecret:\n    image: onetimesecret/onetimesecret:latest\n    environment:\n      - AUTH_AUTOVERIFY=${AUTH_AUTOVERIFY:-true}\n      - AUTH_SIGNUP=${AUTH_SIGNUP:-true}\n      - COLONEL=${COLONEL:-admin@example.com}\n      - HOST=${HOST:-localhost}\n      - REDIS_URL=redis://:03994d86e90fae8a9ae7c0924f372b7b@redis:6379/0\n      - SECRET=9f51ac13198815bc815983750c1d344b\n      - SSL=${SSL:-false}\n      - RACK_ENV=production\n    depends_on:\n      redis:\n        condition: service_healthy\n    healthcheck:\n      test:\n        - CMD\n        - ruby\n        - -rnet/http\n        - -e\n        - 'exit(Net::HTTP.get_response(URI(''http://localhost:3000'')).is_a?(Net::HTTPSuccess) ? 0 : 1)'\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n    ports:\n      - 42087:3000\n  redis:\n    image: redis:8-alpine\n    command: redis-server --requirepass 03994d86e90fae8a9ae7c0924f372b7b\n    healthcheck:\n      test:\n        - CMD\n        - redis-cli\n        - ping\n      interval: 30s\n      timeout: 10s\n      retries: 3\n    restart: unless-stopped\n"
 }

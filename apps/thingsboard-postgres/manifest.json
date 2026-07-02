@@ -13,5 +13,6 @@
  "mainService": "thingsboard-postgres",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/thingsboard-postgres.png",
  "docker_compose": "services:\n  thingsboard-postgres:\n    image: thingsboard/tb-postgres:3.2.2\n    environment:\n      TB_QUEUE_TYPE: in-memory\n    volumes:\n      - thingsboard-postgres-data:/data\n      - thingsboard-postgres-logs:/var/log/thingsboard\n    restart: unless-stopped\n    ports:\n      - 42122:9090\nvolumes:\n  thingsboard-postgres-data: null\n  thingsboard-postgres-logs: null\n"
 }

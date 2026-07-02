@@ -13,5 +13,6 @@
  "mainService": "jenkins",
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/jenkins.png",
  "docker_compose": "services:\n  jenkins:\n    image: jenkins/jenkins:lts-jdk11\n    restart: unless-stopped\n    volumes:\n      - jenkins-jenkins-home:/var/jenkins_home\n    ports:\n      - 42054:8080\nvolumes:\n  jenkins-jenkins-home: null\n"
 }

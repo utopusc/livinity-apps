@@ -13,5 +13,6 @@
  "mainService": "wordpress",
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
+ "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/wordpress.svg",
  "docker_compose": "services:\n  wordpress:\n    image: wordpress:latest\n    volumes:\n      - wordpress-files:/var/www/html\n    environment:\n      - WORDPRESS_DB_HOST=mariadb\n      - WORDPRESS_DB_USER=u67e5b9006e\n      - WORDPRESS_DB_PASSWORD=647649fd3d26406ab3e9a71e2cfbdb9f\n      - WORDPRESS_DB_NAME=wordpress\n    depends_on:\n      - mariadb\n    healthcheck:\n      test:\n        - CMD\n        - curl\n        - -f\n        - http://127.0.0.1\n      interval: 2s\n      timeout: 10s\n      retries: 10\n    restart: unless-stopped\n    ports:\n      - 42141:80\n  mariadb:\n    image: mariadb:11\n    volumes:\n      - mariadb-data:/var/lib/mysql\n    environment:\n      - MYSQL_ROOT_PASSWORD=3309bd67357f6a7fb5185957bd898bfe\n      - MYSQL_DATABASE=wordpress\n      - MYSQL_USER=u67e5b9006e\n      - MYSQL_PASSWORD=647649fd3d26406ab3e9a71e2cfbdb9f\n    healthcheck:\n      test:\n        - CMD\n        - healthcheck.sh\n        - --connect\n        - --innodb_initialized\n      interval: 5s\n      timeout: 20s\n      retries: 10\n    restart: unless-stopped\nvolumes:\n  wordpress-files: null\n  mariadb-data: null\n"
 }
