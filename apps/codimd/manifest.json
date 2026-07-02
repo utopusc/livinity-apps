@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "Realtime collaborative Markdown notes on all platforms. GitHub: https://github.com/hackmdio/codimd",
  "description": "Realtime collaborative Markdown notes on all platforms. GitHub: https://github.com/hackmdio/codimd\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "development",
+ "category": "notes",
  "version": "1.6.0-ls44",
  "port": 42017,
  "subdomain": "codimd",

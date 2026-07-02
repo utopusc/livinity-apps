@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "Sourcegraph is a code search and navigation tool (open-source/self-hosted). More information about this container can be found here: https://hub.docker.com/r/",
  "description": "Sourcegraph is a code search and navigation tool (open-source/self-hosted). More information about this container can be found here: https://hub.docker.com/r/\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "ai",
+ "category": "privacy",
  "version": "3.2.2",
  "port": 42115,
  "subdomain": "sourcegraph",

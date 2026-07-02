@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "Imagor is a fast, Docker-ready image processing server written in Go. This app will store the images in local file system, using mounted volume. If you want t",
  "description": "Imagor is a fast, Docker-ready image processing server written in Go. This app will store the images in local file system, using mounted volume. If you want t\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "development",
+ "category": "productivity",
  "version": "0.8.11",
  "port": 42051,
  "subdomain": "imagor-local",

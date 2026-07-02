@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "A blazingly fast Rust/SQLite/Wasmtime app server with type-safe APIs",
  "description": "A blazingly fast Rust/SQLite/Wasmtime app server with type-safe APIs\n\nDocs: https://trailbase.io/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "ai",
+ "category": "productivity",
  "version": "0.22.6",
  "port": 42126,
  "subdomain": "trailbase",

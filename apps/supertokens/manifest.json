@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "SuperTokens is an open source user authentication solution. More details: https://supertokens.com",
  "description": "SuperTokens is an open source user authentication solution. More details: https://supertokens.com\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "ai",
+ "category": "productivity",
  "version": "7.0",
  "port": 42118,
  "subdomain": "supertokens",

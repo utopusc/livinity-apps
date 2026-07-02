@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "You have to read and agree to the terms in the disclaimer: https://github.com/SinusBot/docker#disclaimer",
  "description": "You have to read and agree to the terms in the disclaimer: https://github.com/SinusBot/docker#disclaimer\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "development",
+ "category": "productivity",
  "version": "1.0.0-beta.10-202ee4d",
  "port": 42110,
  "subdomain": "sinusbot",

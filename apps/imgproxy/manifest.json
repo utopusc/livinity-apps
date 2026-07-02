@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "imgproxy - Fast and secure standalone server for resizing and converting remote images. For more info visit https://imgproxy.net/.",
  "description": "imgproxy - Fast and secure standalone server for resizing and converting remote images. For more info visit https://imgproxy.net/.\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "networking",
+ "category": "productivity",
  "version": "v3.6.0",
  "port": 42053,
  "subdomain": "imgproxy",

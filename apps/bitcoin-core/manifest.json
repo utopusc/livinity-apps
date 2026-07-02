@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "A self-hosted Bitcoin Core full node.",
  "description": "A self-hosted Bitcoin Core full node.\n\nDocs: https://hub.docker.com/r/ruimarinho/bitcoin-core/?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "ai",
+ "category": "bitcoin",
  "version": "latest",
  "port": 42003,
  "subdomain": "bitcoin-core",

@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "This is a very simply redirect nginx image. It redirects all HTTP requests to the HTTP address that you define. It's useful when you want to redirect all traf",
  "description": "This is a very simply redirect nginx image. It redirects all HTTP requests to the HTTP address that you define. It's useful when you want to redirect all traf\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "development",
+ "category": "productivity",
  "version": "latest",
  "port": 42079,
  "subdomain": "nginx-redirect",

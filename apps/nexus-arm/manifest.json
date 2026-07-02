@@ -4,7 +4,7 @@
  "section": "app",
  "tagline": "Open source Universal Repository Manager (ARM version, community edition), default credentials: admin/admin123",
  "description": "Open source Universal Repository Manager (ARM version, community edition), default credentials: admin/admin123\n\nDocs: https://help.sonatype.com/en/sonatype-nexus-repository.html?utm_source=coolify.io\n\n_Template derived from coollabsio/coolify (coolify@e7dff30, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
- "category": "ai",
+ "category": "productivity",
  "version": "1.0.0",
  "port": 42077,
  "subdomain": "nexus-arm",
