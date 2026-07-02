@@ -5,7 +5,7 @@
  "tagline": "Verdaccio is a simple, zero-config-required local private npm registry. No need for an entire database just to get started! Verdaccio comes out of the box wit",
  "description": "Verdaccio is a simple, zero-config-required local private npm registry. No need for an entire database just to get started! Verdaccio comes out of the box wit\n\n\n_Template derived from caprover/one-click-apps (caprover@bd357c9, Apache-2.0). Default credentials are generated per-app — check the compose environment values._",
  "category": "developer-tools",
- "version": "3.11.6",
+ "version": "6",
  "port": 42133,
  "subdomain": "verdaccio",
  "env": [],
@@ -14,5 +14,5 @@
  "importSource": "caprover@bd357c9",
  "importedAt": "2026-07-02",
  "icon_url": "https://raw.githubusercontent.com/caprover/one-click-apps/bd357c9/public/v4/logos/verdaccio.png",
- "docker_compose": "services:\n  verdaccio:\n    image: verdaccio/verdaccio:3.11.6\n    volumes:\n      - verdaccio-storage:/verdaccio/storage\n      - verdaccio-conf:/verdaccio/conf\n      - verdaccio-plugins:/verdaccio/plugins\n    restart: unless-stopped\n    environment: {}\n    ports:\n      - 42133:4873\nvolumes:\n  verdaccio-storage: null\n  verdaccio-conf: null\n  verdaccio-plugins: null\n"
+ "docker_compose": "services:\n  verdaccio:\n    image: verdaccio/verdaccio:6\n    volumes:\n      - verdaccio-storage:/verdaccio/storage\n      - verdaccio-conf:/verdaccio/conf\n      - verdaccio-plugins:/verdaccio/plugins\n    restart: unless-stopped\n    environment: {}\n    ports:\n      - 42133:4873\nvolumes:\n  verdaccio-storage: null\n  verdaccio-conf: null\n  verdaccio-plugins: null\n"
 }

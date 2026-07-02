@@ -14,5 +14,5 @@
  "importSource": "coolify@e7dff30",
  "importedAt": "2026-07-02",
  "icon_url": "https://raw.githubusercontent.com/coollabsio/coolify/e7dff30/public/svgs/postgresql.svg",
- "docker_compose": "services:\n  pgadmin:\n    image: dpage/pgadmin4:latest\n    environment:\n      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-admin@pgadmin.local}\n      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-9c992b660003fce2cd8bac37d86ca884}\n    volumes:\n      - pgadmin-data:/var/lib/pgadmin\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://localhost:80/login\n      interval: 5s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42094:80\nvolumes:\n  pgadmin-data: null\n"
+ "docker_compose": "services:\n  pgadmin:\n    image: dpage/pgadmin4:latest\n    environment:\n      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-admin@example.com}\n      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-9c992b660003fce2cd8bac37d86ca884}\n    volumes:\n      - pgadmin-data:/var/lib/pgadmin\n    healthcheck:\n      test:\n        - CMD\n        - wget\n        - -qO-\n        - http://localhost:80/login\n      interval: 5s\n      timeout: 10s\n      retries: 5\n    restart: unless-stopped\n    ports:\n      - 42094:80\nvolumes:\n  pgadmin-data: null\n"
 }
